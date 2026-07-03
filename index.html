@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kriya Coaching Classes - Personalized Education for Academic Excellence">
+    <meta name="keywords" content="coaching, education, CBSE, competitive exams, students">
+    <meta name="author" content="Kriya Coaching Classes">
+    
+    <title>Home - Kriya Coaching Classes</title>
+    
+    <script src="./js/base-loader.js"></script>
+    
+    <!-- ===== PAGE-SPECIFIC CSS (home.html) ===== -->
+    <link rel="stylesheet" href="./css/home.css">
+    
+</head>
+<body>
+    <!-- Header -->
+    <div id="header-container"></div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Carousel Section -->
+        <section class="hero-carousel-section">
+            <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+                 <!--   <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>  -->
+                </div>
+
+                <!-- Carousel Items -->
+                <div class="carousel-inner">
+
+                     <!-- Slide 1 -->
+                    <!--<div class="carousel-item" style="background: linear-gradient(135deg, #cad5ef 0%, #2be753 100%);">
+                        <div class="carousel-content-1">
+                            <div class="container-custom-2">
+                                    <div class="carousel-image-1">
+                                        <img src="./images/Corousel-1.jpeg" alt="Students Success" class="rounded-lg" data-aos="zoom-in" data-aos-delay="300">
+                                    </div>
+                            </div>
+                        </div>
+                    </div>-->
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active" style="background: linear-gradient(135deg, #cad5ef 0%, #1e40af 100%);">
+                        <div class="carousel-content">
+                            <div class="container-custom">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-5 text-white">
+                                        <h1 class="carousel-title" data-aos="fade-up">
+                                            Excel in Your Academics
+                                        </h1>
+                                        <p class="carousel-subtitle" data-aos="fade-up" data-aos-delay="200">
+                                            Personalized education to bridge gaps in school learning and boost your academic performance
+                                        </p>
+                                        <div class="carousel-buttons" data-aos="fade-up" data-aos-delay="400">
+                                            <a href="#enquiry-section" class="btn btn-primary me-3">Enroll Now</a>
+                                            <a href="#enquiry-section" class="btn btn-outline text-white border-white">Enquire</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7 text-center carousel-image">
+                                        <img src="./images/Corousel-1.jpeg" alt="Students Success" class="img-fluid-carousel-1 rounded-lg" data-aos="zoom-in" data-aos-delay="300">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item" style="background: linear-gradient(135deg, #d89edfbd 0%, #d89edfbd 100%);">
+                        <div class="carousel-content">
+                            <div class="container-custom">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-6 text-white">
+                                        <h1 class="carousel-title">
+                                            Competitive Exam Preparation
+                                        </h1>
+                                        <p class="carousel-subtitle">
+                                            Expert guidance for JEE, NEET, UPSC, and other competitive examinations
+                                        </p>
+                                        <div class="carousel-buttons">
+                                            <a href="#enquiry-section" class="btn btn-primary me-3">Start Preparation</a>
+                                            <a href="pages/courses.html" class="btn btn-outline text-white border-white">View Courses</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 text-center carousel-image">
+                                        <img src="./images/Corousel-2.jpeg" alt="Exam Preparation" class="img-fluid-carousel-2 rounded-lg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="carousel-item" style="background: linear-gradient(135deg, #beb19a 0%, #dbc4aa 100%);">
+                        <div class="carousel-content">
+                            <div class="container-custom">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-6">
+                                        <h1 class="carousel-title text-dark">
+                                            Holistic Student Development
+                                        </h1>
+                                        <p class="carousel-subtitle text-dark">
+                                            Beyond academics - Mental health support, personality development, and career guidance
+                                        </p>
+                                        <div class="carousel-buttons">
+                                            <a href="pages/services.html" class="btn btn-primary me-3">Explore Services</a>
+                                            <a href="pages/services.html?type=mental-health" class="btn btn-outline">Mental Health</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 text-center carousel-image">
+                                        <img src="./images/Corousel-3.jpeg" alt="Holistic Development" class="img-fluid-carousel-3 rounded-lg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Stats/Counts Section -->
+        <section class="stats-section">
+            <div class="container-custom">
+                <div class="row text-center">
+                    <div class="col-lg-4 col-md-6 mb-4 mb-lg-0" data-aos="fade-up">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div><div style="display: inline-flex;">
+                            <div class="stat-number" data-target="400">0</div><b style="font-size: 1.2rem;">+</b></div>
+                            <div class="stat-label">Students we taught</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-school"></i>
+                            </div><div><div style="display: inline-flex;">
+                            <div class="stat-number" data-target="55">0</div><b style="font-size: 1.2rem;">+</b></div>
+                            <div class="stat-label">Schools we catered students</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-clock"></i>
+                            </div><div><div style="display: inline-flex;">
+                            <div class="stat-number" data-target="100">0</div><b style="font-size: 1.3rem;">%</b></div>
+                            <div class="stat-label">Passing results for all Grades</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- About Institute Section -->
+        <section class="about-section">
+            <div class="container-custom">
+                <div class="section-header">
+                    <span class="section-subtitle">About Kriya Coaching class</span>
+                    <h2>Who We Are</h2>
+                    <p>Kriya Coaching Classes is a premier educational institution dedicated to providing personalized, supplementary education that bridges gaps in school learning.</p>
+                </div>
+
+                <div class="row align-items-center mt-5">
+                    <div class="col-lg-5" data-aos="fade-right">
+                        <img src="./images/businessman-book-ssuccess.webp" alt="About Institute" class="img-fluid img-rounded">
+                    </div>
+                    <div class="col-lg-7" data-aos="fade-left">
+                        <div class="about-content">
+                            <!-- Mission -->
+                            <div class="about-card mb-4">
+                                <div class="about-card-icon">
+                                    <i class="fas fa-bullseye"></i>
+                                </div>
+                                <div class="about-card-content">
+                                    <h4>Our Mission</h4>
+                                    <p>At Kriya Coaching, We are committed to transform determined students into confident achievers—ready to excel in school, competitive exams, and life beyond the classroom with world-class academic mentorship, personalized growth plans, and a value-driven environment.</p>
+                                </div>
+                            </div>
+
+                            <!-- Vision -->
+                            <div class="about-card mb-4">
+                                <div class="about-card-icon">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <div class="about-card-content">
+                                    <h4>Our Vision</h4>
+                                    <p>To nurture the next generation of thinkers, leaders, and achievers by
+                                    building unshakable academic foundations and empowering each
+                                    student to discover their highest potential with discipline, passion, and purpose</p>
+                                </div>
+                            </div>
+
+                            <!-- Ethos -->
+                            <div class="about-card">
+                                <div class="about-card-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div class="about-card-content">
+                                    <h4>Our Ethos</h4>
+                                    <p>At Kriya, we believe:</p>
+                                    <p></p>
+                                    <p>• Every student deserves mentors who are deeply committed to their growth.</p>
+                                    <p>• True education shapes not just brighter students, but stronger individuals.</p>
+                                    <p>• Discipline, resilience, and ethics are as important as marks and ranks.</p>
+                                    <p>• We stand with families who seek more than shortcuts—who seek real, lasting success.</p>
+                                    <p>• Success is built, not bought.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="text-center mt-5" data-aos="fade-up">
+                    <a href="pages/who-are-we.html" class="btn btn-primary">Know more about us</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section" id="services-preview">
+            <div class="container-custom">
+                <div class="section-header">
+                    <span class="section-subttl">What We Offer</span>
+                    <h2>Our Services</h2>
+                    <p>Comprehensive educational solutions designed to meet diverse learning needs</p>
+                </div>
+
+                <div class="row mt-5">
+                    <!-- Service 1: Courses -->
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <h4>Academic Courses</h4>
+                            <p>Comprehensive courses for CBSE, ICSE, State Board and competitive exams with expert faculty guidance.</p>
+                            <a href="pages/courses.html" class="cources-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Service 2: Training -->
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-chalkboard-user"></i>
+                            </div>
+                            <h4>Training Programs</h4>
+                            <p>Specialized training for competitive exams including JEE, NEET, UPSC, and other national-level examinations.</p>
+                            <a href="pages/services.html?type=training" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Service 3: NIOS -->
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <h4>National Institute of Open Schooling (NIOS)</h4>
+                            <p>Comprehensive preparation for National Institute of Open Schooling examinations.</p>
+                            <a href="pages/nios.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Service 4: Scholarship -->
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h4>Scholarship Programs</h4>
+                            <p>Merit-based and need-based scholarships to support talented and deserving students.</p>
+                            <a href="pages/services.html?type=scholarship" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                     <!-- Service 5: Language classes -->
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <h4>Languages (Online) - French &amp; German</h4>
+                            <p>Unlock a new language with our interactive, immersive classes designed to build confidence in speaking, listening, reading, and writing from day one.</p>
+                            <a href="pages/services.html?type=languages" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                     <!-- Service 6: Workshops -->
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h4>Workshops</h4>
+                            <p>Interactive seminars, webinars, and workshops on exam strategies and academic excellence.</p>
+                            <a href="pages/services.html?type=workshops" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>               
+
+                    <!-- Service 7: Career Counselling -->
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-compass"></i>
+                            </div>
+                            <h4>Career Counselling</h4>
+                            <p>A professional, structured process that helps individuals evaluate their skills, interests, and values to make informed decisions about their education, training, and career path.</p>
+                            <a href="pages/services.html?type=counseling" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Service 8: Mental Health -->
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h4>Mental Health</h4>
+                            <p>Counseling services, stress management, and holistic student wellness programs.</p>
+                            <a href="pages/services.html?type=mental-health" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                     <!-- Service 9: Nutritionists -->
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-apple-alt"></i>
+                            </div>
+                            <h4>Nutritionists</h4>
+                            <p>Professional nutrition counseling to support students' physical well-being, helping them maintain energy, focus, and health through personalized diet guidance and wellness plans.</p>
+                            <a href="pages/services.html?type=nutritionists" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-5" data-aos="fade-up">
+                    <a href="pages/services.html" class="btn btn-primary btn-lg">View All Services</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Congratulations Section -->
+       <section class="congratulations-section">
+            <div class="container-custom">
+                <div class="section-header">
+                    <span class="section-subtitle">Results & Recognition</span>
+                    <h2>Congratulations !</h2>
+                    <p>We are proud of you</p>
+                </div>
+
+                <!-- Students Carousel - Single Line with Right-to-Left Slide -->
+                <div class="students-carousel-container mt-5" data-aos="fade-up">
+                    <div class="students-carousel-wrapper">
+                        <!-- Slide 1: Students 1-6 -->
+                        <div class="carousel-slide active">
+                            <!-- Student 1 -->
+                            <div class="student-card">
+                                <div class="student-image">
+                                    <img src="./images/Shresht.jpg" alt="Student Photo" class="img-fluid">
+                                </div>
+                                <div class="student-content">
+                                    <h6 class="student-name">Shresht Bonappa</h6>
+                                    <p class="student-class">Class 12 - ISC</p>
+                                    <p class="student-subjects">Commerce</p>
+                                </div>
+                            </div>
+
+                            <!-- Student 2 -->
+                            <div class="student-card">
+                                <div class="student-image">
+                                    <img src="./images/Uttam.jpg" alt="Student Photo" class="img-fluid">
+                                </div>
+                                <div class="student-content">
+                                    <h6 class="student-name">Uttam Bhonsle</h6>
+                                    <p class="student-class">Class 12 - CBSE</p>
+                                    <p class="student-subjects">Commerce</p>
+                                </div>
+                            </div>
+
+                            <!-- Student 3 -->
+                            <div class="student-card">
+                                <div class="student-image">
+                                    <img src="./images/Kabilesh.jpg" alt="Student Photo" class="img-fluid">
+                                </div>
+                                <div class="student-content">
+                                    <h6 class="student-name">Kabilesh Anand</h6>
+                                    <p class="student-class">Class 12 - CBSE</p>
+                                    <p class="student-subjects">Commerce</p>
+                                </div>
+                            </div>
+
+                            <!-- Student 4 -->
+                            <div class="student-card">
+                                <div class="student-image">
+                                    <img src="./images/Sparsha.jpg" alt="Student Photo" class="img-fluid">
+                                </div>
+                                <div class="student-content">
+                                    <h6 class="student-name">Sparsha Ranvel</h6>
+                                    <p class="student-class">Class 12 - CBSE</p>
+                                    <p class="student-subjects">Science</p>
+                                </div>
+                            </div>
+
+                            <!-- Student 5 -->
+                            <div class="student-card">
+                                <div class="student-image">
+                                    <img src="./images/Samruddha.jpg" alt="Student Photo" class="img-fluid">
+                                </div>
+                                <div class="student-content">
+                                    <h6 class="student-name">Samruddha Shivakumar</h6>
+                                    <p class="student-class">Class 12 - CBSE</p>
+                                    <p class="student-subjects">Science</p>
+                                </div>
+                            </div>
+
+                            <!-- Student 6 -->
+                            <div class="student-card">
+                                <div class="student-image">
+                                    <img src="./images/Daniel.jpg" alt="Student Photo" class="img-fluid">
+                                </div>
+                                <div class="student-content">
+                                    <h6 class="student-name">Daniel Christopher</h6>
+                                    <p class="student-class">Class 11 - ISC</p>
+                                    <p class="student-subjects">Science</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2: Students 7-12 -->
+                        <div class="carousel-slide">
+                            <!-- Student 7 -->
+                            <div class="student-card">
+                                <div class="student-image">
+                                    <img src="./images/Hasini.jpg" alt="Student Photo" class="img-fluid">
+                                </div>
+                                <div class="student-content">
+                                    <h6 class="student-name">Hasini B</h6>
+                                    <p class="student-class">Class 10 - ICSE</p>
+                                </div>
+                            </div>
+
+                            <!-- Student 8 -->
+                            <div class="student-card">
+                                <div class="student-image">
+                                    <img src="./images/Snighdha.jpg" alt="Student Photo" class="img-fluid">
+                                </div>
+                                <div class="student-content">
+                                    <h6 class="student-name">Snighdha Gunti</h6>
+                                    <p class="student-class">Class 10 - ICSE</p>
+                                </div>
+                            </div>
+
+                            <!-- Student 9 -->
+                            <div class="student-card">
+                                <div class="student-image">
+                                    <img src="./images/Shreshta.jpg" alt="Student Photo" class="img-fluid">
+                                </div>
+                                <div class="student-content">
+                                    <h6 class="student-name">Shreshta Dandapa</h6>
+                                    <p class="student-class">Class 10 - ICSE</p>
+                                </div>
+                            </div>
+
+                            <!-- Student 10 -->
+                            <div class="student-card">
+                                <div class="student-image">
+                                    <img src="./images/Kushal.jpg" alt="Student Photo" class="img-fluid">
+                                </div>
+                                <div class="student-content">
+                                    <h6 class="student-name">Kushal Babu N</h6>
+                                    <p class="student-class">Class 10 - ICSE</p>
+                                </div>
+                            </div>
+
+                            <!-- Student 11 -->
+                            <div class="student-card">
+                                <div class="student-image">
+                                    <img src="./images/Ashlyn.jpg" alt="Student Photo" class="img-fluid">
+                                </div>
+                                <div class="student-content">
+                                    <h6 class="student-name">Ashlyn Williams</h6>
+                                    <p class="student-class">Class 10 - CBSE</p>
+                                </div>
+                            </div>
+
+                            <!-- Student 12 -->
+                            <div class="student-card">
+                                <div class="student-image">
+                                    <img src="./images/Siddharth.jpg" alt="Student Photo" class="img-fluid">
+                                </div>
+                                <div class="student-content">
+                                    <h6 class="student-name">Siddharth A</h6>
+                                    <p class="student-class">Class 10 - CBSE</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carousel Controls -->
+                    <div class="carousel-controls">
+                        <button class="carousel-control-prev" id="prevStudents">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-control-next" id="nextStudents">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+       <!-- <section class="achievements-section light-bg">
+            <div class="container-custom">
+                <div class="section-header">
+                    <span class="section-subtitle">Results & Recognition</span>
+                    <h2>Our Achievements</h2>
+                    <p>Success stories and milestones that define our excellence in education</p>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-lg-6" data-aos="fade-up">
+                        <div class="achievement-item">
+                            <div class="achievement-number">2000+</div>
+                            <h4>Students in Top 10 Ranks</h4>
+                            <p>Our students consistently secure top ranks in board exams and competitive tests.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="achievement-item">
+                            <div class="achievement-number">98%</div>
+                            <h4>Pass Rate</h4>
+                            <p>Year after year, our students achieve excellent results with outstanding success rates.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="achievement-item">
+                            <div class="achievement-number">50+</div>
+                            <h4>IIT/NIT Selections</h4>
+                            <p>Our competitive exam training has helped numerous students enter premier engineering colleges.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="achievement-item">
+                            <div class="achievement-number">25+</div>
+                            <h4>Awards & Recognition</h4>
+                            <p>Recognized by educational bodies and parents for excellence and innovation in teaching.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5" data-aos="fade-up">
+                    <a href="pages/achievements.html" class="btn btn-primary">View Detailed Achievements</a>
+                </div>
+            </div>
+        </section>-->
+
+        <!-- Google Reviews Section -->
+        <section class="reviews-section">
+            <div class="container-custom">
+                <div class="section-header">
+                    <h2>Google Reviews</h2>
+                    <p>Hear from our satisfied students and parents</p>
+                </div>
+
+                <div class="row mt-5">
+                    <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+                    <script src="https://elfsightcdn.com/platform.js" async></script>
+                    <div class="elfsight-app-6712314a-c66c-4a29-8f05-7d5ce5990aa4" data-elfsight-app-lazy></div>
+                </div>
+
+                <div class="text-center mt-5" data-aos="fade-up">
+                    <a href="pages/testimonials.html" class="btn btn-primary">Read More Testimonials</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enquiry Form Section -->
+        <section class="enquiry-section" id="enquiry-section">
+            <div class="container-custom">
+                <div class="section-header">
+                    <span class="section-subtitle">Get Started</span>
+                    <h2>Enquiry Form</h2>
+                    <p>Fill this form and our team will contact you with relevant course information</p>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-lg-8 offset-lg-2" data-aos="fade-up">
+                        <form class="enquiry-form" id="enquiry-form" onsubmit="sendToWhatsapp(); return false;" novalidate>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="fullName" class="form-label">Full Name *</label>
+                                    <input type="text" class="form-control" id="fullName" name="fullName" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="mobileNumber" class="form-label">Mobile Number *</label>
+                                    <input type="tel" class="form-control" id="mobileNumber" name="mobileNumber" placeholder="10 digit number" required>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="emailId" class="form-label">Email ID *</label>
+                                    <input type="email" class="form-control" id="emailId" name="emailId" placeholder="your@email.com" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="service" class="form-label">Service *</label>
+                                    <select class="form-select" id="service" name="service" required>
+                                        <option value="">Select a Service</option>
+                                        <option value="Academic Courses">Academic Courses</option>
+                                        <option value="Training Programs">Training Programs</option>
+                                        <option value="NIOS">NIOS</option>
+                                        <option value="Scholarship Programs">Scholarship Programs</option>
+                                        <option value="Languages (Online) - French &amp; German">Languages (Online) - French &amp; German</option>
+                                        <option value="Workshops">Workshops</option>
+                                        <option value="Career Counseling">Career Counseling</option>
+                                        <option value="Mental Health">Mental Health</option>
+                                        <option value="Nutritionists">Nutritionists</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Board + Class Row: visible only when Academic Courses is selected -->
+                            <div class="row d-none" id="board-class-row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="board" class="form-label">Board *</label>
+                                    <select class="form-select" id="board" name="board">
+                                        <option value="">Select a Board</option>
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="ICSE">ICSE</option>
+                                        <option value="State Board">State Board</option>
+                                        <option value="Other Courses">Other Courses</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3 d-none" id="class-col">
+                                    <label for="className" class="form-label">Class *</label>
+                                    <select class="form-select" id="className" name="className">
+                                        <option value="">Select a Class</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Subject Row: visible only when a Class is selected -->
+                            <div class="row d-none" id="subject-row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="subject" class="form-label">Subject *</label>
+                                    <select class="form-select" id="subject" name="subject">
+                                        <option value="">Select a Subject</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="queryMessage" class="form-label">Query / Message *</label>
+                                <textarea class="form-control" id="queryMessage" name="queryMessage" rows="4" placeholder="Write your question or inquiry here..." required></textarea>
+                            </div>
+
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="terms" name="terms" required>
+                                <label class="form-check-label" for="terms">
+                                    I agree to be contacted by Kriya Coaching Classes
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-lg w-100"><i class="fab fa-whatsapp me-2"></i>Submit Enquiry</button>
+                            <p class="text-muted text-center mt-3">We'll get back to you within 24 hours</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Location Section -->
+        <section class="contact-location-section">
+            <div class="container-custom">
+                <div class="section-header">
+                    <span class="section-subttl">Get In Touch</span>
+                    <h2>Contact Us</h2>
+                    <p>Reach out to us for more information or assistance</p>
+                </div>
+
+                <div class="row mt-5">
+                    <!-- Contact Info Cards -->
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                        <div class="contact-info-card">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h5>Address</h5>
+                            <p>3rd Floor, Above Styling U Salon, Ananthapura main Road, Yelahanka, Bengaluru, Karnataka 560064, India</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="contact-info-card">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h5>Phone Number</h5>
+                            <p><a href="tel:+919584326764">+91 84313 45144</a><br>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="contact-info-card">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h5>Email Address</h5>
+                            <p><a href="mailto:info@kriya.edu">nitin@kriyacoachingclasses.com</a><br>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Map -->
+                <div class="row" data-aos="fade-up">
+                    <div class="col-12">
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242.85960203304134!2d77.57338226962666!3d13.114787829899814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae19c2ffb0a9db%3A0xf818974c3148684!2sKriya%20Coaching%20Classes%20%7C%20CBSE%20%26%20ICSE%20(6%E2%80%9312)%20%2B%20NEET%2FCET%20Prep!5e0!3m2!1sen!2sin!4v1772480942880!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <!-- ===== PAGE-SPECIFIC SCRIPTS (home.html) ===== -->
+    <!-- Home Page JS will call loadCommonScripts() and initialize after common scripts load -->
+    <script src="./js/home.js"></script>
+
+</body>
+</html>

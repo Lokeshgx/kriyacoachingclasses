@@ -1,0 +1,73 @@
+Minutes of meeting - 03-03-2026
+
+Header:
+1. Logo needs to be changed. (Nitin will provide the image)
+2. Background Color needs to be changed (will do it later)
+3. Faculties should be changed to Members.
+4. Who we are, Courses, and Enquire now button will be removed from the header.
+5. Achievements need to be hidden for now.
+6. NIOS, Scholarship, and Mental Health should be shown on the header menu.
+7. In languages, specify the mode as online and (French and German only).
+
+
+Carousel slider:
+1. Slider images need to be changed (Nitin will provide)
+
+
+Counters:
+1. The 4th box needs to be removed.
+2. Actual counts should be shown (Nitin will provide numbers). 
+
+
+Who we are:
+1. For the about page, we will give one hyperlink "Know more about us" on the home page, ==> who we are section, which will navigate the user to the 'About us' page.
+2. Content needs to be changed from the old website. (for mission, vision, and Ethos)
+
+
+Service:
+1. The chess service needs to be removed.
+2. Nutritionists' service needs to be added.
+3. In languages, need to mention - French and German are available only for online classes.
+4. Box arrangement -
+	Academic courses,	Training program,	 NIOS
+	Scholarship program,	Languages (Online),	Workshops
+	Career counseling,	Mental Health,		Nutritionist
+	
+5. Description will be changed for all services. (Nitin will provide)
+6. All the box background color needs to be changed (will do it later)
+7. Scholarship page needs to be redesigned.
+8. Workshop page needs to be redesigned (Upcoming events and past events) (Need data from Nitin)
+9. Course structure needs to be provided (What to show, how to show, all hierarchy)
+10.Same for all the services.
+
+
+Enquiry Form:
+1. All fields should be mandatory to fill out.
+2. Need to create a backend to submit the data.
+3. On Submit, this page should trigger a WhatsApp message. 
+
+
+Contact Us:
+1. Only one phone number should be shown.
+
+
+Footer:
+1. FAQs required (Nitin will provide)
+2. Social media links need to be configured. (profile name required)
+3. email or mobile number field for subscription/updates/advertisements (Will do it later)
+4. Terms & conditions required (Nitin will provide)
+5. Privacy policy required(If it is there)
+
+
+Testimonials:
+1. From the old website need to pull Google reviews and word on the street.
+
+
+Achievements:
+1. From the old website need to pull We Proud of you and Hub for Learners from Top Schools.
+
+
+Careers:
+1. Need to build this module.
+
+

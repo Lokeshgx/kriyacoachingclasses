@@ -1,0 +1,112 @@
+/* Contact Page Styles */
+.contact-section {
+    padding: 2rem 0;
+    background-color: #fbefd8;
+}
+
+.contact-info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.info-card {
+    background: var(--light-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+.info-card i {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.info-card h5 {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.info-card p {
+    margin-bottom: 0;
+    color: var(--text-light);
+}
+
+.info-card a {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.contact-form,
+.enquiry-form {
+    background: white;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-lg);
+}
+
+.form-label,
+.enquiry-form .form-label {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.form-control,
+.form-select,
+.enquiry-form .form-control,
+.enquiry-form .form-select {
+    border: 1px solid var(--border-color);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.form-control:focus,
+.form-select:focus,
+.enquiry-form .form-control:focus,
+.enquiry-form .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.enquiry-form .form-check-label {
+    color: var(--text-light);
+    margin-left: 0.5rem;
+}
+
+.enquiry-form button {
+    font-weight: 600;
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.enquiry-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+}
+
+.map-container {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    margin: 3rem 0;
+}
+
+@media (max-width: 768px) {
+    .enquiry-form {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .enquiry-form {
+        padding: 1.5rem;
+    }
+
+    .enquiry-form .form-label {
+        font-size: 0.85rem;
+    }
+}
+

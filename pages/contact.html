@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Us - Kriya Coaching Classes">
+    
+    <title>Contact Us - Kriya Coaching Classes</title>
+    
+    <script src="../js/base-loader.js"></script>
+    
+    <!-- ===== PAGE-SPECIFIC CSS (contact.html) ===== -->
+    <link rel="stylesheet" href="../css/contact.css">
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <main id="main-content">
+        <nav aria-label="breadcrumb" class="breadcrumb-section">
+            <div class="container-custom">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Contact Us</li>
+                </ol>
+            </div>
+        </nav>
+
+        <section class="contact-section">
+            <div class="container-custom">
+                <div class="section-header">
+                    <span class="section-subtitle">Get In Touch</span>
+                    <h1>Contact Us</h1>
+                    <p>We'd love to hear from you. Reach out to us with any questions or inquiries</p>
+                </div>
+
+                <!-- Contact Info Cards -->
+                <div class="contact-info-cards">
+                    <div class="info-card" data-aos="fade-up">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h5>Address</h5>
+                        <p>3rd Floor, Above Styling U Salon, Ananthapura main Road, Yelahanka, Bengaluru, Karnataka 560064, India</p>
+                    </div>
+                    <div class="info-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-phone"></i>
+                        <h5>Phone</h5>
+                        <p><a href="tel:+918431345144">+91 84313 45144</a></p>
+                    </div>
+                    <div class="info-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-envelope"></i>
+                        <h5>Email</h5>
+                        <p><a href="mailto:nitin@kriyacoachingclasses.com">nitin@kriyacoachingclasses.com</a></p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="row mt-5">
+                    <div class="col-lg-8 offset-lg-2" data-aos="fade-up">
+                        <form class="enquiry-form" id="enquiry-form" onsubmit="sendToWhatsapp(); return false;" novalidate>
+                            <h3 class="mb-4">Enquiry Form</h3>
+                            <p class="text-muted mb-4">Fill this form and our team will contact you with relevant course information</p>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="fullName" class="form-label">Full Name *</label>
+                                    <input type="text" class="form-control" id="fullName" name="fullName" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="mobileNumber" class="form-label">Mobile Number *</label>
+                                    <input type="tel" class="form-control" id="mobileNumber" name="mobileNumber" placeholder="10 digit number" required>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="emailId" class="form-label">Email ID *</label>
+                                    <input type="email" class="form-control" id="emailId" name="emailId" placeholder="your@email.com" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="service" class="form-label">Service *</label>
+                                    <select class="form-select" id="service" name="service" required>
+                                        <option value="">Select a Service</option>
+                                        <option value="Academic Courses">Academic Courses</option>
+                                        <option value="Training Programs">Training Programs</option>
+                                        <option value="NIOS">NIOS</option>
+                                        <option value="Scholarship Programs">Scholarship Programs</option>
+                                        <option value="Languages (Online) - French &amp; German">Languages (Online) - French &amp; German</option>
+                                        <option value="Workshops">Workshops</option>
+                                        <option value="Career Counseling">Career Counseling</option>
+                                        <option value="Mental Health">Mental Health</option>
+                                        <option value="Nutritionists">Nutritionists</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row d-none" id="board-class-row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="board" class="form-label">Board *</label>
+                                    <select class="form-select" id="board" name="board">
+                                        <option value="">Select a Board</option>
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="ICSE">ICSE</option>
+                                        <option value="State Board">State Board</option>
+                                        <option value="Other Courses">Other Courses</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3 d-none" id="class-col">
+                                    <label for="className" class="form-label">Class *</label>
+                                    <select class="form-select" id="className" name="className">
+                                        <option value="">Select a Class</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row d-none" id="subject-row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="subject" class="form-label">Subject *</label>
+                                    <select class="form-select" id="subject" name="subject">
+                                        <option value="">Select a Subject</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="queryMessage" class="form-label">Query / Message *</label>
+                                <textarea class="form-control" id="queryMessage" name="queryMessage" rows="4" placeholder="Write your question or inquiry here..." required></textarea>
+                            </div>
+
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="terms" name="terms" required>
+                                <label class="form-check-label" for="terms">
+                                    I agree to be contacted by Kriya Coaching Classes
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-lg w-100"><i class="fab fa-whatsapp me-2"></i>Submit Enquiry</button>
+                            <p class="text-muted text-center mt-3">We'll get back to you within 24 hours</p>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="map-container" data-aos="fade-up">
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242.85960203304134!2d77.57338226962666!3d13.114787829899814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae19c2ffb0a9db%3A0xf818974c3148684!2sKriya%20Coaching%20Classes%20%7C%20CBSE%20%26%20ICSE%20(6%E2%80%9312)%20%2B%20NEET%2FCET%20Prep!5e0!3m2!1sen!2sin!4v1772480942880!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <!-- Office Hours -->
+                <div class="row mt-5" data-aos="fade-up">
+                    <div class="col-lg-6">
+                        <div class="info-card">
+                            <h5><i class="fas fa-clock"></i> Office Hours</h5>
+                            <p><strong>Monday - Friday:</strong> 8:00 AM - 9:00 PM<br>
+                            <strong>Saturday:</strong> 9:00 AM - 7:00 PM<br>
+                            <strong>Sunday:</strong> 10:00 AM - 5:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="info-card">
+                            <h5><i class="fas fa-headset"></i> Support</h5>
+                            <p><strong>Queries:</strong> We respond within 24 hours<br>
+                            <strong>Emergency:</strong> Call us immediately<br>
+                            <strong>Chat:</strong> Available during office hours</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script>loadCommonScripts();</script>
+
+    <!-- ===== PAGE-SPECIFIC SCRIPTS ===== -->
+    <script src="../js/contact.js"></script>
+</body>
+</html>

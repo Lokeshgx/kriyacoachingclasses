@@ -1,0 +1,622 @@
+/* ===== SERVICES PAGE STYLES ===== */
+
+/* Breadcrumb Section */
+
+/* Services Page Section */
+.services-page-section {
+    padding: 2rem 0;
+    background-color: #fbefd8;
+}
+
+/* Filter Buttons */
+.filter-section {
+    text-align: center;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: white;
+    border: 2px solid var(--border-color);
+    border-radius: 2rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.filter-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.service-item {
+    opacity: 1;
+    animation: fadeIn 0.3s ease;
+}
+
+.service-item.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Service Card - Detailed */
+.service-card-detailed {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card-detailed::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.service-card-detailed:hover {
+    transform: translateY(-15px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.service-card-detailed:hover::before {
+    transform: scaleX(1);
+}
+
+/* Service Icon Large */
+.service-icon-large {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.service-card-detailed:hover .service-icon-large {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.service-icon-large.success {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.service-icon-large.warning {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.service-icon-large.info {
+    background: linear-gradient(135deg, #3b82f6, #1e40af);
+}
+
+.service-icon-large.danger {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.service-icon-large.primary {
+    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+}
+
+.service-icon-large.secondary {
+    background: linear-gradient(135deg, #ec4899, #be185d);
+}
+
+/* Service Content */
+.service-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.service-content h3 {
+    color: var(--text-dark);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.service-content p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+/* Service Features List */
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.service-features li {
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.service-features i {
+    color: var(--success-color);
+    font-size: 0.8rem;
+}
+
+/* Service Card Button */
+.service-card-detailed .btn {
+    align-self: flex-start;
+    margin-top: auto;
+    transition: all 0.3s ease;
+}
+
+.service-card-detailed:hover .btn {
+    transform: translateX(5px);
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 3rem 0;
+    background-color: #fbefd8;
+}
+
+.faq-section .section-header {
+    margin-bottom: 2rem;
+}
+
+.faq-section .faq-category {
+    margin-bottom: 2.5rem;
+}
+
+.faq-section .faq-category h3 {
+    font-size: 1.65rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+.faq-accordion .accordion-item {
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    background: white;
+    overflow: hidden;
+}
+
+.faq-accordion .accordion-button {
+    background-color: var(--light-color);
+    color: var(--text-dark);
+    font-weight: 600;
+    padding: 1rem 1.25rem;
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+    color: var(--primary-color);
+    background-color: #f8fafc;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.faq-accordion .accordion-button::after {
+    filter: invert(0);
+}
+
+.faq-accordion .accordion-body {
+    color: var(--text-light);
+    background: white;
+    padding: 1.25rem 1.5rem;
+    line-height: 1.75;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 4rem 0;
+}
+
+.cta-content {
+    text-align: center;
+}
+
+.cta-content h2 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.cta-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+}
+
+.cta-content .btn {
+    background-color: white;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.cta-content .btn:hover {
+    background-color: var(--light-color);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Workshops & Events Full Section */
+.workshops-full-section {
+    grid-column: 1 / -1;
+}
+
+.workshops-container {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    box-shadow: var(--shadow-md);
+}
+
+/* Workshops Category */
+.workshops-category {
+    margin-bottom: 3rem;
+}
+
+.workshops-category:last-child {
+    margin-bottom: 0;
+}
+
+.workshops-category-title {
+    font-size: 1.75rem;
+    color: var(--text-dark);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.workshops-category-title i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+/* Workshops Events Grid */
+.workshops-events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Event Card */
+.event-card {
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: 1.25rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.event-card.past {
+    opacity: 0.92;
+    background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+}
+
+/* Event Image */
+.event-image {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    background: linear-gradient(135deg, var(--light-color), #f0f0f0);
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover .event-image img {
+    transform: scale(1.08);
+}
+
+/* Event Badge */
+.event-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.event-badge.past-badge {
+    background: linear-gradient(135deg, #6b7280, #4b5563);
+}
+
+/* Event Content */
+.event-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.event-content h4 {
+    color: var(--text-dark);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.event-description {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+/* Event Meta */
+.event-meta {
+    margin-bottom: 1rem;
+}
+
+.event-datetime {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.event-datetime i {
+    font-size: 1rem;
+}
+
+/* Event Features */
+.event-features {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 0.75rem;
+}
+
+.event-features li {
+    color: var(--text-dark);
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.event-features i {
+    color: var(--success-color);
+    font-size: 0.7rem;
+}
+
+/* Event Card Button */
+.event-card .btn-sm {
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.event-card:hover .btn {
+    transform: translateX(3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .filter-buttons {
+        gap: 0.5rem;
+    }
+
+    .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .service-card-detailed {
+        padding: 2rem;
+    }
+
+    .service-icon-large {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+    }
+
+    .cta-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .cta-content p {
+        font-size: 1rem;
+    }
+
+    .workshops-container {
+        padding: 1.5rem;
+    }
+
+    .workshops-category-title {
+        font-size: 1.5rem;
+    }
+
+    .workshops-events-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .event-features {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .services-page-section {
+        padding: 3rem 0;
+    }
+
+    .filter-buttons {
+        gap: 0.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .filter-btn {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.75rem;
+    }
+
+    .services-grid {
+        gap: 1rem;
+    }
+
+    .service-card-detailed {
+        padding: 1.5rem;
+        border-radius: 1rem;
+    }
+
+    .service-content h3 {
+        font-size: 1.25rem;
+    }
+
+    .service-content p {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+    }
+
+    .service-icon-large {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .cta-section {
+        padding: 3rem 0;
+        margin-top: 2rem;
+    }
+
+    .cta-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-content p {
+        font-size: 0.95rem;
+    }
+
+    .workshops-container {
+        padding: 1rem;
+    }
+
+    .workshops-category {
+        margin-bottom: 2rem;
+    }
+
+    .workshops-category-title {
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .workshops-events-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .event-image {
+        height: 180px;
+    }
+
+    .event-content {
+        padding: 1rem;
+    }
+
+    .event-content h4 {
+        font-size: 1.1rem;
+    }
+
+    .event-features {
+        margin: 0.75rem 0;
+    }
+
+    .event-features li {
+        font-size: 0.8rem;
+    }
+}

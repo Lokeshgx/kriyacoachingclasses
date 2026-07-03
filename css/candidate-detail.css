@@ -1,0 +1,98 @@
+/* Candidate Detail Page */
+.candidate-page-section {
+    padding: 2rem 0 4rem;
+      background-color: #fbefd8;
+}
+
+.candidate-form-wrap {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.candidate-form .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.4rem;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    border: 1px solid var(--border-color);
+    border-radius: 0.65rem;
+    padding: 0.7rem 0.85rem;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+.form-group input[type="file"] {
+    padding: 0.6rem 0.85rem;
+}
+
+.form-hint {
+    display: block;
+    margin-top: 0.25rem;
+    color: #6b7280;
+    font-size: 0.88rem;
+}
+
+.invalid-field {
+    border-color: #dc2626 !important;
+    box-shadow: 0 0 0 1px rgba(220, 38, 38, 0.2);
+}
+
+.form-error {
+    display: block;
+    margin-top: 0.35rem;
+    color: #dc2626;
+    font-size: 0.9rem;
+}
+
+.form-group input:read-only {
+    background: #f8fafc;
+}
+
+.form-group-full {
+    grid-column: 1 / -1;
+}
+
+.form-actions {
+    margin-top: 1.25rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+}
+
+.form-actions .btn-outline {
+    border: 1px solid var(--border-color);
+    color: var(--text-dark);
+}
+
+@media (max-width: 768px) {
+    .candidate-form .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        justify-content: stretch;
+        flex-direction: column;
+    }
+
+    .form-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

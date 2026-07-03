@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Candidate Details - Kriya Coaching Classes">
+
+    <title>Candidate Detail - Kriya Coaching Classes</title>
+
+    <script src="../js/base-loader.js"></script>
+
+    <link rel="stylesheet" href="../css/candidate-detail.css">
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <main id="main-content">
+        <nav aria-label="breadcrumb" class="breadcrumb-section">
+            <div class="container-custom">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="career-opportunities.html">Career Opportunities</a></li>
+                    <li class="breadcrumb-item active">Candidate Detail</li>
+                </ol>
+            </div>
+        </nav>
+
+        <section class="candidate-page-section">
+            <div class="container-custom">
+                <div class="section-header">
+                    <span class="section-subtitle">Apply for Role</span>
+                    <h1>Candidate Detail Form</h1>
+                    <p>Submit your details and our hiring team will connect with you.</p>
+                </div>
+
+                <div class="candidate-form-wrap" data-aos="fade-up">
+                    <form id="candidate-form" class="candidate-form" novalidate>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="jobTitle">Job Title</label>
+                                <input id="jobTitle" name="jobTitle" type="text" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="jobCode">Job Code</label>
+                                <input id="jobCode" name="jobCode" type="text" readonly>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input id="fullName" name="fullName" type="text" required>
+                                <span class="form-error" id="fullNameError" aria-live="polite"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input id="email" name="email" type="email" required>
+                                <span class="form-error" id="emailError" aria-live="polite"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="mobile">Mobile Number</label>
+                                <input id="mobile" name="mobile" type="tel" required>
+                                <span class="form-error" id="mobileError" aria-live="polite"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="experience">Total Experience (Years)</label>
+                                <input id="experience" name="experience" type="number" min="0" step="0.5" required>
+                                <span class="form-error" id="experienceError" aria-live="polite"></span>
+                            </div>
+
+                            <div class="form-group form-group-full">
+                                <label for="skills">Key Skills</label>
+                                <input id="skills" name="skills" type="text" placeholder="Example: Classroom management, Curriculum design" required>
+                                <span class="form-error" id="skillsError" aria-live="polite"></span>
+                            </div>
+
+                            <div class="form-group form-group-full">
+                                <label for="coverNote">Why should we hire you?</label>
+                                <textarea id="coverNote" name="coverNote" rows="5" required></textarea>
+                                <span class="form-error" id="coverNoteError" aria-live="polite"></span>
+                            </div>
+
+                            <div class="form-group form-group-full">
+                                <label for="resumeUpload">Upload Resume / CV</label>
+                                <input id="resumeUpload" name="resumeUpload" type="file" accept=".pdf,.doc,.docx,.txt" required>
+                                <span class="form-hint">Accepted files: PDF, DOC, DOCX, TXT. Max size 5MB. WhatsApp will open next — attach the file manually if it does not upload automatically.</span>
+                                <span class="form-error" id="resumeUploadError" aria-live="polite"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <a class="btn btn-outline" href="career-opportunities.html">Back to Careers</a>
+                            <button type="submit" class="btn btn-primary">Submit Application</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script>loadCommonScripts();</script>
+    <script src="../js/candidate-detail.js"></script>
+</body>
+</html>
