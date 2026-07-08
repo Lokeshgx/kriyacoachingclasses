@@ -91,28 +91,8 @@
 
 // Initialize service description page
     document.addEventListener('DOMContentLoaded', function() {
-    // Fetch and load header
-    fetch('./header.html')
-        .then(r => r.text())
-        .then(h => {
-            document.getElementById('header-container').innerHTML = h;
-            setActiveNavLink();
-        });
-    
-    // Fetch and load footer
-    fetch('./footer.html')
-        .then(r => r.text())
-        .then(h => {
-            document.getElementById('footer-container').innerHTML = h;
-            setupBackToTopButton();
-            // Reinitialize AOS for dynamically loaded footer elements
-            if (typeof AOS !== 'undefined') {
-                AOS.refresh();
-            }
-        });
-    
-    // Initialize AOS
-    if (typeof AOS !== 'undefined') AOS.init({ duration: 1000, once: true });
+    loadHeader();
+    loadFooter();
     
     // Load service details from URL parameter
     loadServiceDetails();

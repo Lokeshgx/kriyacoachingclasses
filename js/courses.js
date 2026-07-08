@@ -5,44 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     loadHeader();
     loadFooter();
     initializeCourseFilters();
-    if (typeof AOS !== 'undefined') AOS.init({ duration: 1000, once: true, offset: 100 });
 });
-
-// Load Header
-function loadHeader() {
-    const headerContainer = document.getElementById('header-container');
-    if (headerContainer) {
-        fetch('./header.html')
-            .then(response => response.text())
-            .then(html => {
-                headerContainer.innerHTML = html;
-                setActiveNavLink();
-            })
-            .catch(error => {
-                console.error('Error loading header:', error);
-                showNotification('Failed to load navigation. Please refresh the page.', 'error');
-            });
-    }
-}
-
-// Load Footer
-function loadFooter() {
-    const footerContainer = document.getElementById('footer-container');
-    if (footerContainer) {
-        fetch('./footer.html')
-            .then(response => response.text())
-            .then(html => {
-                footerContainer.innerHTML = html;
-                setupBackToTopButton();                // Reinitialize AOS for dynamically loaded footer elements
-                if (typeof AOS !== 'undefined') {
-                    AOS.refresh();
-                }            })
-            .catch(error => {
-                console.error('Error loading footer:', error);
-                showNotification('Failed to load footer. Some features may not work.', 'error');
-            });
-    }
-}
 
 // Initialize Course Filters
 function initializeCourseFilters() {
@@ -79,26 +42,8 @@ function initializeCourseFilters() {
             }
         });
 
-        AOS.refresh();
+        if (typeof AOS !== 'undefined') AOS.refresh();
     }
-}
-
-// Setup Back to Top Button
-function setupBackToTopButton() {
-    const backToTopBtn = document.getElementById('back-to-top');
-    if (!backToTopBtn) return;
-
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 300) {
-            backToTopBtn.classList.add('show');
-        } else {
-            backToTopBtn.classList.remove('show');
-        }
-    });
-
-    backToTopBtn.addEventListener('click', function() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
 }
 
 // Add fade-in animation

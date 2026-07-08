@@ -69,34 +69,6 @@ const scholarshipDetails = {
     }
 };
 
-function loadPageHeader() {
-    const headerContainer = document.getElementById('header-container');
-    if (!headerContainer) return;
-    fetch('./header.html')
-        .then(response => response.text())
-        .then(html => {
-            headerContainer.innerHTML = html;
-            if (typeof setActiveNavLink === 'function') {
-                setActiveNavLink();
-            }
-        })
-        .catch(error => console.error('Error loading header:', error));
-}
-
-function loadPageFooter() {
-    const footerContainer = document.getElementById('footer-container');
-    if (!footerContainer) return;
-    fetch('./footer.html')
-        .then(response => response.text())
-        .then(html => {
-            footerContainer.innerHTML = html;
-            if (typeof setupBackToTopButton === 'function') {
-                setupBackToTopButton();
-            }
-        })
-        .catch(error => console.error('Error loading footer:', error));
-}
-
 function loadScholarshipDetails() {
     const urlParams = new URLSearchParams(window.location.search);
     const program = urlParams.get('program') || 'achiever';
@@ -130,11 +102,8 @@ function loadScholarshipDetails() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    loadPageHeader();
-    loadPageFooter();
-    if (typeof AOS !== 'undefined') {
-        if (typeof AOS !== 'undefined') AOS.init({ duration: 1000, once: true });
-    }
+    loadHeader();
+    loadFooter();
     loadScholarshipDetails();
 });
 

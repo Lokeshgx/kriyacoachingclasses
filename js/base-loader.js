@@ -175,6 +175,71 @@
     window.loadCommonHead = loadCommonHead;
     window.loadCommonScripts = loadCommonScripts;
 
+    // ── Shared header / footer fragment loaders ──────────────────────────────
+    // These are exposed globally so every page JS can call loadHeader() /
+    // loadFooter() without each file needing its own copy of the logic.
+
+    function adjustHeaderLinksForRoot(headerContainer) {
+        if (!headerContainer) return;
+        const pathParts = window.location.pathname.split('/').filter(function(p) { return p; });
+        const basePath = pathParts.length > 1 ? '/' + pathParts[0] : '';
+        headerContainer.querySelectorAll('a[href]').forEach(function(link) {
+            var href = link.getAttribute('href');
+            if (!href || href.startsWith('http') || href.startsWith('/') || href.startsWith('#')) return;
+            var newHref = href.startsWith('../') ? href.replace('../', '') : 'pages/' + href;
+            if (basePath && !newHref.startsWith('/')) newHref = basePath + '/' + newHref;
+            link.setAttribute('href', newHref);
+        });
+    }
+
+    function adjustFooterLinksForRoot(footerContainer) {
+        if (!footerContainer) return;
+        var pathParts = window.location.pathname.split('/').filter(function(p) { return p; });
+        var basePath = pathParts.length > 1 ? '/' + pathParts[0] : '';
+        footerContainer.querySelectorAll('a[href]').forEach(function(link) {
+            var href = link.getAttribute('href');
+            if (!href || href.startsWith('http') || href.startsWith('/') || href.startsWith('#')) return;
+            var newHref = href.startsWith('../') ? href.replace('../', '') : 'pages/' + href;
+            if (basePath && !newHref.startsWith('/')) newHref = basePath + '/' + newHref;
+            link.setAttribute('href', newHref);
+        });
+    }
+
+    function loadHeader(callback) {
+        var headerContainer = document.getElementById('header-container');
+        if (!headerContainer) return;
+        fetch(fragmentBasePath + 'header.html')
+            .then(function(r) { return r.text(); })
+            .then(function(html) {
+                headerContainer.innerHTML = html;
+                if (!isSubPage) adjustHeaderLinksForRoot(headerContainer);
+                if (typeof window.setActiveNavLink === 'function') window.setActiveNavLink();
+                if (typeof callback === 'function') callback();
+            })
+            .catch(function(e) { console.error('Error loading header:', e); });
+    }
+
+    function loadFooter(callback) {
+        var footerContainer = document.getElementById('footer-container');
+        if (!footerContainer) return;
+        fetch(fragmentBasePath + 'footer.html')
+            .then(function(r) { return r.text(); })
+            .then(function(html) {
+                footerContainer.innerHTML = html;
+                if (!isSubPage) adjustFooterLinksForRoot(footerContainer);
+                if (typeof window.setupBackToTopButton === 'function') window.setupBackToTopButton();
+                if (typeof window.AOS !== 'undefined') window.AOS.refresh();
+                if (typeof callback === 'function') callback();
+            })
+            .catch(function(e) { console.error('Error loading footer:', e); });
+    }
+
+    window.loadHeader = loadHeader;
+    window.loadFooter = loadFooter;
+    window.adjustHeaderLinksForRoot = adjustHeaderLinksForRoot;
+    window.adjustFooterLinksForRoot = adjustFooterLinksForRoot;
+    // ─────────────────────────────────────────────────────────────────────────
+
     loadCommonHead();
     // Preload shared JS early so page-specific scripts at the end of body can rely on them.
     loadCommonScripts();

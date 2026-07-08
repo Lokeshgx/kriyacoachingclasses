@@ -261,61 +261,9 @@ function initializeCandidateForm() {
     });
 }
 
-function loadHeader() {
-    const headerContainer = document.getElementById('header-container');
-    if (!headerContainer) return;
-
-    fetch('./header.html')
-        .then(response => response.text())
-        .then(html => {
-            headerContainer.innerHTML = html;
-            if (typeof setActiveNavLink === 'function') {
-                setActiveNavLink();
-            }
-        })
-        .catch(error => console.error('Error loading header:', error));
-}
-
-function setupBackToTopButton() {
-    const backToTopBtn = document.getElementById('back-to-top');
-    if (!backToTopBtn) return;
-
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 300) {
-            backToTopBtn.classList.add('show');
-        } else {
-            backToTopBtn.classList.remove('show');
-        }
-    });
-
-    backToTopBtn.addEventListener('click', function() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-}
-
-function loadFooter() {
-    const footerContainer = document.getElementById('footer-container');
-    if (!footerContainer) return;
-
-    fetch('./footer.html')
-        .then(response => response.text())
-        .then(html => {
-            footerContainer.innerHTML = html;
-            setupBackToTopButton();
-            if (typeof AOS !== 'undefined') {
-                AOS.refresh();
-            }
-        })
-        .catch(error => console.error('Error loading footer:', error));
-}
-
 document.addEventListener('DOMContentLoaded', function() {
     loadHeader();
     loadFooter();
     prefillJobInfo();
     initializeCandidateForm();
-
-    if (typeof AOS !== 'undefined') {
-        AOS.init({ duration: 850, once: true, offset: 70 });
-    }
 });
