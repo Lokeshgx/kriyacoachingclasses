@@ -36,6 +36,11 @@ body {
     padding-top: 70px;
 }
 
+main {
+    top: 130px;
+    position: sticky;
+}
+
 /* ===== TYPOGRAPHY ===== */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
@@ -162,7 +167,7 @@ a:hover {
 }
 
 section {
-    padding: 0 0 0.5rem 0;
+    padding: 0 0 0 0;
 }
 
 section.light-bg {

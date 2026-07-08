@@ -3,7 +3,7 @@
 /* Hero Carousel Section */
 .hero-carousel-section {
     position: relative;
-    min-height: 505px;
+ /*   min-height: 505px; */
     overflow: hidden;
 }
 
