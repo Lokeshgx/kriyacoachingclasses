@@ -1,7 +1,8 @@
 /* Mental Health page styles */
 
 .mental-hero-section {
-    padding: 4rem 0;
+    padding: 2rem 0;
+    background-color: lightseagreen;
 }
 
 .mental-hero-section h1 {
