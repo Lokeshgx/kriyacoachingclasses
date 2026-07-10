@@ -26,6 +26,8 @@
 
 html {
     scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -34,6 +36,8 @@ body {
     line-height: 1.6;
     background-color: #ffffff;
     padding-top: 70px;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 main {

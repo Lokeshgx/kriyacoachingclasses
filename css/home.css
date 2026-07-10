@@ -61,26 +61,34 @@
     width: 100%;
 }
 
-/* Carousel Controls */
-.carousel-control-prev,
-.carousel-control-next {
-    width: 50px;
-    height: 50px;
-    background-color: rgba(255, 255, 255, 0.2);
+/* ─── Hero Carousel Controls ─── */
+#heroCarousel .carousel-control-prev,
+#heroCarousel .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.25);
     border: none;
     border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    z-index: 2;
 }
 
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-    background-color: rgba(255, 255, 255, 0.4);
+#heroCarousel .carousel-control-prev:hover,
+#heroCarousel .carousel-control-next:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 1;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
+#heroCarousel .carousel-control-prev-icon,
+#heroCarousel .carousel-control-next-icon {
     width: 20px;
     height: 20px;
 }
@@ -604,13 +612,32 @@
         margin-bottom: 1.5rem;
     }
 
-    #heroCarousel ~ .carousel-control-prev,
-    #heroCarousel ~ .carousel-control-next {
-        display: none;
+    #heroCarousel .carousel-control-prev,
+    #heroCarousel .carousel-control-next {
+        width: 36px;
+        height: 36px;
     }
 }
 
 @media (max-width: 576px) {
+
+    .img-fluid-carousel-1 {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .img-fluid-carousel-2 {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .img-fluid-carousel-3 {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .row .carousel-image {
+        margin-top: 1rem; 
+    }
+
     .carousel-title {
         font-size: 1.5rem;
     }
@@ -627,6 +654,19 @@
 
     .hero-carousel-section {
         min-height: 400px;
+    }
+
+    /* Smaller controls on very small screens */
+    #heroCarousel .carousel-control-prev,
+    #heroCarousel .carousel-control-next {
+        width: 32px;
+        height: 32px;
+    }
+
+    #heroCarousel .carousel-control-prev-icon,
+    #heroCarousel .carousel-control-next-icon {
+        width: 16px;
+        height: 16px;
     }
 
     .stat-number {
@@ -789,16 +829,9 @@
     margin: 0;
 }
 
-/* Carousel Controls */
-.carousel-controls {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 2.5rem;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
+/* ─── Students Carousel Controls (inside .carousel-controls flex row) ─── */
+.carousel-controls .carousel-control-prev,
+.carousel-controls .carousel-control-next {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -812,15 +845,18 @@
     font-size: 1.25rem;
     transition: background 0.3s ease;
     flex-shrink: 0;
+    position: static;
+    transform: none;
+    opacity: 1;
 }
 
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
+.carousel-controls .carousel-control-prev:hover,
+.carousel-controls .carousel-control-next:hover {
     background: #1e40af;
 }
 
-.carousel-control-prev:active,
-.carousel-control-next:active {
+.carousel-controls .carousel-control-prev:active,
+.carousel-controls .carousel-control-next:active {
     background: #1e3a8a;
 }
 
@@ -901,5 +937,22 @@
 
     .student-class {
         font-size: 0.65rem;
+    }
+
+    .img-fluid-carousel-1 {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .img-fluid-carousel-2 {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .img-fluid-carousel-3 {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .row .carousel-image {
+        margin-top: 1rem; 
     }
 }
