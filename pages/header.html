@@ -1,15 +1,18 @@
 <!-- Top notification bar (sticky above header) -->
 <div class="top-notice" role="region" aria-label="Site notifications">
-    <div class="container-fluid position-relative d-flex align-items-center">
-        <div class="notice-left d-flex align-items-center">
-            <span class="notice-label"><i class="fas fa-bullhorn"></i> Admission Open Now!</span>
-        </div>
-        <div class="notice-center position-absolute start-50 translate-middle-x d-flex align-items-center gap-3">
+    <div class="container-fluid notice-bar-inner">
+        <!-- Contact details: phone + email -->
+        <div class="notice-left d-flex align-items-center gap-3">
             <a href="tel:+918431345144" class="notice-link"><i class="fas fa-phone"></i>&nbsp;+91 84313 45144</a>
             <a href="mailto:nitin@kriyacoachingclasses.com" class="notice-link"><i class="fas fa-envelope"></i>&nbsp;nitin@kriyacoachingclasses.com</a>
         </div>
+        <!-- Centre: admission badge (hidden on mobile/tablet) -->
+        <div class="notice-center">
+            <span class="notice-label"><i class="fas fa-bullhorn"></i> Admission Open Now!</span>
+        </div>
+        <!-- Right: GSTIN + social icons -->
         <div class="notice-right ms-auto d-flex align-items-center gap-2">
-         <div class="notice-gst">GSTIN: 29CIWPS4600Q1Z5</div>&emsp;&emsp;
+            <div class="notice-gst">GSTIN: 29CIWPS4600Q1Z5</div>
             <div class="notice-social d-flex align-items-center gap-2">
                 <a href="https://www.facebook.com/people/Kriyacoaching/61575142894755/" target="_blank" rel="noopener" class="social-icon social-facebook"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://www.linkedin.com/in/nitin-saxena-a60299360/" target="_blank" rel="noopener" class="social-icon social-linkedin"><i class="fab fa-linkedin-in"></i></a>
@@ -41,6 +44,12 @@
 
             <!-- Navigation Links -->
             <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Close button — visible only on mobile (< lg) -->
+                <div class="d-flex d-lg-none justify-content-end align-items-center pt-2 pb-1 px-1">
+                    <button class="navbar-close-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Close navigation">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
                 <ul class="navbar-nav ms-auto align-items-lg-center">
                     <li class="nav-item">
                         <a class="nav-link" href="../index.html">Home</a>
