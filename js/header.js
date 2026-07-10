@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Adjust header position based on top-notice height so they don't overlap
+/*
 function adjustHeaderOffset() {
     const topNotice = document.querySelector('.top-notice');
     const navbar = document.querySelector('.navbar-wrapper');
@@ -71,12 +72,13 @@ function adjustHeaderOffset() {
 
     // Update body padding so content begins after top-notice + navbar
     document.body.style.paddingTop = (topHeight + navHeight) + 'px';
-}
+} */
 
 // Recompute on window load and resize (debounced)
+/*
 window.addEventListener('load', adjustHeaderOffset);
 let __hdrResizeTimer = null;
 window.addEventListener('resize', function() {
     clearTimeout(__hdrResizeTimer);
     __hdrResizeTimer = setTimeout(adjustHeaderOffset, 120);
-});
+});*/
