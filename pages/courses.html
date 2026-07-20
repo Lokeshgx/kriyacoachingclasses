@@ -33,7 +33,7 @@
             <div class="container-custom">
                 <div class="section-header">
                     <span class="section-subtitle">Comprehensive Learning</span>
-                    <h1>Our Courses</h1>
+                    <h2>Our Courses</h2>
                     <p>Explore our wide range of courses designed for different academic levels and competencies</p>
                 </div>
 
@@ -43,9 +43,12 @@
                         <div class="filter-group">
                             <label>Select Board:</label>
                             <select id="boardFilter" class="form-select">
-                                <option value="">All Boards</option>
+                                <option value="all">All Boards</option>
                                 <option value="cbse">CBSE</option>
                                 <option value="icse">ICSE</option>
+                                <option value="igcse">IGCSE</option>
+                                <option value="ib">IB</option>
+                                <option value="isc">ISC</option>
                                 <option value="state">State Board</option>
                                 <option value="competitive">Competitive Exams</option>
                             </select>
@@ -53,18 +56,21 @@
                         <div class="filter-group">
                             <label>Select Class:</label>
                             <select id="classFilter" class="form-select">
-                                <option value="">All Classes</option>
+                                <option value="all">All Classes</option>
+                                <option value="class-6">Class 6</option>
+                                <option value="class-7">Class 7</option>
+                                <option value="class-8">Class 8</option>
                                 <option value="class-9">Class 9</option>
                                 <option value="class-10">Class 10</option>
-                                <option value="class-11">Class 11</option>
-                                <option value="class-12">Class 12</option>
-                                <option value="post-12">Post 12</option>
+                                <option value="class-11">Class 11 / PU 1st Year</option>
+                                <option value="class-12">Class 12 / PU 2nd Year</option>
+                                <option value="post-12">Competitive Exam</option>
                             </select>
                         </div>
                         <div class="filter-group">
                             <label>Select Subject:</label>
                             <select id="subjectFilter" class="form-select">
-                                <option value="">All Subjects</option>
+                                <option value="all">All Subjects</option>
                                 <option value="mathematics">Mathematics</option>
                                 <option value="science">Science</option>
                                 <option value="physics">Physics</option>
@@ -78,26 +84,26 @@
 
                 <!-- Courses Grid -->
                 <div class="courses-grid">
-                    <!-- Course 1 -->
-                    <div class="course-card" data-board="cbse" data-class="class-10" data-aos="fade-up">
-                        <div class="course-header" style="background: linear-gradient(135deg, #2563eb, #1e40af);">
-                            <div class="course-category"><i class="fas fa-book-open"></i> CBSE Class 10</div>
-                            <h3>Science & Mathematics</h3>
+                    <!-- Class 6 -->
+                    <div class="course-card" data-board="all" data-class="class-6" data-aos="fade-up">
+                        <div class="course-header" style="background: linear-gradient(135deg, 	#A95C68, #80461B);">
+                            <div class="course-category"><i class="fas fa-book-open"></i>  Class 6 (All boards)</div>
+                            <h3>Science & Math</h3>
                         </div>
                         <div class="course-body">
-                            <p>Complete coverage of Science (Physics, Chemistry, Biology) and Mathematics for CBSE Class 10 board exams.</p>
+                            <p>Complete coverage of Science (Physics, Chemistry, Biology) and Mathematics for Class 6.</p>
                             <div class="course-details">
                                 <div class="detail-item">
                                     <i class="fas fa-clock"></i>
-                                    <span>12 Months</span>
+                                    <span>5:00 PM to 7:00 PM</span>
                                 </div>
                                 <div class="detail-item">
                                     <i class="fas fa-users"></i>
-                                    <span>Batch: 10-15</span>
+                                    <span>Mon to Thu</span>
                                 </div>
                                 <div class="detail-item">
                                     <i class="fas fa-rupee-sign"></i>
-                                    <span>₹15,000</span>
+                                    <span>₹40000 for complete course</span>
                                 </div>
                             </div>
                             <ul class="course-features">
@@ -110,26 +116,220 @@
                         </div>
                     </div>
 
-                    <!-- Course 2 -->
-                    <div class="course-card" data-board="cbse" data-class="class-12" data-aos="fade-up" data-aos-delay="100">
-                        <div class="course-header" style="background: linear-gradient(135deg, #10b981, #059669);">
-                            <div class="course-category"><i class="fas fa-book-open"></i> CBSE Class 12</div>
-                            <h3>Science Stream</h3>
+                    <!-- Course 7 -->
+                    <div class="course-card" data-board="all" data-class="class-7" data-aos="fade-up">
+                        <div class="course-header" style="background: linear-gradient(135deg, 	#A95C68, #80461B);">
+                            <div class="course-category"><i class="fas fa-book-open"></i>  Class 7 (All boards)</div>
+                            <h3>Science & Math</h3>
                         </div>
                         <div class="course-body">
-                            <p>Advanced Science courses for CBSE Class 12 including PCM/PCB with competitive exam preparation.</p>
+                            <p>Complete coverage of Science (Physics, Chemistry, Biology) and Mathematics for Class 7.</p>
                             <div class="course-details">
                                 <div class="detail-item">
                                     <i class="fas fa-clock"></i>
-                                    <span>12 Months</span>
+                                    <span>5:00 PM to 7:00 PM</span>
                                 </div>
                                 <div class="detail-item">
                                     <i class="fas fa-users"></i>
-                                    <span>Batch: 8-12</span>
+                                    <span>Mon to Fri</span>
                                 </div>
                                 <div class="detail-item">
                                     <i class="fas fa-rupee-sign"></i>
-                                    <span>₹20,000</span>
+                                    <span>₹50000 for complete course</span>
+                                </div>
+                            </div>
+                            <ul class="course-features">
+                                <li><i class="fas fa-check"></i> Weekly Tests</li>
+                                <li><i class="fas fa-check"></i> Study Materials</li>
+                                <li><i class="fas fa-check"></i> Doubt Classes</li>
+                                <li><i class="fas fa-check"></i> Board Guidance</li>
+                            </ul>
+                            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
+                        </div>
+                    </div>
+
+                    <!-- Course 8 -->
+                    <div class="course-card" data-board="all" data-class="class-8" data-aos="fade-up">
+                        <div class="course-header" style="background: linear-gradient(135deg, 	#A95C68, #80461B);">
+                            <div class="course-category"><i class="fas fa-book-open"></i>  Class 8 (All boards)</div>
+                            <h3>Science & Math</h3>
+                        </div>
+                        <div class="course-body">
+                            <p>Complete coverage of Science (Physics, Chemistry, Biology) and Mathematics for Class 8.</p>
+                            <div class="course-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>5:00 PM to 7:00 PM</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>Mon to Fri</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-rupee-sign"></i>
+                                    <span>₹50000 for complete course</span>
+                                </div>
+                            </div>
+                            <ul class="course-features">
+                                <li><i class="fas fa-check"></i> Weekly Tests</li>
+                                <li><i class="fas fa-check"></i> Study Materials</li>
+                                <li><i class="fas fa-check"></i> Doubt Classes</li>
+                                <li><i class="fas fa-check"></i> Board Guidance</li>
+                            </ul>
+                            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
+                        </div>
+                    </div>
+
+                    <!-- Course 9 -->
+                    <div class="course-card" data-board="all" data-class="class-9" data-aos="fade-up">
+                        <div class="course-header" style="background: linear-gradient(135deg, 	#A95C68, #80461B);">
+                            <div class="course-category"><i class="fas fa-book-open"></i>  Class 9 (All boards)</div>
+                            <h3>Science & Math</h3>
+                        </div>
+                        <div class="course-body">
+                            <p>Complete coverage of Science (Physics, Chemistry, Biology) and Mathematics for Class 9.</p>
+                            <div class="course-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>5:00 PM to 7:00 PM</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>Mon to Sat</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-rupee-sign"></i>
+                                    <span>₹60000 for complete course</span>
+                                </div>
+                            </div>
+                            <ul class="course-features">
+                                <li><i class="fas fa-check"></i> Weekly Tests</li>
+                                <li><i class="fas fa-check"></i> Study Materials</li>
+                                <li><i class="fas fa-check"></i> Doubt Classes</li>
+                                <li><i class="fas fa-check"></i> Board Guidance</li>
+                            </ul>
+                            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
+                        </div>
+                    </div>
+
+                    <!-- Course 10 -->
+                    <div class="course-card" data-board="all" data-class="class-10" data-aos="fade-up">
+                        <div class="course-header" style="background: linear-gradient(135deg, 	#A95C68, #80461B);">
+                            <div class="course-category"><i class="fas fa-book-open"></i>  Class 10 (All boards)</div>
+                            <h3>Science & Math</h3>
+                        </div>
+                        <div class="course-body">
+                            <p>Complete coverage of Science (Physics, Chemistry, Biology) and Mathematics for Class 10.</p>
+                            <div class="course-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>6:00 PM to 8:00 PM</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>Mon to Sat</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-rupee-sign"></i>
+                                    <span>₹60000 for complete course</span>
+                                </div>
+                            </div>
+                            <ul class="course-features">
+                                <li><i class="fas fa-check"></i> Weekly Tests</li>
+                                <li><i class="fas fa-check"></i> Study Materials</li>
+                                <li><i class="fas fa-check"></i> Doubt Classes</li>
+                                <li><i class="fas fa-check"></i> Board Guidance</li>
+                            </ul>
+                            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
+                        </div>
+                    </div>
+
+                    <!-- Course 11 / PU 1st Year -->
+                    <div class="course-card" data-board="all" data-class="class-11" data-aos="fade-up">
+                        <div class="course-header" style="background: linear-gradient(135deg, 	#A95C68, #80461B);">
+                            <div class="course-category"><i class="fas fa-book-open"></i>  Class 11 / PU 1st Year (All boards)</div>
+                           <p><b>Science Stream:</b><i> Physics, Chemistry, Biology, and Math</i></p>
+                           <p><b>Commerce Stream:</b><i>Accounts, Economics, Business Studies, and Math/ Applied Math</i></p> 
+                        </div>
+                        <div class="course-body">
+                            <p>Complete coverage of each subject Physics, Chemistry, Biology and Mathematics for Class 11th.</p>
+                            <div class="course-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>6:00 PM to 8:00 PM</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>Mon to Sat</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-rupee-sign"></i>
+                                    <span>₹25000 per subject</span>
+                                </div>
+                            </div>
+                            <ul class="course-features">
+                                <li><i class="fas fa-check"></i> Weekly Tests</li>
+                                <li><i class="fas fa-check"></i> Study Materials</li>
+                                <li><i class="fas fa-check"></i> Doubt Classes</li>
+                                <li><i class="fas fa-check"></i> Board Guidance</li>
+                            </ul>
+                            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
+                        </div>
+                    </div>
+
+                     <!-- Course 11 / PU 1st Year -->
+                  <!--  <div class="course-card" data-board="" data-class="class-11" data-aos="fade-up">
+                        <div class="course-header" style="background: linear-gradient(135deg, 	#A95C68, #80461B);">
+                            <div class="course-category"><i class="fas fa-book-open"></i>  Class 11 / PU 1st Year (All boards)</div>
+                            <p><b>Commerce Stream:</b><i> Accounts, Economics, Business Studies, and Math/ Applied Math</i></p>
+                        </div>
+                        <div class="course-body">
+                            <p>Complete coverage of each subject Accounts, Economics, Business Studies, and Math/ Applied Math for Class 11th.</p>
+                            <div class="course-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>6:00 PM to 8:00 PM</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>Mon to Sat</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-rupee-sign"></i>
+                                    <span>₹25000 per subject</span>
+                                </div>
+                            </div>
+                            <ul class="course-features">
+                                <li><i class="fas fa-check"></i> Weekly Tests</li>
+                                <li><i class="fas fa-check"></i> Study Materials</li>
+                                <li><i class="fas fa-check"></i> Doubt Classes</li>
+                                <li><i class="fas fa-check"></i> Board Guidance</li>
+                            </ul>
+                            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
+                        </div>
+                    </div>-->
+
+                    <!-- class 12 -->
+                    <div class="course-card" data-board="all" data-class="class-12" data-aos="fade-up">
+                        <div class="course-header" style="background: linear-gradient(135deg, #A95C68, #80461B);">
+                            <div class="course-category"><i class="fas fa-book-open"></i>  Class 12 / PU 2nd Year</div>
+                            <p><b>Science Stream:</b><i> Physics, Chemistry, Biology, and Math</i></p>
+                            <p><b>Commerce Stream:</b><i>Accounts, Economics, Business Studies, and Math/ Applied Math</i></p>
+                        </div>
+                        <div class="course-body">
+                            <p>Complete coverage of each subject Physics, Chemistry, Biology and Mathematics for Class 12th.</p>
+                            <div class="course-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>6:00 PM to 8:00 PMs</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>Mon to Sat</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-rupee-sign"></i>
+                                    <span>₹25000 per subject</span>
                                 </div>
                             </div>
                             <ul class="course-features">
@@ -142,143 +342,86 @@
                         </div>
                     </div>
 
-                    <!-- Course 3 -->
-                    <div class="course-card" data-board="competitive" data-class="post-12" data-aos="fade-up" data-aos-delay="200">
-                        <div class="course-header" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
-                            <div class="course-category"><i class="fas fa-book-open"></i> Competitive</div>
-                            <h3>JEE Main & Advanced</h3>
+                    <!-- class 12 -->
+                    <!-- <div class="course-card" data-board="" data-class="class-12" data-aos="fade-up">
+                        <div class="course-header" style="background: linear-gradient(135deg, #A95C68, #80461B);">
+                            <div class="course-category"><i class="fas fa-book-open"></i>  Class 12 / PU 2nd Year</div>
+                            <p><b>Commerce Stream:</b><i>Accounts, Economics, Business Studies, and Math/ Applied Math</i></p>
                         </div>
                         <div class="course-body">
-                            <p>Comprehensive JEE preparation course with updated curriculum, mock tests, and expert guidance from IIT alumni.</p>
+                            <p>Complete coverage of each subject Accounts, Economics, Business Studies, and Math/ Applied Math for Class 12th.</p>
                             <div class="course-details">
                                 <div class="detail-item">
                                     <i class="fas fa-clock"></i>
-                                    <span>18 Months</span>
+                                    <span>6:00 PM to 8:00 PMs</span>
                                 </div>
                                 <div class="detail-item">
                                     <i class="fas fa-users"></i>
-                                    <span>Batch: 6-10</span>
+                                    <span>Mon to Sat</span>
                                 </div>
                                 <div class="detail-item">
                                     <i class="fas fa-rupee-sign"></i>
-                                    <span>₹40,000</span>
+                                    <span>₹25000 per subject</span>
                                 </div>
                             </div>
                             <ul class="course-features">
-                                <li><i class="fas fa-check"></i> Intensive Training</li>
-                                <li><i class="fas fa-check"></i> Weekly Full Tests</li>
-                                <li><i class="fas fa-check"></i> Doubt Solving</li>
-                                <li><i class="fas fa-check"></i> IIT Alumni Faculty</li>
+                                <li><i class="fas fa-check"></i> Board & Competitive</li>
+                                <li><i class="fas fa-check"></i> Mock Tests</li>
+                                <li><i class="fas fa-check"></i> Faculty Support</li>
+                                <li><i class="fas fa-check"></i> Performance Tracking</li>
                             </ul>
                             <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
                         </div>
-                    </div>
+                    </div>-->
 
-                    <!-- Course 4 -->
-                    <div class="course-card" data-board="competitive" data-class="post-12" data-aos="fade-up" data-aos-delay="300">
-                        <div class="course-header" style="background: linear-gradient(135deg, #ef4444, #dc2626);">
-                            <div class="course-category"><i class="fas fa-book-open"></i> Competitive</div>
-                            <h3>NEET Preparation</h3>
+                    <!-- competitive -->
+                    <div class="course-card" data-board="competitive" data-class="post-12" data-aos="fade-up">
+                        <div class="course-header" style="background: linear-gradient(135deg, #A95C68, #80461B);">
+                            <div class="course-category"><i class="fas fa-book-open"></i> Competitive Exams Preparation</div>
+                            <h3>NEET, KCET, ICAR, IPMAT, ComedK, VIT, BITSAT, CUET</h3>
                         </div>
                         <div class="course-body">
-                            <p>Complete NEET preparation with expert biology, chemistry & physics coaching from experienced medical entrance specialists.</p>
+                            <p>Complete Preparation for NEET, KCET, ICAR, IPMAT, ComedK, VIT, BITSAT, CUET (Including board exams)</p>
                             <div class="course-details">
                                 <div class="detail-item">
                                     <i class="fas fa-clock"></i>
-                                    <span>18 Months</span>
+                                    <span>5:00 PM to 8:00 PM</span>
                                 </div>
                                 <div class="detail-item">
                                     <i class="fas fa-users"></i>
-                                    <span>Batch: 8-12</span>
+                                    <span>Mon to Sat</span>
                                 </div>
                                 <div class="detail-item">
                                     <i class="fas fa-rupee-sign"></i>
-                                    <span>₹35,000</span>
+                                    <span>₹2,50,000 for complete course</span>
                                 </div>
                             </div>
                             <ul class="course-features">
                                 <li><i class="fas fa-check"></i> Focused Coaching</li>
-                                <li><i class="fas fa-check"></i> Practice Cases</li>
                                 <li><i class="fas fa-check"></i> Regular Assessments</li>
-                                <li><i class="fas fa-check"></i> Medical Counseling</li>
+                                <li><i class="fas fa-check"></i> Mock practice test</li>
+                                <li><i class="fas fa-check"></i> Weekly test</li>
+                                <li><i class="fas fa-check"></i> 1 year and 2 years batch available</li>
                             </ul>
                             <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
                         </div>
                     </div>
 
-                    <!-- Course 5 -->
-                    <div class="course-card" data-board="state" data-class="class-10" data-aos="fade-up" data-aos-delay="400">
-                        <div class="course-header" style="background: linear-gradient(135deg, #8b5cf6, #6d28d9);">
-                            <div class="course-category"><i class="fas fa-book-open"></i> State Board</div>
-                            <h3>State Board Class 10</h3>
-                        </div>
-                        <div class="course-body">
-                            <p>Comprehensive State Board Class 10 preparation with focus on local curriculum and board exam patterns.</p>
-                            <div class="course-details">
-                                <div class="detail-item">
-                                    <i class="fas fa-clock"></i>
-                                    <span>12 Months</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-users"></i>
-                                    <span>Batch: 12-15</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-rupee-sign"></i>
-                                    <span>₹12,000</span>
-                                </div>
-                            </div>
-                            <ul class="course-features">
-                                <li><i class="fas fa-check"></i> Curriculum Aligned</li>
-                                <li><i class="fas fa-check"></i> Board Pattern</li>
-                                <li><i class="fas fa-check"></i> Question Bank</li>
-                                <li><i class="fas fa-check"></i> Sample Papers</li>
-                            </ul>
-                            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
-                        </div>
-                    </div>
+                    
 
-                    <!-- Course 6 -->
-                    <div class="course-card" data-board="icse" data-class="class-12" data-aos="fade-up" data-aos-delay="500">
-                        <div class="course-header" style="background: linear-gradient(135deg, #ec4899, #be185d);">
-                            <div class="course-category"><i class="fas fa-book-open"></i> ICSE</div>
-                            <h3>ICSE Class 12</h3>
-                        </div>
-                        <div class="course-body">
-                            <p>Complete ICSE Class 12 course covering all subjects with emphasis on conceptual clarity and detailed explanation.</p>
-                            <div class="course-details">
-                                <div class="detail-item">
-                                    <i class="fas fa-clock"></i>
-                                    <span>12 Months</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-users"></i>
-                                    <span>Batch: 8-12</span>
-                                </div>
-                                <div class="detail-item">
-                                    <i class="fas fa-rupee-sign"></i>
-                                    <span>₹22,000</span>
-                                </div>
-                            </div>
-                            <ul class="course-features">
-                                <li><i class="fas fa-check"></i> ICSE Syllabus</li>
-                                <li><i class="fas fa-check"></i> Board Exams</li>
-                                <li><i class="fas fa-check"></i> Mock Tests</li>
-                                <li><i class="fas fa-check"></i> Result Guarantee</li>
-                            </ul>
-                            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </section>
 
         <!-- Call to Action -->
-        <section class="courses-cta">
-            <div class="container-custom text-center"  data-aos="fade-up">
-                <h2>Still Confused About Which Course?</h2>
-                <p>Contact our counselors to get personalized course recommendations</p>
-                <a href="contact.html" class="btn btn-primary btn-lg">Contact Counselor</a>
+        <section class="cta-section">
+            <div class="container-custom">
+                <div class="cta-content" data-aos="fade-up">
+                    <h2>Still Confused About Which Course?</h2>
+                    <p>We offer confidential, evidence-based care tailored to each learner.</p>
+                    <a href="contact.html" class="btn btn-primary btn-lg">Contact Counselor</a>
+                </div>
             </div>
         </section>
     </main>

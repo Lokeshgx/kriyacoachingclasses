@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,88 +12,196 @@
     <div id="header-container"></div>
 
     <main id="main-content">
+
+        <!-- Breadcrumb -->
         <nav aria-label="breadcrumb" class="breadcrumb-section">
             <div class="container-custom">
-                <ol class="breadcrumb">
+                <ol class="breadcrumb mb-0">
                     <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
                     <li class="breadcrumb-item"><a href="scholarship.html">Scholarships</a></li>
-                    <li class="breadcrumb-item active" id="detail-breadcrumb">Scholarship Detail</li>
+                    <li class="breadcrumb-item active" id="sd-breadcrumb">Scholarship Detail</li>
                 </ol>
             </div>
         </nav>
 
-        <section class="scholarship-detail-hero py-5">
-            <div class="container-custom">
-                <div class="row align-items-center">
-                    <div class="col-lg-7" data-aos="fade-right">
-                        <span class="section-subtitle" id="detail-subtitle">Scholarship Program</span>
-                        <h1 id="detail-title">Scholarship Name</h1>
-                        <p id="detail-description">Scholarship overview and short summary will appear here.</p>
-                        <a href="scholarship.html#scholarship-list" class="btn btn-outline btn-lg mt-3">Explore Other Scholarships</a>
+        <!-- ====== HERO ====== -->
+        <section class="sd-hero" id="sd-hero">
+            <div class="container">
+                <div id="sd-badge"></div>
+                <h1 id="sd-title">Scholarship Name</h1>
+                <p class="sd-tagline" id="sd-tagline">Loading details&hellip;</p>
+
+                <div class="sd-hero-stats">
+                    <div class="sd-stat">
+                        <span id="sd-stat-coverage">-</span>
+                        <small>Coverage</small>
                     </div>
-                    <div class="col-lg-5 text-center" data-aos="fade-left">
-                        <div class="detail-hero-image">
-                            <img id="detail-hero-img" src="../images/faculty-avatar-1.svg" alt="Scholarship Visual">
-                        </div>
+                    <div class="sd-stat">
+                        <span id="sd-stat-duration">-</span>
+                        <small>Duration</small>
+                    </div>
+                    <div class="sd-stat">
+                        <span id="sd-stat-seats">-</span>
+                        <small>Available Seats</small>
+                    </div>
+                    <div class="sd-stat">
+                        <span id="sd-stat-type">-</span>
+                        <small>Type</small>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="scholarship-detail-content pb-5">
+        <!-- ====== IN MEMORY OF ====== -->
+        <section class="sd-person-section">
             <div class="container-custom">
-                <div class="row gy-5">
-                    <div class="col-lg-8" data-aos="fade-up">
-                        <div class="detail-section">
-                            <h2>About This Scholarship</h2>
-                            <p id="detail-about">Details about the scholarship will appear here.</p>
+                <h2>In Memory &amp; Honour Of</h2>
+                <div class="sd-person-card" data-aos="fade-up">
+
+                    <!-- Photo -->
+                    <div class="sd-person-photo-col">
+                        <img id="sd-person-photo" src="" alt="Honoree" loading="lazy">
+                        <div class="sd-person-name-plate" id="sd-person-era"></div>
+                    </div>
+
+                    <!-- Info + Tabs -->
+                    <div class="sd-person-info flex-grow-1">
+                        <h3 id="sd-person-name">Name</h3>
+                        <p class="sd-person-role" id="sd-person-role"></p>
+
+                        <!-- Tab buttons -->
+                        <div class="person-tabs">
+                            <button class="person-tab active" data-tab="life-story">Life Story</button>
+                            <button class="person-tab" data-tab="achievements">Achievements</button>
+                            <button class="person-tab" data-tab="lessons">Life Lessons</button>
+                            <button class="person-tab" data-tab="legacy">Legacy</button>
                         </div>
 
-                        <div class="detail-section">
-                            <h2>About the Benefactor</h2>
-                            <div class="benefactor-card">
-                                <div class="benefactor-image">
-                                    <img id="benefactor-image" src="../images/faculty-avatar-2.svg" alt="Benefactor">
+                        <!-- Tab panels -->
+                        <div id="tab-life-story" class="tab-panel active">
+                            <div id="sd-life-story"></div>
+                        </div>
+                        <div id="tab-achievements" class="tab-panel">
+                            <ul class="sd-achievements-list" id="sd-achievements"></ul>
+                        </div>
+                        <div id="tab-lessons" class="tab-panel">
+                            <div id="sd-lessons"></div>
+                        </div>
+                        <div id="tab-legacy" class="tab-panel">
+                            <div class="sd-legacy-box" id="sd-legacy"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== SCHOLARSHIP DETAILS + SIDEBAR ====== -->
+        <section class="sd-details-section">
+            <div class="container-custom">
+                <div class="row g-4">
+
+                    <!-- LEFT: Main Details -->
+                    <div class="col-lg-8" data-aos="fade-up">
+
+                        <!-- Why this scholarship -->
+                        <div class="sd-section-block">
+                            <h2>About This Scholarship</h2>
+                            <p id="sd-why"></p>
+                        </div>
+
+                        <!-- Courses covered -->
+                        <div class="sd-section-block">
+                            <h3><i class="fas fa-graduation-cap me-2 text-primary"></i>Courses &amp; Classes Covered</h3>
+                            <ul class="sd-courses-list" id="sd-courses"></ul>
+                        </div>
+
+                        <!-- Fee structure -->
+                        <div class="sd-section-block">
+                            <h3><i class="fas fa-rupee-sign me-2 text-primary"></i>Fee Structure</h3>
+                            <div class="fee-grid">
+                                <div class="fee-box fee-box-kriya">
+                                    <span class="fee-amount" id="sd-fee-kriya">-</span>
+                                    <span class="fee-label">Kriya Pays</span>
                                 </div>
-                                <div class="benefactor-content">
-                                    <h3 id="benefactor-name">Mr. Nitin Saxena</h3>
-                                    <p id="benefactor-bio">A leader in education with a passion for supporting young scholars.</p>
+                                <div class="fee-box fee-box-student">
+                                    <span class="fee-amount" id="sd-fee-student">-</span>
+                                    <span class="fee-label">Student Pays</span>
                                 </div>
                             </div>
+                            <p class="fee-notes" id="sd-fee-notes"></p>
                         </div>
 
-                        <div class="detail-section">
-                            <h2>Eligibility Criteria</h2>
-                            <ul id="detail-eligibility"></ul>
+                        <!-- Eligibility -->
+                        <div class="sd-section-block">
+                            <h3><i class="fas fa-user-check me-2 text-primary"></i>Eligibility Criteria</h3>
+                            <ul class="sd-elig-list" id="sd-eligibility"></ul>
                         </div>
 
-                        <div class="detail-section">
-                            <h2>Selection Process</h2>
-                            <p id="detail-process">Selection steps will appear here.</p>
+                        <!-- Selection process -->
+                        <div class="sd-section-block">
+                            <h3><i class="fas fa-route me-2 text-primary"></i>Selection Process</h3>
+                            <div id="sd-process"></div>
                         </div>
+
                     </div>
 
+                    <!-- RIGHT: Sidebar -->
                     <div class="col-lg-4" data-aos="fade-left">
-                        <div class="info-box mb-4">
-                            <h4>Program Snapshot</h4>
-                            <p><strong>Type:</strong> <span id="detail-type">Merit Scholarship</span></p>
-                            <p><strong>Coverage:</strong> <span id="detail-coverage">Full Tuition</span></p>
-                            <p><strong>Duration:</strong> <span id="detail-duration">One Academic Year</span></p>
-                        </div>
+                        <div class="sd-sidebar-box">
+                            <h4><i class="fas fa-info-circle me-2"></i>At a Glance</h4>
+                            <ul class="sd-facts-list">
+                                <li><span class="fact-label">Coverage</span><span class="fact-value" id="sb-coverage">-</span></li>
+                                <li><span class="fact-label">Duration</span><span class="fact-value" id="sb-duration">-</span></li>
+                                <li><span class="fact-label">Seats / Year</span><span class="fact-value" id="sb-seats">-</span></li>
+                                <li><span class="fact-label">Type</span><span class="fact-value" id="sb-type">-</span></li>
+                            </ul>
 
-                        <div class="image-grid">
-                            <div class="image-item"><img id="detail-image-1" src="../images/faculty-avatar-3.svg" alt="Scholarship image 1"></div>
-                            <div class="image-item"><img id="detail-image-2" src="../images/faculty-avatar-4.svg" alt="Scholarship image 2"></div>
-                            <div class="image-item"><img id="detail-image-3" src="../images/faculty-avatar-5.svg" alt="Scholarship image 3"></div>
+                            <div class="sd-apply-btns">
+                                <a href="contact.html" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane me-2"></i>Apply Now
+                                </a>
+                                <a href="scholarship.html" class="btn btn-outline-secondary">
+                                    <i class="fas fa-arrow-left me-2"></i>All Scholarships
+                                </a>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
+
+        <!-- ====== CTA ====== -->
+        <section class="sd-cta-section">
+            <div class="container">
+                <h2>Take the First Step Today</h2>
+                <p>Apply for the scholarship and let Kriya invest in your potential. Every great journey begins with one bold decision.</p>
+                <a href="contact.html" class="btn-cta-w"><i class="fas fa-paper-plane me-2"></i>Apply Now</a>
+                <a href="scholarship.html" class="btn-cta-o"><i class="fas fa-list me-2"></i>View All Scholarships</a>
+            </div>
+        </section>
+
     </main>
 
     <div id="footer-container"></div>
+
     <script>loadCommonScripts();</script>
+    <script>
+        // Tab switching logic (inline, no extra JS file needed)
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.person-tab').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    var tabId = btn.getAttribute('data-tab');
+                    document.querySelectorAll('.person-tab').forEach(function (b) { b.classList.remove('active'); });
+                    document.querySelectorAll('.tab-panel').forEach(function (p) { p.classList.remove('active'); });
+                    btn.classList.add('active');
+                    var panel = document.getElementById('tab-' + tabId);
+                    if (panel) panel.classList.add('active');
+                });
+            });
+        });
+    </script>
     <script src="../js/scholarship-detail.js"></script>
 </body>
 </html>
