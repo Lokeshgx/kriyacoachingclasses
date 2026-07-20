@@ -102,7 +102,7 @@
 }
 
 #footer-container .contact-item i {
-    color: #2563eb;
+    color: var(--saddle-brown-color);
     font-size: 1.25rem;
     min-width: 30px;
     margin-top: 0.25rem;
@@ -161,7 +161,7 @@
     right: 30px;
     width: 50px;
     height: 50px;
-    background: #2563eb;
+    background: var(--saddle-brown-color);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -181,7 +181,7 @@
 }
 
 .back-to-top:hover {
-    background: #1e40af;
+    background: var(--brown-color);
     transform: translateY(-5px);
     box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
 }

@@ -6,7 +6,7 @@
 
 .about-subheading{
     margin-bottom: 1rem;
-    color: blue;
+    color: rgba(165, 42, 42, 0.692);
 }
 
 .value-card {
@@ -16,7 +16,7 @@
     box-shadow: var(--shadow-md);
     transition: all 0.3s ease;
     text-align: center;
-    border-top: 4px solid var(--primary-color);
+    border-top: 4px solid var(--brown-color);
 }
 
 .value-card:hover {
@@ -26,7 +26,7 @@
 
 .value-icon {
     font-size: 3rem;
-    color: var(--primary-color);
+    color: var(--brown-color);
     margin-bottom: 1rem;
 }
 
@@ -58,7 +58,7 @@
     top: 0;
     width: 30px;
     height: 30px;
-    background: var(--primary-color);
+    background: var(--brown-color);
     border-radius: 50%;
 }
 

@@ -1,461 +1,295 @@
-/* Scholarship Page Styles */
+﻿/* =============================================
+   SCHOLARSHIP LIST PAGE  —  scholarship.css
+   ============================================= */
 
+/* ── Hero ─────────────────────────────────── */
 .scholarship-hero-section {
     position: relative;
-    min-height: 390px;
-    background: linear-gradient(135deg, rgba(37,99,235,0.8), rgba(56,189,248,0.7)), url('../images/graduation-scene.svg') center/cover no-repeat;
+    min-height: 420px;
+    background: linear-gradient(135deg, #097969 0%, #00A36C 55%, #00A36C 100%);
     display: flex;
     align-items: center;
-    padding: 0 0 0 0;
+    padding: 2rem 0;
+    overflow: hidden;
 }
 
-.scholarship-hero-section .overlay {
+.scholarship-hero-section::before {
+    content: '';
     position: absolute;
     inset: 0;
-    background: rgba(15,23,42,0.35);
+    background: rgba(0,0,0,0.22);
 }
 
-.hero-inner {
-    position: relative;
-    z-index: 1;
-}
+.hero-inner { position: relative; z-index: 1; }
 
 .hero-copy h2 {
-    color: white;
-    font-size: clamp(2.5rem, 4vw, 3rem);
-    line-height: 1.05;
+    color: #fff;
+    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    line-height: 1.15;
+    font-weight: 700;
 }
 
 .hero-copy p {
-    color: rgba(255, 255, 255, 0.85);
-    max-width: 520px;
-    margin-top: 1.5rem;
+    color: rgba(255,255,255,0.88);
+    max-width: 500px;
+    margin-top: 1.25rem;
     line-height: 1.8;
+    font-size: 1.05rem;
 }
 
-.hero-copy .btn {
-    margin-top: 1.5rem;
-}
-
-.hero-profile {
-    display: flex;
-    margin-top: 3rem;
-}
+.hero-profile { display: flex; justify-content: center; margin-top: 2rem; }
 
 .hero-image {
     width: 100%;
-    max-width: 320px;
-    overflow: hidden;
+    max-width: 300px;
     border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
 }
 
-.hero-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-}
+.hero-image img { width: 100%; height: auto; object-fit: contain; display: block; }
 
+/* ── Section ──────────────────────────────── */
 .scholarship-list-section {
-    padding-top: 5rem;
-    background-color: #fbefd8;
+    padding: 5rem 0 4rem;
+    background: #fbefd8;
 }
 
-.scholarship-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-}
-
+/* ── Cards Grid ───────────────────────────── */
 #scholarshipList {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 2rem;
+    margin-top: 3rem;
 }
 
-.scholarship-card {
-    background: white;
-    border: 1px solid var(--border-color);
-    border-radius: 1.5rem;
+.sc-card {
+    background: #fff;
+    border-radius: 1.25rem;
     overflow: hidden;
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: var(--shadow-sm);
-    display: grid;
-    grid-template-columns: 70% 30%;
-    gap: 0;
-    align-items: start;
-}
-
-.scholarship-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: var(--shadow-lg);
-    animation: cardPulse 0.6s ease-in-out;
-}
-
-@keyframes cardPulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.95; }
-}
-
-/* Color schemes for each card */
-/* Card 1 - Priya Iyer - Purple Theme */
-.scholarship-card:nth-child(1) {
-    background: linear-gradient(135deg, #f3e5f5 0%, #ede7f6 100%);
-    border-color: #b39ddb;
-}
-
-.scholarship-card:nth-child(1) .card-content h3 {
-    color: #6a1b9a;
-}
-
-.scholarship-card:nth-child(1) .link-more {
-    color: #6a1b9a;
-}
-
-.scholarship-card:nth-child(1):hover {
-    border-color: #6a1b9a;
-    background: linear-gradient(135deg, #e1bee7 0%, #d1c4e9 100%);
-}
-
-.scholarship-card:nth-child(1):hover .card-content h3 {
-    color: #4a0e78;
-}
-
-/* Card 2 - Kamala Saxena - Blue Theme */
-.scholarship-card:nth-child(2) {
-    background: linear-gradient(135deg, #e3f2fd 0%, #e8eaf6 100%);
-    border-color: #64b5f6;
-}
-
-.scholarship-card:nth-child(2) .card-content h3 {
-    color: #1565c0;
-}
-
-.scholarship-card:nth-child(2) .link-more {
-    color: #1565c0;
-}
-
-.scholarship-card:nth-child(2):hover {
-    border-color: #1565c0;
-    background: linear-gradient(135deg, #bbdefb 0%, #c5cae9 100%);
-}
-
-.scholarship-card:nth-child(2):hover .card-content h3 {
-    color: #0d47a1;
-}
-
-/* Card 3 - Abha Saxena - Pink Theme */
-.scholarship-card:nth-child(3) {
-    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
-    border-color: #f48fb1;
-}
-
-.scholarship-card:nth-child(3) .card-content h3 {
-    color: #c2185b;
-}
-
-.scholarship-card:nth-child(3) .link-more {
-    color: #c2185b;
-}
-
-.scholarship-card:nth-child(3):hover {
-    border-color: #c2185b;
-    background: linear-gradient(135deg, #f8bbd0 0%, #f5a7c1 100%);
-}
-
-.scholarship-card:nth-child(3):hover .card-content h3 {
-    color: #880e4f;
-}
-
-/* Card 4 - Manju Saxena - Green Theme */
-.scholarship-card:nth-child(4) {
-    background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
-    border-color: #81c784;
-}
-
-.scholarship-card:nth-child(4) .card-content h3 {
-    color: #2e7d32;
-}
-
-.scholarship-card:nth-child(4) .link-more {
-    color: #2e7d32;
-}
-
-.scholarship-card:nth-child(4):hover {
-    border-color: #2e7d32;
-    background: linear-gradient(135deg, #c8e6c9 0%, #dcedc8 100%);
-}
-
-.scholarship-card:nth-child(4):hover .card-content h3 {
-    color: #1b5e20;
-}
-
-/* Card 5 - Sanjeev Kumar - Orange Theme */
-.scholarship-card:nth-child(5) {
-    background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
-    border-color: #ffb74d;
-}
-
-.scholarship-card:nth-child(5) .card-content h3 {
-    color: #e65100;
-}
-
-.scholarship-card:nth-child(5) .link-more {
-    color: #e65100;
-}
-
-.scholarship-card:nth-child(5):hover {
-    border-color: #e65100;
-    background: linear-gradient(135deg, #ffe0b2 0%, #ffd699 100%);
-}
-
-.scholarship-card:nth-child(5):hover .card-content h3 {
-    color: #bf360c;
-}
-
-.scholarship-card:nth-child(1) .card-content p {
-    color: #7b1fa2;
-}
-
-.scholarship-card:nth-child(1):hover .card-content p {
-    color: #6a1b9a;
-}
-
-.scholarship-card:nth-child(2) .card-content p {
-    color: #0d47a1;
-}
-
-.scholarship-card:nth-child(2):hover .card-content p {
-    color: #0a3d91;
-}
-
-.scholarship-card:nth-child(3) .card-content p {
-    color: #ad1457;
-}
-
-.scholarship-card:nth-child(3):hover .card-content p {
-    color: #880e4f;
-}
-
-.scholarship-card:nth-child(4) .card-content p {
-    color: #1b5e20;
-}
-
-.scholarship-card:nth-child(4):hover .card-content p {
-    color: #1a4d1a;
-}
-
-.scholarship-card:nth-child(5) .card-content p {
-    color: #e65100;
-}
-
-.scholarship-card:nth-child(5):hover .card-content p {
-    color: #bf360c;
-}
-
-/* Alternate layout: text-left = text first (left), image second (right) */
-.scholarship-card[data-layout="text-left"] {
-    grid-template-columns: 7fr 3fr;
-}
-
-.scholarship-card[data-layout="text-left"] .card-content {
-    order: 1;
-}
-
-.scholarship-card[data-layout="text-left"] .card-image {
-    order: 2;
-}
-
-/* Alternate layout: text-right = image first (left), text second (right) */
-.scholarship-card[data-layout="text-right"] {
-    grid-template-columns: 3fr 7fr;
-}
-
-.scholarship-card[data-layout="text-right"] .card-content {
-    order: 2;
-}
-
-.scholarship-card[data-layout="text-right"] .card-image {
-    order: 1;
-}
-
-.card-image {
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.25rem;
-}
-
-.card-image img {
-    width: auto;
-    height: auto;
-    border-radius: 0.75rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     border: 1px solid rgba(0,0,0,0.06);
-    box-shadow: var(--shadow-sm);
-    object-fit: cover;
-    display: block;
-    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: row;        /* horizontal: image | content */
+    min-height: 280px;
 }
 
-.card-content {
-    padding: 2rem;
+/* Alternate: odd cards flip image to the right */
+.sc-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.sc-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 36px rgba(0,0,0,0.14);
+}
+
+/* Image panel — fixed-width left/right column */
+.sc-card-image {
+    position: relative;
+    flex: 0 0 300px;
+    width: 300px;
+    overflow: hidden;
+    background: #f3f4f6;
+}
+
+.sc-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.45s ease;
+    position: absolute;
+    inset: 0;
+}
+
+.sc-card:hover .sc-card-image img { transform: scale(1.06); }
+
+/* Badge */
+.sc-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.3rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+.badge-gold { background: #f59e0b; color: #fff; }
+.badge-teal { background: #0d9488; color: #fff; }
+.badge-purple { background: #7c3aed; color: #fff; }
+.badge-blue { background: #2563eb; color: #fff; }
+.badge-orange { background: #ea580c; color: #fff; }
+
+/* Card body — fills remaining width */
+.sc-card-body {
+    padding: 1.75rem 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    flex: 1;
+    min-width: 0;
 }
 
-.card-content h3 {
+.sc-type-row {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.6rem;
+}
+
+.sc-card-body h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+    line-height: 1.35;
+}
+
+.sc-tagline {
+    font-size: 0.87rem;
+    color: var(--text-light);
+    line-height: 1.6;
     margin-bottom: 1rem;
+}
+
+/* Info chips */
+.sc-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-bottom: 1rem;
+}
+
+.sc-chip {
+    font-size: 0.76rem;
+    font-weight: 600;
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.chip-cov { background: #fef3c7; color: #97831d; border: 1px solid #fde68a; }
+.chip-dur { background: #F5DEB3; color: #8b1375; border: 1px solid #DAA06D; }
+.chip-seat { background: #d1fae5; color: #065f46; border: 1px solid #a7f3d0; }
+
+/* Highlights list */
+.sc-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.25rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.3rem;
+}
+
+.sc-highlights li {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.82rem;
     color: var(--text-dark);
 }
 
-.card-content p {
-    color: var(--text-light);
-    margin-bottom: 1.5rem;
-    line-height: 1.75;
-}
+.sc-highlights li i { color: var(--success-color); font-size: 0.78rem; flex-shrink: 0; }
 
-.link-more {
-    color: var(--primary-color);
-    font-weight: 700;
+/* CTA button */
+.sc-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--brown-color);
+    color: #fff;
     text-decoration: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: auto;
+    align-self: flex-start;
+    transition: background 0.25s ease, transform 0.2s ease;
 }
 
-.link-more:hover {
-    text-decoration: underline;
+.sc-cta-btn:hover { 
+    background: var(--saddle-brown-color); 
+    transform: translateX(3px); 
+    color: #fff; 
 }
 
-.testimonial-section {
-    padding-top: 5rem;
-    background-color: #0c6c41;
-}
-
-.testimonial-section  p{
-    color:lightgray
-}
+/* ── Testimonials ─────────────────────────── */
+.testimonial-section { padding: 4rem 0; background: #fff; }
 
 .testimonial-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1.5rem;
+    margin-top: 2.5rem;
 }
 
 .testimonial-card {
-    background: white;
-    border-radius: 1.5rem;
+    background: #f8fafc;
+    border-radius: 1rem;
+    padding: 1.75rem;
     border: 1px solid var(--border-color);
-    padding: 2rem;
     box-shadow: var(--shadow-sm);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: box-shadow 0.25s ease;
 }
 
-.testimonial-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
-}
+.testimonial-card:hover { box-shadow: var(--shadow-md); }
 
 .testimonial-card p {
+    font-size: 0.95rem;
     color: var(--text-dark);
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
+    line-height: 1.75;
+    font-style: italic;
+    margin-bottom: 1.25rem;
 }
 
 .testimonial-author {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    margin-top: 1.5rem;
+    gap: 0.85rem;
 }
 
 .author-photo {
-    width: 56px;
-    height: 56px;
+    width: 46px;
+    height: 46px;
     border-radius: 50%;
     overflow: hidden;
-    flex-shrink: 0;
-    border: 2px solid var(--primary-color);
-}
-
-.author-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.author-info strong {
-    display: block;
-    color: var(--text-dark);
-    margin-bottom: 0.25rem;
-}
-
-.author-info span {
-    color: var(--text-light);
-}
-
-.faq-section {
-    padding-top: 5rem;
-    background-color: #fbefd8;
-}
-
-.faq-accordion .accordion-item {
-    border-radius: 1.25rem;
-    border: 1px solid var(--border-color);
-    overflow: hidden;
-    margin-bottom: 1rem;
-}
-
-.faq-accordion .accordion-button {
     background: var(--light-color);
-    color: var(--text-dark);
-    font-weight: 600;
+    flex-shrink: 0;
 }
 
-.faq-accordion .accordion-body {
-    background: white;
-    color: var(--text-light);
-    line-height: 1.8;
+.author-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+.author-info strong { display: block; font-size: 0.9rem; color: var(--dark-color); }
+.author-info span { font-size: 0.78rem; color: var(--text-light); }
+
+/* ── Responsive ───────────────────────────── */
+@media (max-width: 768px) {
+    /* Stack vertically on mobile */
+    .sc-card,
+    .sc-card:nth-child(even) {
+        flex-direction: column;
+    }
+    .sc-card-image {
+        flex: none;
+        width: 100%;
+        height: 220px;
+    }
+    .sc-card-image img { position: static; height: 220px; }
+    .sc-card-body { padding: 1.5rem; }
+    .sc-highlights { grid-template-columns: 1fr; }
+    .scholarship-hero-section { min-height: auto; padding: 3rem 0; }
 }
 
-@media (max-width: 767px) {
-    .scholarship-hero-section {
-        min-height: 620px;
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-
-    .hero-profile {
-        justify-content: center;
-        margin-top: 2rem;
-    }
-
-    .profile-card {
-        max-width: 100%;
-    }
-
-    /* Mobile responsive: stack cards vertically */
-    .scholarship-card {
-        grid-template-columns: 1fr;
-        min-height: auto;
-    }
-
-    .scholarship-card[data-layout="text-left"] .card-content {
-        order: 2;
-    }
-
-    .scholarship-card[data-layout="text-left"] .card-image {
-        order: 1;
-    }
-
-    .scholarship-card[data-layout="text-right"] .card-content {
-        order: 2;
-    }
-
-    .scholarship-card[data-layout="text-right"] .card-image {
-        order: 1;
-    }
-
-    .card-content {
-        padding: 1.5rem;
-    }
+@media (max-width: 480px) {
+    .sc-card-image { height: 180px; }
+    .sc-card-image img { height: 180px; }
+    .sc-chips { flex-direction: column; gap: 0.35rem; }
 }

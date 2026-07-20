@@ -33,14 +33,14 @@
 }
 
 .filter-btn:hover {
-    border-color: var(--primary-color);
-    color: var(--primary-color);
+    border-color: var(--brown-color);
+    color: var(--brown-color);
 }
 
 .filter-btn.active {
-    background-color: var(--primary-color);
+    background-color: var(--brown-color);
     color: white;
-    border-color: var(--primary-color);
+    border-color: var(--brown-color);
 }
 
 /* Services Grid */
@@ -93,7 +93,7 @@
     left: 0;
     right: 0;
     height: 5px;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(90deg, var(--brown-color), var(--saddle-brown-color));
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease;
@@ -102,7 +102,7 @@
 .service-card-detailed:hover {
     transform: translateY(-15px);
     box-shadow: var(--shadow-lg);
-    border-color: var(--primary-color);
+    border-color: var(--brown-color);
 }
 
 .service-card-detailed:hover::before {
@@ -113,7 +113,7 @@
 .service-icon-large {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, var(--brown-color), var(--saddle-brown-color));
     border-radius: 1rem;
     display: flex;
     align-items: center;
@@ -129,27 +129,27 @@
 }
 
 .service-icon-large.success {
-    background: linear-gradient(135deg, #10b981, #059669);
+    background: linear-gradient(135deg, var(--brown-color), var(--saddle-brown-color));
 }
 
 .service-icon-large.warning {
-    background: linear-gradient(135deg, #f59e0b, #d97706);
+    background: linear-gradient(135deg, var(--brown-color), var(--saddle-brown-color));
 }
 
 .service-icon-large.info {
-    background: linear-gradient(135deg, #3b82f6, #1e40af);
+    background: linear-gradient(135deg, var(--brown-color), var(--saddle-brown-color));
 }
 
 .service-icon-large.danger {
-    background: linear-gradient(135deg, #ef4444, #dc2626);
+    background: linear-gradient(135deg, var(--brown-color), var(--saddle-brown-color));
 }
 
 .service-icon-large.primary {
-    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+    background: linear-gradient(135deg, var(--brown-color), var(--saddle-brown-color));
 }
 
 .service-icon-large.secondary {
-    background: linear-gradient(135deg, #ec4899, #be185d);
+    background: linear-gradient(135deg, var(--brown-color), var(--saddle-brown-color));
 }
 
 /* Service Content */
@@ -243,7 +243,7 @@
 }
 
 .faq-accordion .accordion-button:not(.collapsed) {
-    color: var(--primary-color);
+    color: var(--brown-color);
     background-color: #f8fafc;
     box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.05);
 }
@@ -261,9 +261,9 @@
 
 /* CTA Section */
 .cta-section {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient(135deg, var(--cta-color) 0%, var(--cta-color) 100%);
     color: white;
-    padding: 4rem 0;
+    padding: 2rem 0;
 }
 
 .cta-content {
@@ -284,12 +284,12 @@
 
 .cta-content .btn {
     background-color: white;
-    color: var(--primary-color);
+    color: var(--brown-color);
     font-weight: 700;
 }
 
 .cta-content .btn:hover {
-    background-color: var(--light-color);
+    background-color: var(--dark-color);
     transform: translateY(-3px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
@@ -324,11 +324,11 @@
     align-items: center;
     gap: 0.75rem;
     padding-bottom: 1rem;
-    border-bottom: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--brown-color);
 }
 
 .workshops-category-title i {
-    color: var(--primary-color);
+    color: var(--brown-color);
     font-size: 1.5rem;
 }
 
@@ -353,7 +353,7 @@
 
 .event-card:hover {
     transform: translateY(-10px);
-    border-color: var(--primary-color);
+    border-color: var(--brown-color);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
@@ -386,7 +386,7 @@
     position: absolute;
     top: 15px;
     right: 15px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, var(--brown-color), var(--saddle-brown-color));
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 2rem;
@@ -432,7 +432,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--primary-color);
+    color: var(--brown-color);
     font-weight: 600;
     font-size: 0.9rem;
 }

@@ -12,6 +12,12 @@
     color: #000;
 }
 
+.nios-hero .row p{
+    color: #000;
+    margin-bottom: 1rem;
+
+}
+
 .nios-hero h1 { 
     font-size: 2.2rem; 
     margin-bottom: 0.5rem; 

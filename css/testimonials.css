@@ -1,3 +1,70 @@
+
+/* Reviews Section */
+.reviews-section {
+    background: #fbefd8;
+    padding: 2rem 0;
+}
+
+.reviews-section .section-header p {
+   color: var(--text-light);
+}
+
+.review-card {
+    background: var(--light-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    border-left: 4px solid var(--accent-color);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.review-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.review-stars {
+    display: flex;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.review-stars i {
+    font-size: 1.1rem;
+}
+
+.review-text {
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.review-author {
+    display: flex;
+    flex-direction: column;
+}
+
+.review-author strong {
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.review-date {
+    color: var(--text-light);
+    font-size: 0.85rem;
+}
+
+
+
+
+
+
+
+
+
 /* Testimonials Page Styles */
 
 .testimonials-section {
@@ -5,14 +72,27 @@
     background-color: #fbefd8;
 }
 
+.testimonials-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--accent-color);
+    border-radius: 2px;
+}
+
 .testimonial-card {
     background: white;
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 1rem;
     box-shadow: var(--shadow-md);
     transition: all 0.3s ease;
     position: relative;
     border-top: 4px solid var(--accent-color);
+    margin-bottom: 2rem;
 }
 
 .testimonial-card:hover {
@@ -29,9 +109,10 @@
 
 .testimonial-text {
     color: var(--text-dark);
+    text-align: justify;
     font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 0.7rem;
     font-style: italic;
 }
 
@@ -71,3 +152,29 @@
 }
 
 
+.row-gallery {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0.7rem 0.7rem;
+}
+
+/* Create four equal columns that sits next to each other */
+.column-gallery {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 100%;
+  padding: 0.7rem 0.7rem;
+}
+
+.column-gallery img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.h1-gallery{
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}

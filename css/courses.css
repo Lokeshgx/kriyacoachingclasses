@@ -13,6 +13,7 @@
     padding: 1rem;
     border-radius: 1rem;
     box-shadow: var(--shadow-sm);
+    border:2px solid var(--carousel-btn-color)
 }
 
 .filter-row {
@@ -42,7 +43,7 @@
 }
 
 .filter-group .form-select:focus {
-    border-color: var(--primary-color);
+    border-color: var(--brown-color);
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
@@ -73,7 +74,7 @@
 
 /* Course Header */
 .course-header {
-    padding: 2rem;
+    padding: 1.5rem;
     color: white;
     position: relative;
 }
@@ -95,9 +96,16 @@
     margin: 0;
 }
 
+.course-header p {
+    color: white;
+    font-size: 1.2rem;
+    margin: 0;
+        margin-bottom: 1rem;
+}
+
 /* Course Body */
 .course-body {
-    padding: 2rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -116,7 +124,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
+   /* padding-bottom: 1.5rem; */
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -130,7 +138,7 @@
 
 .detail-item i {
     font-size: 1.25rem;
-    color: var(--primary-color);
+    color: var(--brown-color);
 }
 
 .detail-item span {
@@ -173,37 +181,43 @@
     transform: translateY(-3px);
 }
 
-/* Courses CTA Section */
-.courses-cta {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, var(--cta-color) 0%, var(--cta-color) 100%);
     color: white;
-    padding: 4rem 0;
-    margin-top: 4rem;
+    padding: 2rem 0;
 }
 
-.courses-cta h2 {
+.cta-content {
+    text-align: center;
+}
+
+.cta-content h2 {
     color: white;
     margin-bottom: 1rem;
     font-size: 2.5rem;
 }
 
-.courses-cta p {
+.cta-content p {
     color: rgba(255, 255, 255, 0.9);
-    font-size: 1.1rem;
+    font-size: 1.125rem;
     margin-bottom: 2rem;
 }
 
-.courses-cta .btn {
+.cta-content .btn {
     background-color: white;
-    color: var(--primary-color);
+    color: var(--brown-color);
     font-weight: 700;
 }
 
-.courses-cta .btn:hover {
-    background-color: var(--light-color);
+.cta-content .btn:hover {
+    background-color: var(--dark-color);
     transform: translateY(-3px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
+
 
 /* Modal Styles */
 .modal-content {

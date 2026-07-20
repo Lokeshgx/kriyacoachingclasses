@@ -8,7 +8,7 @@
     position: relative;
     overflow: hidden;
     padding: 3.2rem 0;
-    background: linear-gradient(130deg, #102a66 0%, #1d4ed8 48%, #6d28d9 100%);
+    background: linear-gradient(130deg, #4F7942 0%, #008000 48%, #228B22 100%);
 }
 
 .career-ad-overlay {
@@ -283,14 +283,14 @@
     position: absolute;
     inset: 0 auto 0 0;
     width: 6px;
-    background: linear-gradient(180deg, #2563eb 0%, #7c3aed 100%);
+    background: linear-gradient(180deg, var(--brown-color) 0%, var(--saddle-brown-color) 100%);
     opacity: 0.65;
     transition: opacity 0.28s ease, width 0.28s ease;
 }
 
 .job-card:hover {
     transform: translateY(-6px);
-    border-color: #7aa7ff;
+    border-color: var(--dark-brown-color);
     background: linear-gradient(145deg, #ffffff 0%, #eef5ff 100%);
     box-shadow: 0 16px 32px rgba(37, 99, 235, 0.16);
 }

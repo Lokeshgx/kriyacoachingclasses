@@ -15,11 +15,11 @@
     background: var(--light-color);
     padding: 2rem;
     border-radius: 1rem;
-    border-left: 4px solid var(--primary-color);
+    border-left: 4px solid var(--brown-color);
 }
 
 .info-card i {
-    color: var(--primary-color);
+    color: var(--brown-color);
     font-size: 2rem;
     margin-bottom: 1rem;
 }
@@ -35,7 +35,7 @@
 }
 
 .info-card a {
-    color: var(--primary-color);
+    color: var(--brown-color);
     font-weight: 600;
 }
 
@@ -66,8 +66,8 @@
 .form-select:focus,
 .enquiry-form .form-control:focus,
 .enquiry-form .form-select:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    border-color: var(--brown-color);
+    box-shadow: 0 0 0 3px rgba(160, 82, 45, 0.1);
 }
 
 .enquiry-form .form-check-label {

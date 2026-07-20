@@ -110,7 +110,7 @@
 }
 
 .faculty-info .subject {
-    color: var(--primary-color);
+    color: var(--brown-color);
     font-weight: 600;
     font-size: 0.95rem;
     margin-bottom: 1rem;
@@ -141,30 +141,41 @@
     background-color: #ec4899 !important;
 }
 
-/* Faculty CTA Section */
-.faculty-cta {
-    padding: 4rem 0;
+
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, var(--cta-color) 0%, var(--cta-color) 100%);
+    color: white;
+    padding: 2rem 0;
 }
 
-.faculty-cta h2 {
-    color: White;
-    font-size: 2.5rem;
+.cta-content {
+    text-align: center;
+}
+
+.cta-content h2 {
+    color: white;
     margin-bottom: 1rem;
+    font-size: 2.5rem;
 }
 
-.faculty-cta p {
-    color: rgba(255, 255, 255, 0.818);
-    font-size: 1.1rem;
+.cta-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.125rem;
     margin-bottom: 2rem;
 }
 
-.faculty-cta .btn {
-    transition: all 0.3s ease;
+.cta-content .btn {
+    background-color: white;
+    color: var(--brown-color);
+    font-weight: 700;
 }
 
-.faculty-cta .btn:hover {
+.cta-content .btn:hover {
+    background-color: var(--dark-color);
     transform: translateY(-3px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Design */

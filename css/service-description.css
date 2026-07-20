@@ -5,7 +5,7 @@
 }
 
 .service-hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, #967969, 	#967969);
     color: white;
     padding: 3rem 0;
     margin-bottom: 3rem;
@@ -27,7 +27,7 @@
     padding: 2rem;
     border-radius: 1rem;
     margin: 2rem 0;
-    border-left: 4px solid var(--primary-color);
+    border-left: 4px solid var(--brown-color);
 }
 
 .feature-list {
@@ -43,13 +43,13 @@
 }
 
 .feature-list i {
-    color: var(--primary-color);
+    color: var(--brown-color);
     font-weight: 700;
 }
 
 .price-box {
     background: white;
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--brown-color);
     padding: 2rem;
     border-radius: 1rem;
     text-align: center;
@@ -58,7 +58,7 @@
 
 .price-box .price {
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: var(--brown-color);
     font-weight: 700;
     margin: 1rem 0;
 }
@@ -70,5 +70,42 @@
 
 
 .service-detail-section .service-hero .lead{
-    color: deepskyblue;
+    color: lightcyan;
+}
+
+
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, var(--cta-color) 0%, var(--cta-color) 100%);
+    color: white;
+    padding: 2rem 0;
+}
+
+.cta-content {
+    text-align: center;
+}
+
+.cta-content h2 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.cta-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+}
+
+.cta-content .btn {
+    background-color: white;
+    color: var(--brown-color);
+    font-weight: 700;
+}
+
+.cta-content .btn:hover {
+    background-color: var(--dark-color);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
