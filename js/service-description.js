@@ -18,13 +18,13 @@
     training: {
         title: 'Training Programs',
         subtitle: 'Specialized intensive training for competitive exams',
-        description: 'Our competitive exam training programs are designed for students aiming for IIT, NEET, UPSC and other national exams...',
+        description: 'Our competitive exam training programs are designed for students aiming for NEET, IPMAT, KCET and ICAR',
         benefits: 'Updated curriculum, expert coaching, intensive mock tests, strategic preparation, proven success rate',
         structure: 'Advanced level content with weekly full-length tests, topic-wise practice, problem-solving sessions, and personal mentorship',
         eligibility: 'Class 11-12 students and those preparing for competitive exams',
         features: ['Updated Curriculum', 'Mock Tests', 'Personalized Coaching', 'Study Materials', 'Expert Mentors', 'Performance Analysis'],
-        duration: '18 Months',
-        price: '\u20b935,000 - \u20b950,000',
+        duration: '2 Years',
+        price: '\u20b92,00,000 - \u20b92,50,000',
         batch: '6-12 students'
     },
     'short-courses': {

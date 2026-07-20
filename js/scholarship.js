@@ -1,72 +1,108 @@
-﻿// Scholarship Page Script
+﻿// ===== SCHOLARSHIP LIST PAGE DATA =====
+'use strict';
 
 const scholarshipPrograms = [
     {
         id: 'priya',
+        program: 'priya',
         title: 'Dr. Priya Iyer Memorial Scholarship',
-        description: 'Dr. Priya Iyer was an amazing researcher and well-wisher of the society. She was a wholesome human being who always strived to help those in need. She had a soft corner for special kids and also for the transgender community. Therefore, in the fond memory of our dear friend, Priya, this scholarship is specially for the students between the age group of 13 to 18 years, who either belong to transgender community or face any physical or mental challenge. Every year we aim to provide one such student, free tutoring for a year at our centre for Science and Math.',
+        tagline: 'For students aged 13-18 from any stream.',
+        description: 'Created in fond memory of Dr. Priya Iyer, a compassionate researcher and social champion. This scholarship fully covers tuition for one deserving student each year.',
         image: '../images/priya-iyer.jpg',
-        link: 'scholarship-detail.html?program=achiever'
+        type: 'Memorial \u00B7 Inclusive',
+        coverage: 'Full Tuition \u2014 100% Free',
+        duration: '1 Academic Year',
+        seats: '1 seat / year',
+        highlights: ['No fees whatsoever', 'Science & Mathematics', 'Ages 13\u201318', 'Transgender / Special needs']
     },
     {
         id: 'kamala',
+        program: 'kamala',
         title: 'Smt. Kamala Saxena Scholarship',
-        description: 'Smt. Kamala Saxena is an amazing human being who has been ahead by a century to her peers. Her zeal towards learning and life is what makes her extraordinary. She is a self-made lady who not only educated herself after losing her husband at an early age of 25 or so years but also raised to excellence her 6 daughters all by herself. She allowed each of them to follow their passions and supported them in their life endeavours. She also raised their kids to support them in their budding careers. A very independent and discipliarian person, she instilled the same virtues in her grandkids. A true femanist who valued equity in tasks, she ensured that her male grandkid (aka. me - Nitin Saxena) also learns all life skills that a female grandkid needs to learn. Her learnings have served as the path on which I walk today. This scholarship is meant to help kids as well as adults who need a restart to their lives.',
+        tagline: 'For anyone who needs a second chance at education \u2014 at any age, any stage.',
+        description: 'Named after a remarkable self-made woman who raised 6 daughters alone. This scholarship supports learners who need a restart in life.',
         image: '../images/kamala.jpg',
-        link: 'scholarship-detail.html?program=future-leader'
+        type: 'Life Restart',
+        coverage: '50% Tuition Support',
+        duration: '1 Year (Renewable)',
+        seats: '2\u20133 seats / year',
+        highlights: ['All age groups', 'All Kriya courses', 'Monthly instalment option', 'No academic score barrier']
     },
     {
         id: 'abha',
+        program: 'abha',
         title: 'Ms. Abha Saxena Scholarship',
-        description: 'Ms. Abha Saxena is a world class artist whose art work has been appreciated in India as well as among International fronts alike. She has devoted her entire life to art. An excellent teacher, she has taught more than 5000 students various art skills. Very peculiar in her choices and having a meticulous global culture sense, her work and her personality speaks volume of her immense caliber. This scholarship is meant to help kids as well as adults who are passionate for a specific skill or obtaining certain knowledge base to showcase their hidden talents.',
+        tagline: 'For students passionate about a skill, an art form, or a specific knowledge domain.',
+        description: 'Honouring an internationally acclaimed artist who taught 5000+ students. Dedicated to learners who burn with passion for a craft.',
         image: '../images/abha.jpg',
-        link: 'scholarship-detail.html?program=support-scholar'
+        type: 'Talent & Skill-Based',
+        coverage: '50% Tuition Support',
+        duration: '1 Academic Year',
+        seats: '2 seats / year',
+        highlights: ['Skill/art portfolio required', 'Ages 12+', 'All Kriya programs', 'Flexible instalment']
     },
     {
         id: 'manju',
+        program: 'manju',
         title: 'Mrs. Manju Saxena Scholarship',
-        description: 'A merit-based scholarship for students who demonstrate outstanding academic performance and ambition.',
+        tagline: 'Recognising students who show up every day and hold themselves to high standards.',
+        description: 'A merit-based scholarship for students with consistently outstanding academic performance and the discipline to match.',
         image: '../images/manju.jpg',
-        link: 'scholarship-detail.html?program=achiever'
+        type: 'Merit-Based',
+        coverage: '40% Tuition Support',
+        duration: '1 Year (Renewable)',
+        seats: '3 seats / year',
+        highlights: ['80%+ required', 'All academic courses', 'Renewable on performance', 'Essay + interview']
     },
     {
         id: 'sanjeev',
+        program: 'sanjeev',
         title: 'Mr. Sanjeev Kumar Saxena Scholarship',
-        description: 'A merit-based scholarship for students who demonstrate outstanding academic performance and ambition.',
+        tagline: 'For ambitious achievers who combine intellectual drive with a clear vision for their future.',
+        description: 'Named after a life of purposeful ambition. This scholarship rewards students who have both the marks and the vision to go far.',
         image: '../images/sanjeev.jpg',
-        link: 'scholarship-detail.html?program=achiever'
+        type: 'Merit & Ambition',
+        coverage: '40% Tuition Support',
+        duration: '1 Year (Renewable)',
+        seats: '3 seats / year',
+        highlights: ['80%+ required', 'STEM & competitive prep', 'Vision statement required', 'Renewable on merit']
     }
 ];
 
 function renderScholarshipCards() {
-    const listContainer = document.getElementById('scholarshipList');
-    if (!listContainer) return;
+    const container = document.getElementById('scholarshipList');
+    if (!container) return;
 
-    scholarshipPrograms.forEach((program, index) => {
+    container.innerHTML = '';
+    scholarshipPrograms.forEach(function(s, i) {
         const card = document.createElement('article');
-        card.className = 'scholarship-card';
+        card.className = 'sc-card';
         card.setAttribute('data-aos', 'fade-up');
-        card.setAttribute('data-aos-delay', index * 100);
-        // Alternate layout: even index (0,2,4...) = text left/image right; odd index (1,3,5...) = image left/text right
-        const isEvenIndex = index % 2 === 0;
-        card.setAttribute('data-layout', isEvenIndex ? 'text-left' : 'text-right');
-        card.innerHTML = `
-            <div class="card-image">
-                <img src="${program.image}" alt="${program.title}">
-            </div>
-            <div class="card-content">
-                <h3>${program.title}</h3>
-                <p>${program.description}</p>
-                <a class="link-more" href="${program.link}">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
-            </div>
-        `;
-        listContainer.appendChild(card);
+        card.setAttribute('data-aos-delay', String(i * 80));
+        card.innerHTML =
+            '<div class="sc-card-image">' +
+            '  <img src="' + s.image + '" alt="' + s.title + '" loading="lazy">' +
+            '</div>' +
+            '<div class="sc-card-body">' +
+            '  <div class="sc-type-row"><i class="fas fa-tag me-1"></i>' + s.type + '</div>' +
+            '  <h3>' + s.title + '</h3>' +
+            '  <p class="sc-tagline">' + s.tagline + '</p>' +
+            '  <div class="sc-chips">' +
+            '    <span class="sc-chip chip-cov"><i class="fas fa-percent me-1"></i>' + s.coverage + '</span>' +
+            '    <span class="sc-chip chip-dur"><i class="fas fa-clock me-1"></i>' + s.duration + '</span>' +
+            '    <span class="sc-chip chip-seat"><i class="fas fa-chair me-1"></i>' + s.seats + '</span>' +
+            '  </div>' +
+            '  <ul class="sc-highlights">' +
+            s.highlights.map(function(h) { return '<li><i class="fas fa-check"></i>' + h + '</li>'; }).join('') +
+            '  </ul>' +
+            '  <a class="sc-cta-btn" href="scholarship-detail.html?program=' + s.program + '">View Details &nbsp;<i class="fas fa-arrow-right"></i></a>' +
+            '</div>';
+        container.appendChild(card);
     });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     loadHeader();
     loadFooter();
     renderScholarshipCards();
 });
-
