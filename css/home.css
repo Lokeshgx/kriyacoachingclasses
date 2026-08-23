@@ -131,16 +131,17 @@
 
 /* Stats Section */
 .stats-section {
-    background-color: #0c6c41;
+    background-color: var(--background-color-beige);
     color: white;
-    padding: 1rem 0;
+    padding: 3rem 0;
 }
 
 .stat-card {
-    display: flex;
+    display: block;
     padding: 1rem;
+    margin:  1rem 0;
     border-radius: 1rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--background-color-green);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
@@ -148,7 +149,7 @@
 }
 
 .stat-card:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--background-color-green);
     transform: translateY(-10px);
 }
 
@@ -177,7 +178,7 @@
 
 /* About Section */
 .about-section {
-    padding: 5rem 0;
+    padding: 2rem 0;
     background-color:#fbefd8;
 }
 
@@ -504,8 +505,8 @@
 }
 
 .contact-info-icon {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background: linear-gradient(135deg, var(--saddle-brown-color), var(--dark-brown-color));
     border-radius: 50%;
     display: flex;

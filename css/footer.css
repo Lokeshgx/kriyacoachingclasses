@@ -9,8 +9,8 @@
 #footer-container footer {
     background: linear-gradient(135deg, #1f2937 0%, #374151 100%) !important;
     color: #d1d5db !important;
-    padding-top: 3rem !important;
-    padding-bottom: 1rem !important;
+    padding-top: 2rem !important;
+    padding-bottom: 0.5rem !important;
     display: block;
     width: 100%;
 }
@@ -125,7 +125,7 @@
 
 #footer-container .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 2rem;
+    padding-top: 0;
 }
 
 #footer-container .footer-copyright {

@@ -17,6 +17,11 @@
     margin-bottom: 1rem;
 }
 
+.service-hero h1 {
+    color: #fff;
+}
+
+
 .detail-content {
     line-height: 1.8;
     color: var(--text-dark);
