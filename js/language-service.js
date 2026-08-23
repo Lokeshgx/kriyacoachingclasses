@@ -40,7 +40,6 @@ or simply the joy of speaking one of the world's most beautiful languages, this 
             'Grammar drills with immediate feedback',
             'DELF/DALF exam preparation & mock tests',
             'Regular progress assessments',
-            'Certificate of completion awarded',
             'Recordings available for revision (upon request)'
         ],
 
@@ -60,8 +59,7 @@ You are a great fit if you are:`,
             { label: 'Session Duration', value: '60 minutes' },
             { label: 'Batch Size',       value: '4–8 students' },
             { label: 'Sessions / Week',  value: '3 sessions' },
-            { label: 'Certification',    value: 'DELF / DALF preparation' },
-            { label: 'Certificate',      value: 'Issued on completion' }
+            { label: 'Certification',    value: 'DELF / DALF preparation' }
         ],
 
         instructor: {
@@ -87,8 +85,8 @@ school students of CBSE/ICSE/IGCSE/IB boards, college students, and professional
                 'IBDP Educator at Bombay International School',
                 '5+ years teaching French to learners of all ages and boards'
             ],
-            email:  'sambita@kriyacoachingclasses.com',
-            phone:  '+91 84313 45144'
+            email:  'sambita.modak@gmail.com',
+            phone:  ''
         }
     },
 
@@ -130,8 +128,7 @@ to explore a new language, this course makes German approachable and engaging.`,
             'Grammar exercises with step-by-step explanations',
             'School exam support (all boards)',
             'A1 certification preparation (Goethe-Institut / TELC)',
-            'Progress assessments after every module',
-            'Certificate of completion awarded'
+            'Progress assessments after every module'
         ],
 
         eligibility: `This course is suitable for absolute beginners — no prior German knowledge is needed. 
@@ -150,8 +147,7 @@ You are a great fit if you are:`,
             { label: 'Session Duration',  value: '60 minutes' },
             { label: 'Batch Size',        value: '4–8 students' },
             { label: 'Sessions / Week',   value: '3 sessions' },
-            { label: 'Certification',     value: 'Goethe-Institut A1 / TELC A1 preparation' },
-            { label: 'Certificate',       value: 'Issued on completion' }
+            { label: 'Certification',     value: 'Goethe-Institut A1 / TELC A1 preparation' }
         ],
 
         instructor: {
@@ -176,8 +172,7 @@ alongside grammatical accuracy.`,
                 'Specialises in helping complete beginners start speaking German confidently',
                 'Actively advancing personal German proficiency through ongoing studies'
             ],
-            email:  'parmanand@kriyacoachingclasses.com',
-            phone:  '+91 84313 45144'
+            phone:  '+91 99679 52084'
         }
     }
 };
@@ -281,7 +276,7 @@ function renderLanguagePage(data) {
     }
 
     const emailLink = document.getElementById('instructor-email-link');
-    if (emailLink) emailLink.href = 'mailto:' + inst.email;
+    if (emailLink && inst.email) emailLink.href = 'mailto:' + inst.email;
     setText('instructor-email', inst.email);
 
     const phoneLink = document.getElementById('instructor-phone-link');

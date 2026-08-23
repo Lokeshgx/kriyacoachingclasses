@@ -15,9 +15,10 @@ const scholarships = {
     duration: '1 Academic Year',
     seats: '1 student per year',
     type: 'Memorial · Inclusive Support',
+    scholarOf:'In Memory & Honour Of',
     courses: ['Science (Physics, Chemistry, Biology)', 'Mathematics', 'All standard subjects as required'],
     feeStructure: {
-      kriyaPays: '100% of all tuition fees',
+      waivedOf: '100% of all tuition fees',
       studentPays: 'Nothing — fully waived',
       notes: 'All tuition, study materials and assessments are completely covered. There is no financial burden on the selected student or their family.'
     },
@@ -38,7 +39,6 @@ const scholarships = {
       name: 'Dr. Priya Iyer',
       photo: '../images/priya-iyer.jpg',
       role: 'Researcher \u00B7 Social Champion \u00B7 Friend',
-      era: '20th\u201321st Century',
       lifeStory: [
         "Dr. Priya Iyer was an extraordinary human being \u2014 a researcher by profession and a changemaker by heart. Blessed with a brilliant academic mind, she pursued her research with the same passion that she poured into every human connection she formed.",
         "What set Priya apart was not merely her academic accomplishments, but her profound empathy. She had a rare and beautiful soft corner for children with physical and mental challenges, and she was one of the earliest and most vocal advocates for the dignity and inclusion of the transgender community in India \u2014 long before it became a mainstream conversation.",
@@ -67,15 +67,16 @@ const scholarships = {
     title: 'Smt. Kamala Saxena Scholarship',
     tagline: 'For those who dare to restart, rebuild and rise \u2014 at any age.',
     heroClass: 'hero-kamala',
-    coverageText: '50% Tuition Support',
-    coveragePercent: 50,
+    coverageText: '75% Tuition Fee Support',
+    coveragePercent: 75,
     duration: '1 Academic Year (Renewable)',
-    seats: '2\u20133 students per year',
+    seats: '1 student per year',
     type: 'Life Restart \u00B7 Partial Support',
+    scholarOf: 'Honour Of',
     courses: ['All standard academic courses offered at Kriya', 'NIOS preparation', 'Competitive exam training'],
     feeStructure: {
-      kriyaPays: '50% of tuition fees',
-      studentPays: '50% of tuition fees',
+      waivedOf: '75% of tuition fees',
+      studentPays: '25% of tuition fees',
       notes: 'The remaining 50% can be paid in monthly instalments to ease the financial burden. Hardship waivers on the student share may be considered on a case-by-case basis.'
     },
     eligibility: [
@@ -96,7 +97,6 @@ const scholarships = {
       name: 'Smt. Kamala Saxena',
       photo: '../images/kamala.jpg',
       role: 'Self-Made Woman \u00B7 Single Mother \u00B7 Lifelong Learner',
-      era: '20th Century',
       lifeStory: [
         "Smt. Kamala Saxena is a woman who was, by every measure, ahead of her century. At around the age of 25, life dealt her an unimaginable blow \u2014 she lost her husband, leaving her alone to raise six daughters in an era when a woman\'s independence was far from guaranteed.",
         "Rather than surrendering to circumstance, Kamala chose education. She educated herself, stood tall, and raised all six of her daughters to excellence \u2014 not just academically, but as complete, independent human beings. She not only supported their individual passions but stood firmly behind each daughter\'s life choices.",
@@ -128,15 +128,16 @@ const scholarships = {
     title: 'Ms. Abha Saxena Scholarship',
     tagline: 'Celebrating the power of art, skill and the courage to pursue your true calling.',
     heroClass: 'hero-abha',
-    coverageText: '50% Tuition Support',
-    coveragePercent: 50,
+    coverageText: '75% Tuition Fee Support',
+    coveragePercent: 75,
     duration: '1 Academic Year',
-    seats: '2 students per year',
+    seats: '1 student per year',
     type: 'Talent & Skill-Based \u00B7 Partial Support',
+    scholarOf:'Honour Of',
     courses: ['All academic subjects at Kriya', 'Skill development modules', 'Language and communication courses', 'Personality development programs'],
     feeStructure: {
-      kriyaPays: '50% of tuition fees',
-      studentPays: '50% of tuition fees',
+      waivedOf: '75% of tuition fees',
+      studentPays: '25% of tuition fees',
       notes: 'The student\'s share can be paid in flexible monthly instalments. Students may also apply for an additional hardship consideration if financial need is significant.'
     },
     eligibility: [
@@ -157,7 +158,6 @@ const scholarships = {
       name: 'Ms. Abha Saxena',
       photo: '../images/abha.jpg',
       role: 'World-Class Artist \u00B7 Master Teacher \u00B7 Cultural Icon',
-      era: '20th\u201321st Century',
       lifeStory: [
         "Ms. Abha Saxena is one of those rare individuals who devoted not just a part, but the entirety of their life to a single calling: art. Her work has been recognised and celebrated not only across India but on international stages, a testament to the universality of her vision and craft.",
         "What makes Abha\'s story particularly powerful is that her artistry was never self-contained. She was, at her core, a teacher. Over the course of her life, she taught more than 5,000 students the skills, discipline and joy of various art forms. For her, teaching was not a profession \u2014 it was an extension of her art.",
@@ -181,21 +181,22 @@ const scholarships = {
 
   // ─── 4. Mrs. Manju Saxena Scholarship ───────────────────────────────────
   manju: {
-    badge: '40% Support',
+    badge: '75% Support',
     badgeClass: 'badge-blue',
     title: 'Mrs. Manju Saxena Scholarship',
     tagline: 'For students who strive every day to be better than yesterday.',
     heroClass: 'hero-manju',
-    coverageText: '40% Tuition Support',
-    coveragePercent: 40,
-    duration: '1 Academic Year (Renewable on merit)',
-    seats: '3 students per year',
+    coverageText: '75% Tuition Fee Support',
+    coveragePercent: 75,
+    duration: '1 Academic Year',
+    seats: '1 student per year',
     type: 'Merit-Based \u00B7 Partial Support',
+    scholarOf:'Honour Of',
     courses: ['All academic courses at Kriya', 'Science, Mathematics, Commerce, Humanities', 'Competitive exam preparation'],
     feeStructure: {
-      kriyaPays: '40% of tuition fees',
-      studentPays: '60% of tuition fees',
-      notes: 'The scholarship is renewable for a second year if the student maintains the required academic performance. The student\'s 60% share can be paid in monthly instalments.'
+      waivedOf: '75% of tuition fees',
+      studentPays: '25% of tuition fees',
+      notes: 'The student has to pay 25% share at the time of admission.'
     },
     eligibility: [
       'Minimum 80% aggregate in the most recent board or school examination',
@@ -216,11 +217,10 @@ const scholarships = {
       name: 'Mrs. Manju Saxena',
       photo: '../images/manju.jpg',
       role: 'Pillar of Discipline \u00B7 Advocate of Academic Excellence',
-      era: '20th\u201321st Century',
       lifeStory: [
-        "Mrs. Manju Saxena embodies the quiet power of consistency. Her life is a study in what happens when discipline, hard work and moral character are practised not as strategies, but as a way of life.",
-        "She has always believed that true achievement is not the result of one great moment, but of countless small, diligent steps taken day after day. This philosophy, lived with grace and integrity, has made her a source of profound inspiration for those around her.",
-        "Her influence on the Kriya family has been deep and lasting. The scholarship bearing her name is designed to reward students who share her ethos \u2014 young people who show up every day, work hard, and hold themselves to a high standard not for recognition, but because that is simply who they are."
+        "Mrs. Manju Saxena is a lively person and a true kindred spirit who has kept her inner child alive in this day and age.",
+        "She is a true learner and never stops learning new things and trying out new ventures whenever feasible. Whether it is learning to use computers in the times when it was barely introduced in the country, with a one-year-old kid in her arms, or honing her entrepreneurial skills with her food enterprise, or just learning a new language at the age of 60, she never quits. She has lived her hardships with dignity and a smile. Even those hardships have not managed to fade away her childlike innocence and curiosity for the world.",
+        "This scholarship is meant for anyone who holds the same zeal as her to learn something in life. Applicable to any kid or adult."
       ],
       achievements: [
         'A life defined by discipline, consistency and high personal standards',
@@ -239,21 +239,22 @@ const scholarships = {
 
   // ─── 5. Mr. Sanjeev Kumar Saxena Scholarship ────────────────────────────
   sanjeev: {
-    badge: '40% Support',
+    badge: '75% Support',
     badgeClass: 'badge-orange',
     title: 'Mr. Sanjeev Kumar Saxena Scholarship',
     tagline: 'For ambitious minds who combine intellectual curiosity with the drive to achieve.',
     heroClass: 'hero-sanjeev',
-    coverageText: '40% Tuition Support',
-    coveragePercent: 40,
-    duration: '1 Academic Year (Renewable on merit)',
-    seats: '3 students per year',
+    coverageText: '75% Tuition Fee Support',
+    coveragePercent: 75,
+    duration: '1 Academic Year',
+    seats: '1 student per year',
     type: 'Merit & Ambition \u00B7 Partial Support',
+    scholarOf:'Honour Of',
     courses: ['All academic courses at Kriya', 'STEM subjects', 'Commerce and Economics', 'Competitive exam coaching (JEE, NEET, KCET, UPSC preparation)'],
     feeStructure: {
-      kriyaPays: '40% of tuition fees',
-      studentPays: '60% of tuition fees',
-      notes: 'Renewable for a second year on the condition of maintaining strong academic performance. Monthly instalment options are available for the student\'s portion.'
+      waivedOf: '75% of tuition fees',
+      studentPays: '25% of tuition fees',
+      notes: 'The student has to pay 25% share at the time of admission.'
     },
     eligibility: [
       'Minimum 80% in the most recent board or school examination',
@@ -274,11 +275,10 @@ const scholarships = {
       name: 'Mr. Sanjeev Kumar Saxena',
       photo: '../images/sanjeev.jpg',
       role: 'Visionary \u00B7 Champion of Ambition \u00B7 Source of Inspiration',
-      era: '20th\u201321st Century',
       lifeStory: [
-        "Mr. Sanjeev Kumar Saxena is a man whose life is a testament to the power of ambition guided by values. He has always believed that potential is not something given \u2014 it is something earned through relentless effort, clear thinking, and the courage to dream big.",
-        "His influence on those around him has been marked by a consistent message: have a goal, have a plan, and never let mediocrity become acceptable. He has inspired a generation of thinkers, achievers and professionals to raise their own standards.",
-        "The scholarship named in his honour is for students who do not just want to pass \u2014 they want to excel. Students who have a vision for their future, the discipline to pursue it, and the ambition to make their mark on the world."
+        "Mr. Sanjeev Kumar Saxena is living proof that education is not just schools and textbooks and that a well-educated man need not have read a thousand books. A self-made man, strong yet humble like a banyan tree.",
+        "Mr. Sanjeev can amaze you with his “ahead by a century” open mindset and his love, affection, and warmth. A resilient family man who never shies away from a day of hard work. A kind-hearted man who can teach a lesson or two on what true manhood looks like. A feminist by nature, he values self-dependence for everyone equally.",
+        "Therefore, in keeping with his principles, this scholarship is meant for anyone who wants to do something in their life. Applicable to any kid or adult."
       ],
       achievements: [
         'A life of purposeful ambition that has inspired those around him across generations',
@@ -293,7 +293,123 @@ const scholarships = {
       ],
       legacy: "Mr. Sanjeev Kumar Saxena\'s legacy is one of ambition with purpose. Through this scholarship, Kriya invests in the next generation of achievers \u2014 young people who carry both the drive to succeed and the values to make their success meaningful."
     }
-  }
+  },
+
+  // ─── 6. Mrs. Indu Saxena Scholarship ───────────────────────────────────
+  indu: {
+    badge: '75% Support',
+    badgeClass: 'badge-blue',
+    title: 'Mrs. Indu Saxena Scholarship',
+    tagline: 'For students who strive every day to be better than yesterday.',
+    heroClass: 'hero-indu',
+    coverageText: '75% Tuition Fee Support',
+    coveragePercent: 75,
+    duration: '1 Academic Year',
+    seats: '1 student per year',
+    type: 'Merit-Based \u00B7 Partial Support',
+    scholarOf:'Honour Of',
+    courses: ['All academic courses at Kriya', 'Science, Mathematics, Commerce, Humanities', 'Competitive exam preparation'],
+    feeStructure: {
+      waivedOf: '75% of tuition fees',
+      studentPays: '25% of tuition fees',
+      notes: 'The student has to pay 25% share at the time of admission.'
+    },
+    eligibility: [
+      'Minimum 80% aggregate in the most recent board or school examination',
+      'Consistent academic performance over the last 2 academic years',
+      'Active participation in school or community activities',
+      'Submission of a short essay on your academic goals and career vision',
+      'Two teacher or mentor recommendations',
+      'Interview with Kriya\'s selection committee'
+    ],
+    selectionProcess: [
+      { step: 1, title: 'Online Application', desc: 'Complete the application with academic records, essay, and teacher recommendations.' },
+      { step: 2, title: 'Merit Screening', desc: 'Academic records and essay reviewed by the scholarship panel for eligibility and quality.' },
+      { step: 3, title: 'Selection Interview', desc: 'Top candidates interviewed to assess goals, commitment and character.' },
+      { step: 4, title: 'Results & Enrolment', desc: 'Three students selected and notified. Fee relief applied from the first session.' }
+    ],
+    whyThisScholarship: 'Named in honour of Mrs. Manju Saxena, whose steadfast belief in the power of discipline and daily excellence serves as an inspiration to every serious student.',
+    person: {
+      name: 'Mrs. Indu Saxena',
+      photo: '../images/indu_saxena.jpg',
+      role: 'Pillar of Discipline \u00B7 Advocate of Academic Excellence',
+      lifeStory: [
+        "Mrs. Indu Saxena is a self-driven person who despite the general stereotype at her time that women weren’t good at financial planning, managed her finances in a manner that made her financially independent very early in her life. She holds the zeal for life and the courage to withstand any challenge.",
+        "The child in her heart is ever alive and even at the age of crossing 60’s, she can fill a room with positivity with her child-like innocent laughter. Despite many hardships, she has a very forward-looking outlook towards life.",
+        "Hence, this scholarship is meant for someone who holds the positivity and courage to face the challenges offered by life."
+      ],
+      achievements: [
+        'A life defined by discipline, consistency and high personal standards',
+        'Profound positive influence on the Kriya family and the values it upholds',
+        'An inspiring model of how daily dedication creates lasting achievement',
+        'A demonstration that quiet excellence often speaks louder than public acclaim'
+      ],
+      lifeLessons: [
+        { icon: 'fas fa-calendar-check', title: 'Consistency is the Key', lesson: 'Excellence is not achieved in a single brilliant moment. It is built through small, disciplined actions repeated every single day. Mrs. Manju Saxena lived this truth.' },
+        { icon: 'fas fa-star', title: 'Standards are Self-Set', lesson: 'Hold yourself to high standards not because someone is watching, but because you respect yourself. That internal drive is what separates good students from great ones.' },
+        { icon: 'fas fa-seedling', title: 'Growth is a Daily Choice', lesson: 'Every day is an opportunity to become slightly better than the day before. This scholarship celebrates students who make that choice consciously and consistently.' }
+      ],
+      legacy: "The Mrs. Indu Saxena Scholarship stands as a recognition that merit is not just about marks \u2014 it is about character, commitment and the daily choice to strive for excellence. Her legacy lives in every student who receives this award."
+    }
+  },
+
+  // ─── 7. Ms. Chhavi Saxena Scholarship ───────────────────────────────────
+  chhavi: {
+    badge: '75% Support',
+    badgeClass: 'badge-blue',
+    title: 'Mrs. Chhavi Saxena Scholarship',
+    tagline: 'For students who strive every day to be better than yesterday.',
+    heroClass: 'hero-chhavi',
+    coverageText: '75% Tuition Fee Support',
+    coveragePercent: 75,
+    duration: '1 Academic Year',
+    seats: '1 student per year',
+    type: 'Merit-Based \u00B7 Partial Support',
+    scholarOf:'Honour Of',
+    courses: ['All academic courses at Kriya', 'Science, Mathematics, Commerce, Humanities', 'Competitive exam preparation'],
+    feeStructure: {
+      waivedOf: '75% of tuition fees',
+      studentPays: '25% of tuition fees',
+      notes: 'The student has to pay 25% share at the time of admission.'
+    },
+    eligibility: [
+      'Minimum 80% aggregate in the most recent board or school examination',
+      'Consistent academic performance over the last 2 academic years',
+      'Active participation in school or community activities',
+      'Submission of a short essay on your academic goals and career vision',
+      'Two teacher or mentor recommendations',
+      'Interview with Kriya\'s selection committee'
+    ],
+    selectionProcess: [
+      { step: 1, title: 'Online Application', desc: 'Complete the application with academic records, essay, and teacher recommendations.' },
+      { step: 2, title: 'Merit Screening', desc: 'Academic records and essay reviewed by the scholarship panel for eligibility and quality.' },
+      { step: 3, title: 'Selection Interview', desc: 'Top candidates interviewed to assess goals, commitment and character.' },
+      { step: 4, title: 'Results & Enrolment', desc: 'Three students selected and notified. Fee relief applied from the first session.' }
+    ],
+    whyThisScholarship: 'Named in honour of Ms. Chhavi Saxena, whose steadfast belief in the power of discipline and daily excellence serves as an inspiration to every serious student.',
+    person: {
+      name: 'Ms. Chhavi Saxena',
+      photo: '../images/chhavi_saxena.jpg',
+      role: 'Pillar of Discipline \u00B7 Advocate of Academic Excellence',
+      lifeStory: [
+        "Ms. Chhavi Saxena is the founding brain behind Kriya, and she plays a vital role in the planning and management level decision making for the institute.",
+        "Beyond her formal association with the institute, she is an incredibly inspirational human being. Her determination to achieve what others may define as unfathomable is beyond proportion. She has not heard the words “give up”. Be it academia, arts, professional career or just being a perfect sister, friend, daughter and other relations, she doesn’t give up until she has ensured perfection.",
+        "For someone who is ready to show similar dedication to their goals, this scholarship is ideal for them to apply."
+      ],
+      achievements: [
+        'A life defined by discipline, consistency and high personal standards',
+        'Profound positive influence on the Kriya family and the values it upholds',
+        'An inspiring model of how daily dedication creates lasting achievement',
+        'A demonstration that quiet excellence often speaks louder than public acclaim'
+      ],
+      lifeLessons: [
+        { icon: 'fas fa-calendar-check', title: 'Consistency is the Key', lesson: 'Excellence is not achieved in a single brilliant moment. It is built through small, disciplined actions repeated every single day. Mrs. Manju Saxena lived this truth.' },
+        { icon: 'fas fa-star', title: 'Standards are Self-Set', lesson: 'Hold yourself to high standards not because someone is watching, but because you respect yourself. That internal drive is what separates good students from great ones.' },
+        { icon: 'fas fa-seedling', title: 'Growth is a Daily Choice', lesson: 'Every day is an opportunity to become slightly better than the day before. This scholarship celebrates students who make that choice consciously and consistently.' }
+      ],
+      legacy: "The Ms. Chhavi Saxena Scholarship stands as a recognition that merit is not just about marks \u2014 it is about character, commitment and the daily choice to strive for excellence. Her legacy lives in every student who receives this award."
+    }
+  },
 };
 
 // ── Helper utilities ─────────────────────────────────────────────────────────
@@ -317,6 +433,7 @@ function renderScholarshipDetail(data) {
     setText('sd-stat-duration', data.duration);
     setText('sd-stat-seats', data.seats);
     setText('sd-stat-type', data.type);
+    setText('sd-heading-scholar-of', data.scholarOf);
 
     // Mirror stats into sidebar
     setText('sb-coverage', data.coverageText);
@@ -334,7 +451,7 @@ function renderScholarshipDetail(data) {
     ).join('');
 
     // Fee structure
-    setText('sd-fee-kriya', data.feeStructure.kriyaPays);
+    setText('sd-fee-kriya', data.feeStructure.waivedOf);
     setText('sd-fee-student', data.feeStructure.studentPays);
     setText('sd-fee-notes', data.feeStructure.notes);
 
@@ -358,6 +475,17 @@ function renderScholarshipDetail(data) {
     setText('sd-person-name', p.name);
     setText('sd-person-role', p.role);
     setText('sd-person-era', p.era);
+
+    if(p.name === 'Dr. Priya Iyer') {
+        const priyaEl = html('sd-priya');
+        if (priyaEl) priyaEl.innerHTML = '<div class="why-pullquote" data-aos="fade-up">'+
+                    '<i class="fas fa-quote-left why-quote-icon"></i>'+
+                    '<cite>&mdash; A personal note from founder...</cite><br/>'+
+                    '<p>&ldquo;In physics, during the school days, we were taught about photons. Compact packets of energy which together form the illuminating and life-giving light which surrounds us all. I guess, there is no better way to describe Priya other than that. A single person can be many things for many people but Priya played several roles in each of our lives.</p>'+
+                        '<p>She was my close friend, collaborator, gardening enthusiast, writing buddy, travel companion and a great mentor and counsellor. From the very first day that we met four years ago to the very last moment, her motivational energy, her excitement for science, fondness for nature and empathy for everyone she knew remained beyond measure. She was among the kindest persons that I have known in my life. She always used to go to great lengths to help every other person who would have come into her contact. There was no judgment, bias or favouritism in her mind when it came to helping others.</p>'+
+                        '<p>A brilliant academician as she was, her teaching skills and her zeal to promote positive science culture were also incomparable. She was an amazing multi-tasker who would somehow manage to juggle more than four to five full-fledged research projects, her family, and her students and yet will have time to listen to her friends and help them in any way possible. Every time I felt low or under confident about myself or my work or I was procrastinating, she would come forward with her warmth and support to lift me up and get me going. She maintained her child-like curiosity for the world and therefore everything around her used to excite or impact her greatly. Her laughter like herself was so pure and filled with life that it used to light up the whole place.&rdquo;</p>'+
+                        '</div>';
+    }
 
     const storyEl = html('sd-life-story');
     if (storyEl) storyEl.innerHTML = p.lifeStory.map(para =>

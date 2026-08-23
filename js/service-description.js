@@ -16,16 +16,17 @@
         batch: '8-15 students'
     },
     training: {
-        title: 'Training Programs',
-        subtitle: 'Specialized intensive training for competitive exams',
+        title: 'Competitive Exams Training Programs',
+        subtitle: 'Specialized intensive training for competitive exams like NEET, IPMAT, KCET and ICAR',
         description: 'Our competitive exam training programs are designed for students aiming for NEET, IPMAT, KCET and ICAR',
         benefits: 'Updated curriculum, expert coaching, intensive mock tests, strategic preparation, proven success rate',
         structure: 'Advanced level content with weekly full-length tests, topic-wise practice, problem-solving sessions, and personal mentorship',
         eligibility: 'Class 11-12 students and those preparing for competitive exams',
         features: ['Updated Curriculum', 'Mock Tests', 'Personalized Coaching', 'Study Materials', 'Expert Mentors', 'Performance Analysis'],
-        duration: '2 Years',
-        price: '\u20b92,00,000 - \u20b92,50,000',
-        batch: '6-12 students'
+        duration: '2 Year program',
+        price: '\u20b92,50,000',
+        schedule: 'To be updated',
+        batch: '20 students'
     },
     'short-courses': {
         title: 'Short Courses',
@@ -35,21 +36,22 @@
         structure: 'Topic-wise modules, practice problems, revision sessions, and quick assessments',
         eligibility: 'All students preparing for exams',
         features: ['Flexible Duration', 'Focused Learning', 'Affordable', 'Quick Results', 'Expert Guidance', 'Certificates'],
-        duration: '1-3 Months',
+        duration: '3 Months',
         price: '\u20b93,000 - \u20b98,000',
         batch: '15-20 students'
     },
     workshops: {
-        title: 'Events & Workshops',
-        subtitle: 'Interactive seminars and hands-on learning sessions',
-        description: 'Our workshops and events are designed to provide practical knowledge and interactive learning experiences...',
-        benefits: 'Networking opportunities, expert speakers, practical knowledge, certificates, career guidance',
-        structure: 'Interactive sessions with expert speakers, hands-on activities, Q&A sessions, and networking',
-        eligibility: 'Open to all students and professionals',
-        features: ['Expert Speakers', 'Interactive Sessions', 'Networking', 'Certificates', 'Hands-on Activities', 'Career Guidance'],
-        duration: '1 Day - 1 Week',
-        price: '\u20b9500 - \u20b92,000',
-        batch: '30-50 participants'
+        title: 'Spoken English Classes',
+        subtitle: 'Interactive spoken English classes to build confidence and communication skills for professional and personal success.',
+        description: 'This program is designed to provide practical knowledge and interactive learning experiences...',
+        benefits: 'Confidence, Practical knowledge, career guidance',
+        structure: 'Interactive sessions with expert speakers, hands-on activities and Q&A sessions',
+        eligibility: 'Any female above age 13, who is working or non-working or uneducated or having financial issues/troubles and wants to learn English.',
+        features: ['Expert faculty', 'Interactive Sessions', 'Group Activities', 'Flexible timing'],
+        schedule: 'Mon to Fri, 12:00 PM to 2:00 PM',
+        duration: '3 Months',
+        price: '\u20b9500',
+        batch: '10 participants'
     },
     scholarship: {
         title: 'Scholarship Programs',
@@ -107,7 +109,7 @@
     // Populate page elements with service data
     const titleEl = document.getElementById('detail-title');
     const subtitleEl = document.getElementById('detail-subtitle');
-    const descriptionEl = document.getElementById('detail-description');
+    const descriptionEl = document.getElementById('detail-description'); 
     const benefitsEl = document.getElementById('detail-benefits');
     const structureEl = document.getElementById('detail-structure');
     const eligibilityEl = document.getElementById('detail-eligibility');
@@ -115,6 +117,8 @@
     const durationEl = document.getElementById('detail-duration');
     const batchEl = document.getElementById('fact-batch');
     const serviceNameEl = document.getElementById('service-name');
+    const scheduleEl = document.getElementById('fact-schedule');
+    const durationE2 = document.getElementById('fact-duration');
     
     if (titleEl) titleEl.textContent = data.title;
     if (subtitleEl) subtitleEl.textContent = data.subtitle;
@@ -126,6 +130,8 @@
     if (durationEl) durationEl.textContent = `Duration: ${data.duration}`;
     if (batchEl) batchEl.textContent = data.batch;
     if (serviceNameEl) serviceNameEl.textContent = data.title;
+    if (scheduleEl && data.schedule) scheduleEl.textContent = ` ${data.schedule}`;
+    if (durationE2 && data.duration) durationE2.textContent = ` ${data.duration}`;
     
     // Populate features list
     data.features.forEach((feature, index) => {

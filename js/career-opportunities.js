@@ -1,8 +1,8 @@
 const jobOpenings = [
     {
-        title: 'Mathematics Faculty (Class 9-12)',
+        title: 'Mathematics Faculty (Class 6-10)',
         jobCode: 'KCC-EDU-101',
-        postingDate: '2026-06-20',
+        postingDate: '2026-09-01',
         role: 'Academic Teaching',
         description: 'Deliver high-impact Mathematics sessions for secondary and senior secondary learners.',
         responsibilities: [
@@ -14,9 +14,9 @@ const jobOpenings = [
         experience: '3-6 years'
     },
     {
-        title: 'Physics Faculty (JEE/NEET Foundation)',
+        title: 'Physics Faculty (class 6-10)',
         jobCode: 'KCC-EDU-102',
-        postingDate: '2026-06-18',
+        postingDate: '2026-09-01',
         role: 'Competitive Exam Coaching',
         description: 'Train aspirants with problem-solving techniques and exam-oriented preparation.',
         responsibilities: [
@@ -28,93 +28,9 @@ const jobOpenings = [
         experience: '4-8 years'
     },
     {
-        title: 'English Communication Trainer',
-        jobCode: 'KCC-LNG-201',
-        postingDate: '2026-06-17',
-        role: 'Language & Personality Development',
-        description: 'Improve student fluency, confidence, and public speaking through practical sessions.',
-        responsibilities: [
-            'Run speaking, writing, and presentation workshops',
-            'Design classroom activities for communication skills',
-            'Support interview and group discussion readiness'
-        ],
-        preferredSkills: ['Communication coaching', 'Interactive facilitation', 'Student engagement'],
-        experience: '2-5 years'
-    },
-    {
-        title: 'Career Counselor',
-        jobCode: 'KCC-CC-301',
-        postingDate: '2026-06-16',
-        role: 'Career Guidance & Counseling',
-        description: 'Guide students in stream selection, career mapping, and goal planning.',
-        responsibilities: [
-            'Conduct one-on-one counseling sessions',
-            'Create personalized career roadmaps',
-            'Coordinate with parents for progress discussions'
-        ],
-        preferredSkills: ['Counseling techniques', 'Psychometric awareness', 'Empathy and communication'],
-        experience: '3-7 years'
-    },
-    {
-        title: 'Student Success Executive',
-        jobCode: 'KCC-OPS-401',
-        postingDate: '2026-06-15',
-        role: 'Operations & Student Support',
-        description: 'Own student onboarding, attendance tracking, and issue resolution.',
-        responsibilities: [
-            'Manage student onboarding and document verification',
-            'Coordinate class schedules and attendance records',
-            'Support day-to-day learner queries and escalations'
-        ],
-        preferredSkills: ['Coordination', 'CRM handling', 'Communication and follow-up'],
-        experience: '1-4 years'
-    },
-    {
-        title: 'Digital Marketing Specialist',
-        jobCode: 'KCC-MKT-501',
-        postingDate: '2026-06-14',
-        role: 'Marketing',
-        description: 'Drive admissions-focused digital campaigns and community engagement.',
-        responsibilities: [
-            'Plan and execute social media campaigns',
-            'Manage paid ads and lead funnels',
-            'Track campaign performance and optimize ROI'
-        ],
-        preferredSkills: ['Meta/Google Ads', 'Content planning', 'Analytics reporting'],
-        experience: '2-5 years'
-    },
-    {
-        title: 'Graphic Designer (Education Content)',
-        jobCode: 'KCC-MKT-502',
-        postingDate: '2026-06-13',
-        role: 'Design & Creative',
-        description: 'Create visual assets for promotions, classroom resources, and events.',
-        responsibilities: [
-            'Design creatives for social and print channels',
-            'Build templates for academic communication',
-            'Collaborate with marketing and faculty teams'
-        ],
-        preferredSkills: ['Canva/Adobe tools', 'Visual storytelling', 'Brand consistency'],
-        experience: '1-4 years'
-    },
-    {
-        title: 'Front Desk & Admission Coordinator',
-        jobCode: 'KCC-ADM-601',
-        postingDate: '2026-06-12',
-        role: 'Administration',
-        description: 'Handle front-office operations and admission inquiries professionally.',
-        responsibilities: [
-            'Manage walk-ins, calls, and enquiry forms',
-            'Assist with admission conversion and payment tracking',
-            'Coordinate between parents, students, and internal teams'
-        ],
-        preferredSkills: ['Customer handling', 'MS Office', 'Process discipline'],
-        experience: '1-3 years'
-    },
-    {
-        title: 'Content Writer (Academic & Web)',
+        title: 'Content creator (Academic & Web)',
         jobCode: 'KCC-CNT-701',
-        postingDate: '2026-06-11',
+        postingDate: '2026-09-01',
         role: 'Content & Communication',
         description: 'Develop educational and marketing content for web, brochures, and campaigns.',
         responsibilities: [
@@ -128,7 +44,7 @@ const jobOpenings = [
     {
         title: 'Part-Time Workshop Facilitator',
         jobCode: 'KCC-EVT-801',
-        postingDate: '2026-06-10',
+        postingDate: '2026-09-01',
         role: 'Events & Workshops',
         description: 'Facilitate skill-building workshops for students and parents.',
         responsibilities: [

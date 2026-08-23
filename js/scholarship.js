@@ -23,36 +23,10 @@ const scholarshipPrograms = [
         description: 'Named after a remarkable self-made woman who raised 6 daughters alone. This scholarship supports learners who need a restart in life.',
         image: '../images/kamala.jpg',
         type: 'Life Restart',
-        coverage: '50% Tuition Support',
-        duration: '1 Year (Renewable)',
-        seats: '2\u20133 seats / year',
-        highlights: ['All age groups', 'All Kriya courses', 'Monthly instalment option', 'No academic score barrier']
-    },
-    {
-        id: 'abha',
-        program: 'abha',
-        title: 'Ms. Abha Saxena Scholarship',
-        tagline: 'For students passionate about a skill, an art form, or a specific knowledge domain.',
-        description: 'Honouring an internationally acclaimed artist who taught 5000+ students. Dedicated to learners who burn with passion for a craft.',
-        image: '../images/abha.jpg',
-        type: 'Talent & Skill-Based',
-        coverage: '50% Tuition Support',
+        coverage: '75% Tuition Fee Support',
         duration: '1 Academic Year',
-        seats: '2 seats / year',
-        highlights: ['Skill/art portfolio required', 'Ages 12+', 'All Kriya programs', 'Flexible instalment']
-    },
-    {
-        id: 'manju',
-        program: 'manju',
-        title: 'Mrs. Manju Saxena Scholarship',
-        tagline: 'Recognising students who show up every day and hold themselves to high standards.',
-        description: 'A merit-based scholarship for students with consistently outstanding academic performance and the discipline to match.',
-        image: '../images/manju.jpg',
-        type: 'Merit-Based',
-        coverage: '40% Tuition Support',
-        duration: '1 Year (Renewable)',
-        seats: '3 seats / year',
-        highlights: ['80%+ required', 'All academic courses', 'Renewable on performance', 'Essay + interview']
+        seats: '1 seats / year',
+        highlights: ['All age groups', 'All Kriya courses', 'Monthly instalment option', 'No academic score barrier']
     },
     {
         id: 'sanjeev',
@@ -62,10 +36,62 @@ const scholarshipPrograms = [
         description: 'Named after a life of purposeful ambition. This scholarship rewards students who have both the marks and the vision to go far.',
         image: '../images/sanjeev.jpg',
         type: 'Merit & Ambition',
-        coverage: '40% Tuition Support',
-        duration: '1 Year (Renewable)',
-        seats: '3 seats / year',
-        highlights: ['80%+ required', 'STEM & competitive prep', 'Vision statement required', 'Renewable on merit']
+        coverage: '75% Tuition Fee Support',
+        duration: '1 Academic Year',
+        seats: '1 seats / year',
+        highlights: ['80%+ required', 'STEM & competitive prep', 'Vision statement required', 'On merit']
+    },
+    {
+        id: 'manju',
+        program: 'manju',
+        title: 'Mrs. Manju Saxena Scholarship',
+        tagline: 'Recognising students who show up every day and hold themselves to high standards.',
+        description: 'A merit-based scholarship for students with consistently outstanding academic performance and the discipline to match.',
+        image: '../images/manju.jpg',
+        type: 'Merit-Based',
+        coverage: '75% Tuition Fee Support',
+        duration: '1 Academic Year',
+        seats: '1 seats / year',
+        highlights: ['80%+ required', 'All academic courses', 'On performance', 'Essay + interview']
+    },
+    {
+        id: 'abha',
+        program: 'abha',
+        title: 'Ms. Abha Saxena Scholarship',
+        tagline: 'For students passionate about a skill, an art form, or a specific knowledge domain.',
+        description: 'Honouring an internationally acclaimed artist who taught 5000+ students. Dedicated to learners who burn with passion for a craft.',
+        image: '../images/abha.jpg',
+        type: 'Talent & Skill-Based',
+        coverage: '75% Tuition Fee Support',
+        duration: '1 Academic Year',
+        seats: '1 seats / year',
+        highlights: ['Skill/art portfolio required', 'Ages 12+', 'All Kriya programs', 'Flexible instalment']
+    },
+    {
+        id: 'indu',
+        program: 'indu',
+        title: 'Mrs. Indu Saxena Scholarship',
+        tagline: 'Recognising students who show up every day and hold themselves to high standards.',
+        description: 'A merit-based scholarship for students with consistently outstanding academic performance and the discipline to match.',
+        image: '../images/indu_saxena.jpg',
+        type: 'Merit-Based',
+        coverage: '75% Tuition Fee Support',
+        duration: '1 Academic Year',
+        seats: '1 seats / year',
+        highlights: ['80%+ required', 'All academic courses', 'On performance', 'Essay + interview']
+    },
+    {
+        id: 'chhavi',
+        program: 'chhavi',
+        title: 'Ms. Chhavi Saxena Scholarship',
+        tagline: 'For students passionate about a skill, or a specific knowledge domain.',
+        description: 'Honouring an internationally acclaimed artist who taught 5000+ students. Dedicated to learners who burn with passion for a craft.',
+        image: '../images/chhavi_saxena.jpg',
+        type: 'Talent & Skill-Based',
+        coverage: '75% Tuition Fee Support',
+        duration: '1 Academic Year',
+        seats: '1 seats / year',
+        highlights: ['Skill portfolio required', 'Ages 12+', 'All Kriya programs', 'Flexible instalment']
     }
 ];
 
@@ -88,7 +114,7 @@ function renderScholarshipCards() {
             '  <h3>' + s.title + '</h3>' +
             '  <p class="sc-tagline">' + s.tagline + '</p>' +
             '  <div class="sc-chips">' +
-            '    <span class="sc-chip chip-cov"><i class="fas fa-percent me-1"></i>' + s.coverage + '</span>' +
+            '    <span class="sc-chip chip-cov">' + s.coverage + '</span>' +
             '    <span class="sc-chip chip-dur"><i class="fas fa-clock me-1"></i>' + s.duration + '</span>' +
             '    <span class="sc-chip chip-seat"><i class="fas fa-chair me-1"></i>' + s.seats + '</span>' +
             '  </div>' +
