@@ -159,9 +159,9 @@ const scholarships = {
       photo: '../images/abha.jpg',
       role: 'World-Class Artist \u00B7 Master Teacher \u00B7 Cultural Icon',
       lifeStory: [
-        "Ms. Abha Saxena is one of those rare individuals who devoted not just a part, but the entirety of their life to a single calling: art. Her work has been recognised and celebrated not only across India but on international stages, a testament to the universality of her vision and craft.",
-        "What makes Abha\'s story particularly powerful is that her artistry was never self-contained. She was, at her core, a teacher. Over the course of her life, she taught more than 5,000 students the skills, discipline and joy of various art forms. For her, teaching was not a profession \u2014 it was an extension of her art.",
-        "Her choices were never guided by convention. She was meticulous, deeply particular, and possessed a global cultural sensibility that made her work speak across borders and languages. Her personality, much like her art, spoke volumes of her immense calibre. To know Abha was to encounter someone who had found her purpose completely \u2014 and lived it with every breath."
+        "Ms. Abha Saxena is one of those rare individuals who devotes not just a part, but the entirety of her life to a single calling: art. Her work is recognised and celebrated not only across India but on international stages, a testament to the universality of her vision and craft.",
+        "What makes Abha's story particularly powerful is that her artistry is never self-contained. She is, at her core, a teacher. Over the course of her life, she teaches more than 5,000 students the skills, discipline, and joy of various art forms. For her, teaching is not a profession \u2014 it is an extension of her art.",
+        "Her choices are never guided by convention. She is meticulous, deeply particular, and possesses a global cultural sensibility that makes her work speak across borders and languages. Her personality, much like her art, speaks volumes of her immense calibre. To know Abha is to encounter someone who has found her purpose completely and lives it with every breath."
       ],
       achievements: [
         'Internationally acclaimed artist with work recognised across India and abroad',
@@ -173,7 +173,7 @@ const scholarships = {
       lifeLessons: [
         { icon: 'fas fa-palette', title: 'Passion Over Profession', lesson: 'Abha did not treat art as a career choice \u2014 she treated it as her identity. She teaches us that when you love what you do completely, excellence follows naturally.' },
         { icon: 'fas fa-chalkboard-teacher', title: 'True Mastery Multiplies', lesson: 'A master who keeps their knowledge to themselves has wasted half their gift. Abha shared her mastery with 5,000+ students, ensuring her art would live far beyond her.' },
-        { icon: 'fas fa-globe', title: 'Authenticity Transcends Borders', lesson: 'Her work was deeply personal and rooted in her unique perspective \u2014 yet it resonated internationally. Authenticity, not imitation, is what creates work that the world remembers.' }
+        { icon: 'fas fa-globe', title: 'Authenticity Transcends Borders', lesson: 'Her work is deeply personal and rooted in her unique perspective \u2014 yet it resonated internationally. Authenticity, not imitation, is what creates work that the world remembers.' }
       ],
       legacy: "Ms. Abha Saxena\'s legacy is one of creative dedication. Through this scholarship, Kriya ensures that students who burn with passion for a skill or art form \u2014 but may lack the financial means to pursue it fully \u2014 get the support they need to let that fire grow."
     }
@@ -300,7 +300,7 @@ const scholarships = {
     badge: '75% Support',
     badgeClass: 'badge-blue',
     title: 'Mrs. Indu Saxena Scholarship',
-    tagline: 'For students who strive every day to be better than yesterday.',
+    tagline: '',
     heroClass: 'hero-indu',
     coverageText: '75% Tuition Fee Support',
     coveragePercent: 75,
@@ -328,11 +328,11 @@ const scholarships = {
       { step: 3, title: 'Selection Interview', desc: 'Top candidates interviewed to assess goals, commitment and character.' },
       { step: 4, title: 'Results & Enrolment', desc: 'Three students selected and notified. Fee relief applied from the first session.' }
     ],
-    whyThisScholarship: 'Named in honour of Mrs. Manju Saxena, whose steadfast belief in the power of discipline and daily excellence serves as an inspiration to every serious student.',
+    whyThisScholarship: 'Named in honour of Mrs. Indu Saxena, whose steadfast belief in the power of discipline and daily excellence serves as an inspiration to every serious student.',
     person: {
       name: 'Mrs. Indu Saxena',
-      photo: '../images/indu_saxena.jpg',
-      role: 'Pillar of Discipline \u00B7 Advocate of Academic Excellence',
+      photo: '../images/Indu_saxena.jpg',
+      role: 'Self-Driven \u00B7 Focused and positive Personality',
       lifeStory: [
         "Mrs. Indu Saxena is a self-driven person who despite the general stereotype at her time that women weren’t good at financial planning, managed her finances in a manner that made her financially independent very early in her life. She holds the zeal for life and the courage to withstand any challenge.",
         "The child in her heart is ever alive and even at the age of crossing 60’s, she can fill a room with positivity with her child-like innocent laughter. Despite many hardships, she has a very forward-looking outlook towards life.",
@@ -345,7 +345,7 @@ const scholarships = {
         'A demonstration that quiet excellence often speaks louder than public acclaim'
       ],
       lifeLessons: [
-        { icon: 'fas fa-calendar-check', title: 'Consistency is the Key', lesson: 'Excellence is not achieved in a single brilliant moment. It is built through small, disciplined actions repeated every single day. Mrs. Manju Saxena lived this truth.' },
+        { icon: 'fas fa-calendar-check', title: 'Consistency is the Key', lesson: 'Excellence is not achieved in a single brilliant moment. It is built through small, disciplined actions repeated every single day. Mrs. Indu Saxena lived this truth.' },
         { icon: 'fas fa-star', title: 'Standards are Self-Set', lesson: 'Hold yourself to high standards not because someone is watching, but because you respect yourself. That internal drive is what separates good students from great ones.' },
         { icon: 'fas fa-seedling', title: 'Growth is a Daily Choice', lesson: 'Every day is an opportunity to become slightly better than the day before. This scholarship celebrates students who make that choice consciously and consistently.' }
       ],
@@ -357,7 +357,7 @@ const scholarships = {
   chhavi: {
     badge: '75% Support',
     badgeClass: 'badge-blue',
-    title: 'Mrs. Chhavi Saxena Scholarship',
+    title: 'Ms. Chhavi Saxena Scholarship',
     tagline: 'For students who strive every day to be better than yesterday.',
     heroClass: 'hero-chhavi',
     coverageText: '75% Tuition Fee Support',
@@ -389,8 +389,8 @@ const scholarships = {
     whyThisScholarship: 'Named in honour of Ms. Chhavi Saxena, whose steadfast belief in the power of discipline and daily excellence serves as an inspiration to every serious student.',
     person: {
       name: 'Ms. Chhavi Saxena',
-      photo: '../images/chhavi_saxena.jpg',
-      role: 'Pillar of Discipline \u00B7 Advocate of Academic Excellence',
+      photo: '../images/Chhavi_saxena.jpg',
+      role: 'HR Leader in IT industry \u00B7 Managing business clients \u00B7 Kriya\'s guiding light',
       lifeStory: [
         "Ms. Chhavi Saxena is the founding brain behind Kriya, and she plays a vital role in the planning and management level decision making for the institute.",
         "Beyond her formal association with the institute, she is an incredibly inspirational human being. Her determination to achieve what others may define as unfathomable is beyond proportion. She has not heard the words “give up”. Be it academia, arts, professional career or just being a perfect sister, friend, daughter and other relations, she doesn’t give up until she has ensured perfection.",
@@ -403,7 +403,7 @@ const scholarships = {
         'A demonstration that quiet excellence often speaks louder than public acclaim'
       ],
       lifeLessons: [
-        { icon: 'fas fa-calendar-check', title: 'Consistency is the Key', lesson: 'Excellence is not achieved in a single brilliant moment. It is built through small, disciplined actions repeated every single day. Mrs. Manju Saxena lived this truth.' },
+        { icon: 'fas fa-calendar-check', title: 'Consistency is the Key', lesson: 'Excellence is not achieved in a single brilliant moment. It is built through small, disciplined actions repeated every single day. Ms. Chhavi Saxena lived this truth.' },
         { icon: 'fas fa-star', title: 'Standards are Self-Set', lesson: 'Hold yourself to high standards not because someone is watching, but because you respect yourself. That internal drive is what separates good students from great ones.' },
         { icon: 'fas fa-seedling', title: 'Growth is a Daily Choice', lesson: 'Every day is an opportunity to become slightly better than the day before. This scholarship celebrates students who make that choice consciously and consistently.' }
       ],

@@ -105,7 +105,7 @@ from the very first class. Whether you are a school student, a working professio
 to explore a new language, this course makes German approachable and engaging.`,
 
         benefits: [
-            { icon: 'fas fa-certificate',   text: 'Instructor certified in German A1 from Cambridge Institute, Mumbai' },
+            { icon: 'fas fa-certificate',   text: 'Instructor certified in German A1 and A2 from Cambridge Institute, Mumbai' },
             { icon: 'fas fa-comments',      text: 'Practical communication focus — you will start speaking from lesson one' },
             { icon: 'fas fa-book-open',     text: 'Beginner-friendly A1 curriculum with clear weekly goals' },
             { icon: 'fas fa-school',        text: 'Supports school German syllabus (all boards)' },
@@ -154,9 +154,9 @@ You are a great fit if you are:`,
             name:       'Parmanand Banerjee',
             photo:      '../images/Parmanand.jpeg',
             title:      'German Language Instructor',
-            experience: 'German A1 Specialist',
+            experience: 'German A1 and A2 Specialist',
             bio: `Parmanand is a passionate language enthusiast with a genuine love for teaching German. 
-He completed his German A1 certification from the Cambridge Institute, Mumbai, and brings an 
+He completed his German A2 certifications from the Cambridge Institute, Mumbai, and brings an 
 infectious enthusiasm for the language into every class. Parmanand continues his own German studies 
 to steadily advance his proficiency — a commitment that keeps his teaching current and motivational.
 <br><br>
@@ -164,11 +164,11 @@ His teaching philosophy is simple: make the language accessible, fun, and immedi
 Students in his classes start speaking German from the very first session, building confidence 
 alongside grammatical accuracy.`,
             qualifications: [
-                { icon: 'fas fa-award', text: 'German A1 Certification — Cambridge Institute, Mumbai' },
+                { icon: 'fas fa-award', text: 'German A1 and A2 Certifications — Cambridge Institute, Mumbai' },
                 { icon: 'fas fa-book', text: 'Continuing advanced German studies for higher proficiency' }
             ],
             achievements: [
-                'Certified German A1 instructor \u2014 Cambridge Institute, Mumbai',
+                'Certified German A2 instructor \u2014 Cambridge Institute, Mumbai',
                 'Specialises in helping complete beginners start speaking German confidently',
                 'Actively advancing personal German proficiency through ongoing studies'
             ],
