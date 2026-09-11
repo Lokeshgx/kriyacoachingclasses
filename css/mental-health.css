@@ -164,10 +164,10 @@
     font-size: 1.75rem;
     font-weight: 700;
     color: var(--dark-color);
-    margin-bottom: 1rem;
+ /**   margin-bottom: 1rem;
     padding-bottom: 0.5rem;
-    border-bottom: 3px solid #0d6e5e;
-    display: inline-block;
+    border-bottom: 3px solid #0d6e5e;  
+    display: inline-block;*/
 }
 
 .mh-content-section h3 {
@@ -314,7 +314,15 @@
     box-shadow: none;
 }
 
-.mh-faq .accordion-button:focus { box-shadow: 0 0 0 3px rgba(13,110,94,0.2); }
+.mh-faq .accordion-button:focus { 
+    box-shadow: 0 0 0 3px rgba(13,110,94,0.2); 
+}
+
+
+.mh-faq .accordion-button::after {
+    filter: invert(0);
+}
+
 
 .mh-faq .accordion-item {
     border: 1px solid #c6f0e8 !important;
