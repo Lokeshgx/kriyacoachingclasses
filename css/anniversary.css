@@ -1,0 +1,873 @@
+/* =====================================================================
+   5TH ANNIVERSARY PAGE — "5 Years of Excellence"
+   Premium, animated, celebratory design system.
+   Prefix convention: .anniv-*  (kept isolated from shared site classes)
+   ===================================================================== */
+
+:root {
+    --anniv-gold: #d9a52a;
+    --anniv-gold-light: #ffe38a;
+    --anniv-gold-dark: #a5760f;
+    --anniv-maroon: #7a1f1f;
+    --anniv-maroon-deep: #4d1212;
+    --anniv-green: #0c6c41;
+    --anniv-cream: #fffaf0;
+    --anniv-ink: #241407;
+}
+
+/* ===== SHARED ORNAMENTS ===== */
+.anniv-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 1.1rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--anniv-gold-light), var(--anniv-gold));
+    color: var(--anniv-maroon-deep);
+    font-weight: 700;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    box-shadow: 0 4px 14px rgba(165, 118, 15, 0.35);
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    animation: annivFloat 4s ease-in-out infinite;
+}
+
+.anniv-gold-divider {
+    width: 90px;
+    height: 4px;
+    margin: 0.75rem auto 1.5rem;
+    border-radius: 4px;
+    background: linear-gradient(90deg, transparent, var(--anniv-gold), transparent);
+    position: relative;
+}
+
+.anniv-gold-divider::before {
+    content: '\2726';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--anniv-gold-dark);
+    font-size: 1rem;
+    background: var(--anniv-cream);
+    padding: 0 0.4rem;
+}
+
+.anniv-section {
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.anniv-section-cream { background: var(--anniv-cream); }
+.anniv-section-dark {
+    background: linear-gradient(160deg, var(--anniv-maroon-deep) 0%, var(--anniv-maroon) 55%, #632020 100%);
+    color: #f6e6c8;
+}
+.anniv-section-dark .section-header h2,
+.anniv-section-dark h2, .anniv-section-dark h3, .anniv-section-dark h4 { color: #fff3d8; }
+.anniv-section-dark p { color: #e6cfa8; }
+
+/* ===================================================================
+   ANNOUNCEMENT RIBBON (top of page)
+   =================================================================== */
+.anniv-ribbon {
+    background: linear-gradient(90deg, var(--anniv-maroon-deep), var(--anniv-maroon) 45%, var(--anniv-maroon-deep));
+    color: #fff3d8;
+    text-align: center;
+    padding: 0.65rem 1rem;
+    font-weight: 600;
+    font-size: 0.92rem;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 2px solid var(--anniv-gold);
+}
+
+.anniv-ribbon::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 0%, rgba(255, 227, 138, 0.25) 50%, transparent 100%);
+    background-size: 200% 100%;
+    animation: annivRibbonShine 3.5s linear infinite;
+}
+
+.anniv-ribbon-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem 1rem;
+}
+
+.anniv-ribbon .anniv-ribbon-cta {
+    background: var(--anniv-gold);
+    color: var(--anniv-maroon-deep);
+    padding: 0.2rem 0.9rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.82rem;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.anniv-ribbon .anniv-ribbon-cta:hover {
+    background: var(--anniv-gold-light);
+    color: var(--anniv-maroon-deep);
+    transform: translateY(-1px);
+}
+
+@keyframes annivRibbonShine {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* ===================================================================
+   HERO CAROUSEL
+   =================================================================== */
+.anniv-hero {
+    position: relative;
+    background: radial-gradient(circle at 20% 20%, #2b0d0d 0%, var(--anniv-maroon-deep) 45%, #1c0808 100%);
+    overflow: hidden;
+ /**   min-height: 640px;   */
+}
+
+.anniv-confetti-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.confetti-piece {
+    position: absolute;
+    top: -20px;
+    width: 10px;
+    height: 16px;
+    opacity: 0.9;
+    animation-name: annivConfettiFall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes annivConfettiFall {
+    0% { transform: translate3d(0, -10vh, 0) rotate(0deg); opacity: 1; }
+    100% { transform: translate3d(var(--drift, 40px), 110vh, 0) rotate(540deg); opacity: 0.85; }
+}
+
+.anniv-popper {
+    position: absolute;
+    font-size: 2.6rem;
+    z-index: 3;
+    animation: annivPop 2.6s ease-in-out infinite;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.35));
+}
+.anniv-popper.pop-left { left: 3%; bottom: 8%; animation-delay: 0s; transform-origin: bottom left; }
+.anniv-popper.pop-right { right: 5%; bottom: 8%; animation-delay: 0.6s; transform: scaleX(-1); transform-origin: bottom right; }
+.anniv-popper.pop-top-left { left: 6%; top: 10%; font-size: 1.8rem; animation-delay: 1.1s; }
+.anniv-popper.pop-top-right { right: 6%; top: 12%; font-size: 1.8rem; animation-delay: 1.6s; }
+
+@keyframes annivPop {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    10% { transform: rotate(-18deg) scale(1.15); }
+    20% { transform: rotate(6deg) scale(1); }
+    30% { transform: rotate(0deg) scale(1); }
+}
+.anniv-popper.pop-right { animation-name: annivPopRight; }
+@keyframes annivPopRight {
+    0%, 100% { transform: scaleX(-1) rotate(0deg) scale(1); }
+    10% { transform: scaleX(-1) rotate(-18deg) scale(1.15); }
+    20% { transform: scaleX(-1) rotate(6deg) scale(1); }
+    30% { transform: scaleX(-1) rotate(0deg) scale(1); }
+}
+
+#anniversaryCarousel { position: relative; z-index: 1; }
+
+.anniv-carousel-item {
+    min-height: 640px;
+    display: inline;
+    align-items: center;
+    padding: 3rem 0;
+}
+
+.anniv-hero-content { position: relative; z-index: 4; padding: 2rem 0; }
+
+/* Decorated logo lockup */
+.anniv-logo-wrap {
+    position: relative;
+    width: 168px;
+    height: 168px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.anniv-logo-wrap .anniv-logo-ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, var(--anniv-gold-light), var(--anniv-gold), var(--anniv-gold-dark), var(--anniv-gold), var(--anniv-gold-light));
+    animation: annivSpin 8s linear infinite;
+    box-shadow: 0 0 30px rgba(217, 165, 42, 0.55);
+}
+
+.anniv-logo-wrap .anniv-logo-inner {
+    position: absolute;
+    inset: 8px;
+    border-radius: 50%;
+    background: var(--anniv-cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 3px solid var(--anniv-gold-light);
+}
+
+.anniv-logo-wrap .anniv-logo-inner img {
+    width: 82%;
+    height: 82%;
+    object-fit: contain;
+}
+
+.anniv-logo-wrap .anniv-logo-laurel {
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--anniv-gold-light), var(--anniv-gold-dark));
+    color: var(--anniv-maroon-deep);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    padding: 0.25rem 0.9rem;
+    border-radius: 999px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    white-space: nowrap;
+}
+
+@keyframes annivSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.anniv-hero-title {
+    color: #fff8e6;
+    font-size: 2.8rem;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.anniv-hero-title .anniv-gold-text {
+    background: linear-gradient(135deg, var(--anniv-gold-light), var(--anniv-gold), var(--anniv-gold-light));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: annivShimmer 3.5s linear infinite;
+}
+
+@keyframes annivShimmer {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
+.anniv-hero-sub {
+    color: #f0dcb0;
+    font-size: 1.15rem;
+    max-width: 620px;
+}
+
+.anniv-hero-buttons .btn { border-radius: 999px; padding: 0.85rem 1.9rem; }
+
+.btn-gold {
+    background: linear-gradient(135deg, var(--anniv-gold-light), var(--anniv-gold-dark));
+    color: var(--anniv-maroon-deep);
+    font-weight: 700;
+    border: none;
+    border-radius: 999px;
+    box-shadow: 0 6px 20px rgba(217, 165, 42, 0.4);
+}
+.btn-gold:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(217, 165, 42, 0.55); color: var(--anniv-maroon-deep); }
+
+.btn-ghost-gold {
+    background: transparent;
+    color: var(--anniv-gold-light);
+    border: 2px solid var(--anniv-gold);
+    font-weight: 600;
+    border-radius: 999px;
+}
+.btn-ghost-gold:hover { background: rgba(217,165,42,0.15); color: #fff; }
+
+/* Floating anniversary badge */
+.anniv-badge {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, var(--anniv-gold-light), var(--anniv-gold) 60%, var(--anniv-gold-dark) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--anniv-maroon-deep);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.45), inset 0 0 0 6px rgba(255,255,255,0.35);
+    position: relative;
+    margin: 0 auto;
+    animation: annivFloat 4s ease-in-out infinite;
+    border: 3px dashed rgba(122, 31, 31, 0.5);
+}
+
+.anniv-badge-inner .anniv-badge-num {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1;
+    display: block;
+}
+
+.anniv-badge-inner .anniv-badge-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    display: block;
+}
+
+.anniv-badge-inner .anniv-badge-years {
+    font-size: 0.72rem;
+    font-weight: 600;
+    display: block;
+    margin-top: 0.2rem;
+}
+
+@keyframes annivFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+.anniv-hero-photo-collage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    position: relative;
+    z-index: 1;
+}
+
+.anniv-hero-photo-collage img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 1rem;
+    border: 3px solid rgba(255, 227, 138, 0.5);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+    transition: transform 0.35s ease;
+}
+.anniv-hero-photo-collage img:hover { transform: translateY(-6px) scale(1.03); }
+.anniv-hero-photo-collage div:nth-child(2) img { height: 175px; margin-top: -2rem; }
+
+.carousel-indicators-gold button {
+    background-color: var(--anniv-gold) !important;
+    opacity: 0.5;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.carousel-indicators-gold button.active { opacity: 1; }
+
+.anniv-hero .carousel-control-prev-icon,
+.anniv-hero .carousel-control-next-icon {
+    background-color: rgba(217, 165, 42, 0.85);
+    border-radius: 50%;
+    padding: 1.4rem;
+    background-size: 45%;
+}
+
+/* ===================================================================
+   STATS STRIP
+   =================================================================== */
+.anniv-stats-strip {
+    background: linear-gradient(135deg, var(--anniv-cream), #fdf1d6);
+    padding: 3rem 0;
+    border-bottom: 1px solid rgba(165, 118, 15, 0.15);
+}
+
+.anniv-stat-card {
+    text-align: center;
+    padding: 1.2rem 0.5rem;
+    position: relative;
+}
+
+.anniv-stat-card .anniv-stat-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--anniv-gold-light), var(--anniv-gold-dark));
+    color: var(--anniv-maroon-deep);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.75rem;
+    font-size: 1.3rem;
+    box-shadow: 0 6px 16px rgba(165, 118, 15, 0.35);
+}
+
+.anniv-stat-card .anniv-stat-number {
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: var(--anniv-maroon);
+    font-family: 'Poppins', sans-serif;
+}
+
+.anniv-stat-card .anniv-stat-label {
+    color: var(--anniv-ink);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* ===================================================================
+   JOURNEY TIMELINE
+   =================================================================== */
+.anniv-timeline {
+    position: relative;
+    max-width: 980px;
+    margin: 0 auto;
+    padding-top: 1rem;
+}
+
+.anniv-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 3px;
+    background: linear-gradient(180deg, var(--anniv-gold-light), var(--anniv-gold-dark));
+    transform: translateX(-50%);
+}
+
+.anniv-timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 0 3rem 3rem;
+}
+
+.anniv-timeline-item:nth-child(odd) { left: 0; text-align: right; }
+.anniv-timeline-item:nth-child(even) { left: 50%; text-align: left; }
+
+.anniv-timeline-year {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--anniv-maroon), var(--anniv-maroon-deep));
+    color: var(--anniv-gold-light);
+    font-weight: 800;
+    font-size: 1.1rem;
+    padding: 0.3rem 1.1rem;
+    border-radius: 999px;
+    margin-bottom: 0.6rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.anniv-timeline-dot {
+    position: absolute;
+    top: 6px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--anniv-gold);
+    border: 4px solid var(--anniv-cream);
+    box-shadow: 0 0 0 3px var(--anniv-gold-dark);
+}
+
+.anniv-timeline-item:nth-child(odd) .anniv-timeline-dot { right: -11px; }
+.anniv-timeline-item:nth-child(even) .anniv-timeline-dot { left: -11px; }
+
+.anniv-timeline-card {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem 1.75rem;
+    box-shadow: var(--shadow-md, 0 4px 6px -1px rgba(0,0,0,0.1));
+    border: 1px solid rgba(165, 118, 15, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.anniv-timeline-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg, 0 10px 15px -3px rgba(0,0,0,0.1)); }
+.anniv-timeline-card h4 { color: var(--anniv-maroon); font-size: 1.15rem; margin-bottom: 0.5rem; }
+.anniv-timeline-card p { margin: 0; font-size: 0.92rem; }
+
+/* ===================================================================
+   LEARNINGS / UPS & DOWNS
+   =================================================================== */
+.anniv-learning-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.anniv-learning-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(217, 165, 42, 0.35);
+    border-radius: 1rem;
+    padding: 1.75rem;
+    backdrop-filter: blur(2px);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.anniv-learning-card:hover { transform: translateY(-5px); border-color: var(--anniv-gold); }
+
+.anniv-learning-card .anniv-learning-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 0.9rem;
+    background: linear-gradient(135deg, var(--anniv-gold-light), var(--anniv-gold-dark));
+    color: var(--anniv-maroon-deep);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.anniv-learning-card h5 { color: #fff3d8; font-size: 1.05rem; margin-bottom: 0.6rem; }
+.anniv-learning-card p { font-size: 0.9rem; margin: 0; }
+
+/* ===================================================================
+   PEOPLE BEHIND SUCCESS
+   =================================================================== */
+.anniv-people-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1.75rem;
+}
+
+.anniv-people-card {
+    text-align: center;
+    background: #fff;
+    border-radius: 1.2rem;
+    padding: 2rem 1.25rem 1.5rem;
+    box-shadow: var(--shadow-md, 0 4px 6px -1px rgba(0,0,0,0.1));
+    border: 1px solid rgba(165, 118, 15, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.anniv-people-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg, 0 10px 15px -3px rgba(0,0,0,0.1)); }
+
+.anniv-people-photo {
+    width: 108px;
+    height: 108px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    overflow: hidden;
+    border: 4px solid var(--anniv-gold-light);
+    box-shadow: 0 8px 18px rgba(165, 118, 15, 0.3);
+}
+
+.anniv-people-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+.anniv-people-card h5 { margin-bottom: 0.15rem; color: var(--anniv-maroon); }
+.anniv-people-card .anniv-people-role {
+    display: block;
+    color: var(--anniv-gold-dark);
+    font-weight: 700;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.6rem;
+}
+.anniv-people-card p { font-size: 0.88rem; margin: 0; }
+
+.anniv-thankyou-note {
+    background: linear-gradient(135deg, #fdf1d6, #fff);
+    border: 2px dashed var(--anniv-gold);
+    border-radius: 1.2rem;
+    padding: 2rem;
+    text-align: center;
+    max-width: 780px;
+    margin: 3rem auto 0;
+}
+.anniv-thankyou-note i { color: var(--anniv-gold-dark); font-size: 1.8rem; margin-bottom: 0.75rem; }
+.anniv-thankyou-note p { font-size: 1.05rem; color: var(--anniv-ink); margin: 0; font-style: italic; }
+
+/* ===================================================================
+   VOICES / TESTIMONIAL QUOTES
+   =================================================================== */
+.anniv-voice-card {
+    background: #fff;
+    border-radius: 1.2rem;
+    padding: 1.75rem;
+    box-shadow: var(--shadow-md, 0 4px 6px -1px rgba(0,0,0,0.1));
+    height: 100%;
+    position: relative;
+    border-top: 4px solid var(--anniv-gold);
+}
+.anniv-voice-card .fa-quote-left { color: var(--anniv-gold); font-size: 1.5rem; opacity: 0.6; margin-bottom: 0.75rem; }
+.anniv-voice-card p.anniv-voice-text { font-size: 0.92rem; color: var(--text-light); }
+.anniv-voice-author { display: flex; align-items: center; gap: 0.75rem; margin-top: 1rem; }
+.anniv-voice-author img { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; border: 2px solid var(--anniv-gold-light); }
+.anniv-voice-author strong { display: block; font-size: 0.92rem; color: var(--anniv-maroon); }
+.anniv-voice-author span { font-size: 0.78rem; color: var(--text-light); }
+.anniv-voice-stars i { color: var(--anniv-gold-dark); font-size: 0.85rem; }
+
+/* ===================================================================
+   MEMORABLE PHOTO EXPERIENCE (GALLERY)
+   =================================================================== */
+.anniv-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 160px;
+    gap: 0.9rem;
+}
+
+.anniv-gallery-item {
+    position: relative;
+    border-radius: 0.9rem;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+}
+
+.anniv-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.anniv-gallery-item:hover img { transform: scale(1.12); }
+
+.anniv-gallery-item::after {
+    content: '\f00e';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.4rem;
+    background: rgba(122, 31, 31, 0);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.anniv-gallery-item:hover::after { background: rgba(122, 31, 31, 0.45); opacity: 1; }
+
+.anniv-gallery-item.tall { grid-row: span 2; }
+.anniv-gallery-item.wide { grid-column: span 2; }
+
+/* Lightbox */
+.anniv-lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 8, 8, 0.92);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 3000;
+    padding: 2rem;
+}
+.anniv-lightbox.active { display: flex; }
+.anniv-lightbox img {
+    max-width: 90vw;
+    max-height: 82vh;
+    border-radius: 0.75rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    border: 3px solid var(--anniv-gold);
+}
+.anniv-lightbox-caption {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--anniv-gold-light);
+    font-weight: 600;
+}
+.anniv-lightbox-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.75rem;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    line-height: 1;
+}
+.anniv-lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(217, 165, 42, 0.85);
+    color: var(--anniv-maroon-deep);
+    border: none;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.anniv-lightbox-nav.prev { left: 1.5rem; }
+.anniv-lightbox-nav.next { right: 1.5rem; }
+
+/* ===================================================================
+   VISION FOR THE FUTURE
+   =================================================================== */
+.anniv-vision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.anniv-vision-card {
+    background: linear-gradient(160deg, #fff, #fdf1d6);
+    border-radius: 1.1rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    border: 1px solid rgba(165, 118, 15, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.anniv-vision-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg, 0 10px 15px -3px rgba(0,0,0,0.1)); }
+.anniv-vision-card .anniv-vision-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--anniv-maroon), var(--anniv-maroon-deep));
+    color: var(--anniv-gold-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto 1rem;
+}
+.anniv-vision-card h5 { color: var(--anniv-maroon); margin-bottom: 0.6rem; }
+.anniv-vision-card p { font-size: 0.9rem; margin: 0; }
+
+/* ===================================================================
+   ANNIVERSARY OFFERS
+   =================================================================== */
+.anniv-countdown {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0 2.5rem;
+}
+.anniv-countdown-box {
+    background: linear-gradient(160deg, var(--anniv-maroon), var(--anniv-maroon-deep));
+    color: var(--anniv-gold-light);
+    border-radius: 0.9rem;
+    padding: 0.9rem 1.1rem;
+    min-width: 84px;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    border: 1px solid rgba(217, 165, 42, 0.4);
+}
+.anniv-countdown-box .num { font-size: 1.7rem; font-weight: 800; display: block; font-family: 'Poppins', sans-serif; }
+.anniv-countdown-box .lbl { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.85; }
+
+.anniv-offer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 1.5rem;
+}
+
+.anniv-offer-card {
+    position: relative;
+    background: #fff;
+    border-radius: 1.1rem;
+    padding: 1.85rem 1.6rem;
+    box-shadow: var(--shadow-md, 0 4px 6px -1px rgba(0,0,0,0.1));
+    border: 1px solid rgba(165, 118, 15, 0.15);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.anniv-offer-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg, 0 10px 15px -3px rgba(0,0,0,0.1)); }
+
+.anniv-offer-ribbon {
+    position: absolute;
+    top: 14px;
+    right: -34px;
+    transform: rotate(45deg);
+    background: linear-gradient(135deg, var(--anniv-gold-light), var(--anniv-gold-dark));
+    color: var(--anniv-maroon-deep);
+    font-weight: 800;
+    font-size: 0.72rem;
+    padding: 0.3rem 2.5rem;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+}
+
+.anniv-offer-card .anniv-offer-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 0.9rem;
+    background: linear-gradient(135deg, var(--anniv-maroon), var(--anniv-maroon-deep));
+    color: var(--anniv-gold-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.anniv-offer-card h5 { color: var(--anniv-maroon); margin-bottom: 0.4rem; }
+.anniv-offer-card p { font-size: 0.88rem; margin-bottom: 1rem; }
+.anniv-offer-card .anniv-offer-cta {
+    color: var(--anniv-gold-dark);
+    font-weight: 700;
+    font-size: 0.88rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+.anniv-offer-card .anniv-offer-cta:hover { color: var(--anniv-maroon); }
+
+/* ===================================================================
+   CTA / CLAIM OFFER FORM SECTION
+   =================================================================== */
+.anniv-cta-section {
+    background: linear-gradient(160deg, var(--anniv-maroon-deep), var(--anniv-maroon));
+    position: relative;
+}
+.anniv-cta-section .enquiry-form,
+.anniv-cta-section form { background: #fffaf0; border-radius: 1.25rem; padding: 2.25rem; box-shadow: 0 20px 50px rgba(0,0,0,0.35); }
+
+/* ===================================================================
+   RESPONSIVE
+   =================================================================== */
+@media (max-width: 991px) {
+    .anniv-hero, .anniv-carousel-item { min-height: auto; }
+    .anniv-hero-title { font-size: 2.1rem; }
+    .anniv-timeline::before { left: 22px; }
+    .anniv-timeline-item, .anniv-timeline-item:nth-child(even) { width: 100%; left: 0; text-align: left; padding: 0 0 2.5rem 3.5rem; }
+    .anniv-timeline-item:nth-child(odd) { text-align: left; }
+    .anniv-timeline-item:nth-child(odd) .anniv-timeline-dot,
+    .anniv-timeline-item:nth-child(even) .anniv-timeline-dot { left: 11px; right: auto; }
+    .anniv-gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; }
+    .anniv-hero-photo-collage { grid-template-columns: repeat(3, 1fr); margin-top: 2rem; }
+}
+
+@media (max-width: 576px) {
+    .anniv-section { padding: 3.25rem 0; }
+    .anniv-badge { width: 140px; height: 140px; }
+    .anniv-badge-inner .anniv-badge-num { font-size: 2.4rem; }
+    .anniv-logo-wrap { width: 130px; height: 130px; }
+    .anniv-gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 120px; }
+    .anniv-countdown-box { min-width: 68px; padding: 0.65rem 0.7rem; }
+    .anniv-countdown-box .num { font-size: 1.3rem; }
+    .anniv-ribbon { font-size: 0.8rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .confetti-piece, .anniv-popper, .anniv-logo-ring, .anniv-badge, .anniv-ribbon::before, .anniv-hero-title .anniv-gold-text {
+        animation: none !important;
+    }
+}

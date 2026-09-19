@@ -8,14 +8,133 @@
     width: 100%;
     max-width: 100vw;
     z-index: 1000;
-    background-color: #fbefd8;
+    background: linear-gradient(120deg, #fff8e6 0%, #fbefd8 45%, #fdf1d6 100%);
     border-bottom: 1px solid rgba(37, 99, 235, 0.1);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Festive gold/maroon ribbon stripe along the top edge of the navbar */
+.navbar-wrapper::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -4px;
+    height: 4px;
+    background: repeating-linear-gradient(45deg, #d9a52a 0, #d9a52a 14px, #7a1f1f 14px, #7a1f1f 28px);
+    background-size: 200% 100%;
+    animation: annivRibbonSlide 1.8s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes annivRibbonSlide {
+    0% { background-position: 0 0; }
+    100% { background-position: 80px 0; }
+}
+
+/* Festive gold shimmer underline for the 5th Anniversary (sitewide) */
+.navbar-wrapper::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #d9a52a, #ffe38a, #d9a52a, transparent);
+    background-size: 160% 100%;
+    animation: annivNavbarShine 1.6s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes annivNavbarShine {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Contained glitter/confetti strip inside the navbar */
+.navbar-confetti-strip {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.navbar-confetti-strip .nc-piece {
+    position: absolute;
+    top: -10%;
+    width: 8px;
+    height: 8px;
+    opacity: 0;
+    background: #d9a52a;
+    animation: annivNcDrift 2.4s ease-in infinite;
+}
+
+.navbar-confetti-strip .nc-1  { left: 4%;  background: #d9a52a; animation-delay: 0s;    }
+.navbar-confetti-strip .nc-2  { left: 10%; background: #7a1f1f; border-radius: 50%; animation-delay: 0.15s; }
+.navbar-confetti-strip .nc-3  { left: 17%; background: #0c6c41; animation-delay: 0.3s;  }
+.navbar-confetti-strip .nc-4  { left: 24%; background: #ffe38a; border-radius: 50%; animation-delay: 0.45s; }
+.navbar-confetti-strip .nc-5  { left: 31%; background: #d9a52a; animation-delay: 0.6s;  }
+.navbar-confetti-strip .nc-6  { left: 38%; background: #7a1f1f; border-radius: 50%; animation-delay: 0.75s; }
+.navbar-confetti-strip .nc-7  { left: 45%; background: #0c6c41; animation-delay: 0.9s;  }
+.navbar-confetti-strip .nc-8  { left: 52%; background: #ffe38a; border-radius: 50%; animation-delay: 1.05s; }
+.navbar-confetti-strip .nc-9  { left: 59%; background: #d9a52a; border-radius: 50%; animation-delay: 1.2s;  }
+.navbar-confetti-strip .nc-10 { left: 66%; background: #7a1f1f; animation-delay: 1.35s; }
+.navbar-confetti-strip .nc-11 { left: 73%; background: #0c6c41; border-radius: 50%; animation-delay: 1.5s;  }
+.navbar-confetti-strip .nc-12 { left: 80%; background: #ffe38a; animation-delay: 1.65s; }
+.navbar-confetti-strip .nc-13 { left: 87%; background: #d9a52a; border-radius: 50%; animation-delay: 1.8s;  }
+.navbar-confetti-strip .nc-14 { left: 93%; background: #7a1f1f; animation-delay: 1.95s; }
+.navbar-confetti-strip .nc-15 { left: 97%; background: #0c6c41; border-radius: 50%; animation-delay: 2.1s;  }
+.navbar-confetti-strip .nc-16 { left: 1%;  background: #ffe38a; animation-delay: 2.25s; }
+
+@keyframes annivNcDrift {
+    0% { transform: translateY(-10px) rotate(0deg); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(130px) rotate(360deg); opacity: 0; }
+}
+
+/* Party poppers anchored at both ends of the navbar (desktop only) */
+.navbar-popper {
+    position: absolute;
+    top: 8px;
+    font-size: 1.6rem;
+    z-index: 1;
+    pointer-events: none;
+    align-items: center;
+    justify-content: center;
+    animation: annivNavPopperPop 1.4s ease-in-out infinite;
+    filter: drop-shadow(0 2px 6px rgba(122, 31, 31, 0.35));
+}
+
+.navbar-popper-left  { left: 1%; top:50%; transform-origin: bottom left; }
+.navbar-popper-right { left: 20%; top:50%; transform: scaleX(-1); transform-origin: bottom right; animation-name: annivNavPopperPopRight; animation-delay: 0.7s; }
+
+@keyframes annivNavPopperPop {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    20% { transform: rotate(-22deg) scale(1.25); }
+    40% { transform: rotate(14deg) scale(1.1); }
+    60% { transform: rotate(0deg) scale(1); }
+}
+
+@keyframes annivNavPopperPopRight {
+    0%, 100% { transform: scaleX(-1) rotate(0deg) scale(1); }
+    20% { transform: scaleX(-1) rotate(-22deg) scale(1.25); }
+    40% { transform: scaleX(-1) rotate(14deg) scale(1.1); }
+    60% { transform: scaleX(-1) rotate(0deg) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .navbar-wrapper::before, .navbar-wrapper::after, .navbar-confetti-strip .nc-piece, .navbar-popper {
+        animation: none !important;
+    }
 }
 
 .navbar-custom {
  /*   padding: 0.75rem 0; */
     transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
 }
 
 /* Brand Styling */
@@ -29,7 +148,7 @@
     transition: transform 0.3s ease;
     min-width: 0;
     flex-shrink: 1;
-    overflow: hidden;
+    overflow: visible;
     padding-top: 0;
     padding-bottom: 0;
 }
@@ -45,8 +164,73 @@
     margin-left: 2rem;
 }
 
+/* ===== 5th Anniversary Logo Decoration (sitewide) ===== */
+.logo-anniv-wrap {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.logo-anniv-badge {
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffe38a, #d9a52a 55%, #a5760f);
+    color: #4d1212;
+    font-size: 0.72rem;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1;
+    box-shadow: 0 3px 8px rgba(165, 118, 15, 0.55), 0 0 0 2px #fbefd8;
+    animation: annivBadgeWiggle 3.2s ease-in-out infinite;
+}
+
+.logo-anniv-badge em {
+    font-style: normal;
+    font-size: 0.4rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+@keyframes annivBadgeWiggle {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    8% { transform: rotate(-12deg) scale(1.08); }
+    16% { transform: rotate(8deg) scale(1.04); }
+    24% { transform: rotate(0deg) scale(1); }
+}
+
+.logo-sparkle {
+    position: absolute;
+    z-index: 2;
+    color: #d9a52a;
+    font-size: 0.7rem;
+    opacity: 0;
+    pointer-events: none;
+    animation: annivSparkleTwinkle 2.6s ease-in-out infinite;
+    text-shadow: 0 0 6px rgba(217, 165, 42, 0.8);
+}
+
+.logo-sparkle.sparkle-1 { top: 2px; left: -4px; animation-delay: 0s; }
+.logo-sparkle.sparkle-2 { bottom: 6px; right: -6px; font-size: 0.55rem; animation-delay: 0.9s; }
+.logo-sparkle.sparkle-3 { bottom: -4px; left: 10px; font-size: 0.6rem; animation-delay: 1.7s; }
+
+@keyframes annivSparkleTwinkle {
+    0%, 100% { opacity: 0; transform: scale(0.4) rotate(0deg); }
+    50% { opacity: 1; transform: scale(1.1) rotate(25deg); }
+}
+
 .brand-name {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     font-family: math;
     font-weight: 700;
     color: #a10909;
@@ -55,15 +239,49 @@
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100%;
+    position: relative;
+    background: linear-gradient(100deg, #a10909 40%, #d9a52a 50%, #a10909 60%);
+    background-size: 250% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: annivBrandShimmer 6s ease-in-out infinite;
+}
+
+@keyframes annivBrandShimmer {
+    0%, 85%, 100% { background-position: 200% center; }
+    45% { background-position: 0% center; }
+}
+
+.brand-popper {
+    display: inline-block;
+    font-size: 0.85rem;
+    margin-left: 0.3rem;
+    vertical-align: middle;
+    animation: annivBrandPop 3.4s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+
+@keyframes annivBrandPop {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    10% { transform: scale(1.25) rotate(-15deg); }
+    20% { transform: scale(1) rotate(10deg); }
+    30% { transform: scale(1.1) rotate(0deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .logo-anniv-badge, .logo-sparkle, .brand-name, .brand-popper {
+        animation: none !important;
+    }
 }
 
 .tag-line {
     display: block;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     font-family: math;
     font-weight: 700;
     color: darkgreen;
-    letter-spacing: -0.5px;
+    letter-spacing: 0px;
     line-height: 1.3;
 }
 
@@ -98,6 +316,33 @@
 .navbar-nav .nav-link.active {
     color: brown !important;
     background-color: rgba(37, 99, 235, 0.1);
+}
+
+/* 5th Anniversary Nav Link — gold celebratory badge */
+.nav-link-anniversary {
+    background: linear-gradient(135deg, #f7d774 0%, #c9971f 55%, #a5760f 100%) !important;
+    color: #5c3a00 !important;
+    font-weight: 700 !important;
+    border-radius: 999px !important;
+    padding: 0.5rem 1rem !important;
+    box-shadow: 0 2px 10px rgba(201, 151, 31, 0.45);
+    animation: annivNavPulse 2.4s ease-in-out infinite;
+}
+
+.nav-link-anniversary:hover {
+    color: #3e2700 !important;
+    background: linear-gradient(135deg, #ffe38a 0%, #d9a52a 55%, #b5820f 100%) !important;
+    transform: translateY(-1px);
+}
+
+.nav-link-anniversary.active {
+    color: #3e2700 !important;
+    background: linear-gradient(135deg, #ffe38a 0%, #d9a52a 55%, #b5820f 100%) !important;
+}
+
+@keyframes annivNavPulse {
+    0%, 100% { box-shadow: 0 2px 10px rgba(201, 151, 31, 0.45); }
+    50% { box-shadow: 0 2px 18px rgba(201, 151, 31, 0.85); }
 }
 
 /* Dropdown Styling */
@@ -239,6 +484,18 @@
         height: 56px;
         width: 56px;
         margin-left: 0.5rem;
+    }
+
+    .logo-anniv-badge {
+        width: 24px;
+        height: 24px;
+        font-size: 0.6rem;
+        top: -4px;
+        right: -6px;
+    }
+
+    .logo-anniv-badge em {
+        font-size: 0.34rem;
     }
 
     .logo-svg {

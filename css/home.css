@@ -1,5 +1,80 @@
 /* ===== HOME PAGE STYLES ===== */
 
+/* 5th Anniversary Teaser Banner */
+.anniv-teaser-section {
+    padding: 0.5rem 0 0.5rem;
+}
+
+.anniv-teaser-banner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    background: linear-gradient(120deg, #4d1212 0%, #7a1f1f 55%, #4d1212 100%);
+    border: 1px solid rgba(217, 165, 42, 0.5);
+    border-radius: 1.25rem;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 15px 40px rgba(122, 31, 31, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+.anniv-teaser-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 0%, rgba(255, 227, 138, 0.18) 50%, transparent 100%);
+    background-size: 200% 100%;
+    animation: annivTeaserShine 4s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes annivTeaserShine {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.anniv-teaser-text { position: relative; z-index: 1; max-width: 640px; }
+
+.anniv-teaser-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: linear-gradient(135deg, #ffe38a, #d9a52a);
+    color: #4d1212;
+    font-weight: 700;
+    font-size: 0.78rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.3rem 1rem;
+    border-radius: 999px;
+    margin-bottom: 0.75rem;
+}
+
+.anniv-teaser-banner h3 {
+    color: #fff3d8;
+    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+}
+
+.anniv-teaser-banner p {
+    color: #e6cfa8;
+    margin-bottom: 0;
+}
+
+.anniv-teaser-banner .btn {
+    position: relative;
+    z-index: 1;
+    white-space: nowrap;
+    border-radius: 999px;
+}
+
+@media (max-width: 767px) {
+    .anniv-teaser-banner { padding: 1.75rem; text-align: center; justify-content: center; }
+    .anniv-teaser-text { max-width: 100%; }
+}
+
 /* Hero Carousel Section */
 .hero-carousel-section {
     position: relative;
@@ -10,7 +85,7 @@
 .carousel-content {
     display: flex;
     align-items: center;
-    min-height: 500px;
+    min-height: 400px;
     position: relative;
     z-index: 1;
 }
@@ -119,12 +194,12 @@
 }
 
 .img-fluid-carousel-2 {
-    max-width: 60%;
+    max-width: 50%;
     max-height: 40%;
 }
 
 .img-fluid-carousel-3 {
-    max-width: 120%;
+    max-width: 110%;
     max-height: 40%;
 }
 
@@ -991,3 +1066,9 @@
         margin-top: 1rem; 
     }
 }
+
+
+
+/* ===================================================================
+   ANNIVARSARY DESIGN STARTS
+   =================================================================== */
