@@ -13,6 +13,9 @@
     
     <!-- ===== PAGE-SPECIFIC CSS (home.html) ===== -->
     <link rel="stylesheet" href="./css/home.css">
+
+      <!-- ===== PAGE-SPECIFIC CSS (anniversary.html) ===== -->
+    <link rel="stylesheet" href="../css/anniversary.css">
     
 </head>
 <body>
@@ -21,19 +24,99 @@
 
     <!-- Main Content -->
     <main id="main-content">
+
+        <!-- Anniversary Announcement Ribbon -->
+        <div class="anniv-ribbon">
+            <div class="anniv-ribbon-inner">
+                <span>&#127881; Celebrating <strong>5 Years of Excellence</strong> (2021&ndash;2026)</span>
+                <a href="../pages/anniversary.html#anniv-offers" class="anniv-ribbon-cta">Claim Anniversary Offers &rarr;</a>
+            </div>
+        </div>
+
         <!-- Hero Carousel Section -->
-        <section class="hero-carousel-section">
+        <section class="hero-carousel-section anniv-hero">
+            <div class="anniv-confetti-layer" id="annivConfettiLayer"></div>
+            <span class="anniv-popper pop-left">&#127881;</span>
+            <span class="anniv-popper pop-right">&#127881;</span>
+            <span class="anniv-popper pop-top-left">&#127882;</span>
+            <span class="anniv-popper pop-top-right">&#127882;</span>
+
             <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <!-- Carousel Indicators -->
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#anniversaryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#anniversaryCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
                 </div>
 
                 <!-- Carousel Items -->
                 <div class="carousel-inner">
+
+                    <!-- Slide 1: Celebration Announcement -->
+                    <div class="carousel-item active">
+                        <div class="anniv-carousel-item">
+                            <div class="container-custom">
+                                <div class="row align-items-center anniv-hero-content">
+                                    <div class="col-lg-6 text-center mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="200">
+                                        <div class="anniv-badge">
+                                                <div class="anniv-logo-inner">
+                                                    <img src="../images/anniversary_logo-removebg.png" alt="Kriya Coaching Classes Logo">
+                                                </div>
+                                        </div>
+                                        <span class="anniv-eyebrow"><i class="fas fa-star"></i>&nbsp;5th Anniversary Celebration</span>
+                                    </div>
+                                    <div class="col-lg-6 text-center text-lg-start">
+                                        
+                                        <h1 class="anniv-hero-title" data-aos="fade-up">5 Years of <span class="anniv-gold-text">Excellence</span></h1>
+                                        <p class="anniv-hero-sub" data-aos="fade-up" data-aos-delay="150">From one student in a small room to a thriving family of 500+ learners across 55+ schools &mdash; this is our story of purpose, perseverance, and people. Thank you for being a part of it.</p>
+                                        <div class="anniv-hero-buttons d-flex flex-wrap gap-3 mt-4" data-aos="fade-up" data-aos-delay="300">
+                                            <a href="../pages/anniversary.html#anniv-journey" class="btn btn-gold"><i class="fas fa-route me-2"></i>Explore Our Journey</a>
+                                            <a href="../pages/anniversary.html#anniv-offers" class="btn btn-gold"><i class="fas fa-gift me-2"></i>Claim Anniversary Offer</a>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Thank You / Memory Collage -->
+                    <div class="carousel-item">
+                        <div class="anniv-carousel-item">
+                            <div class="container-custom">
+                                <div class="row align-items-center anniv-hero-content">
+                                    <div class="col-lg-6 text-center text-lg-start order-2 order-lg-1">
+                                        <span class="anniv-eyebrow"><i class="fas fa-heart"></i>&nbsp;With Gratitude</span>
+                                        <h1 class="anniv-hero-title" data-aos="fade-up">Thank You for <span class="anniv-gold-text">Trusting Us</span></h1>
+                                        <p class="anniv-hero-sub" data-aos="fade-up" data-aos-delay="150">Every milestone we've crossed carries the fingerprints of our students, parents, faculty and well-wishers. Here's to the memories we've built together &mdash; and the many more ahead.</p>
+                                        <div class="anniv-hero-buttons d-flex flex-wrap gap-3 mt-4" data-aos="fade-up" data-aos-delay="300">
+                                            <a href="../pages/anniversary.html#anniv-gallery" class="btn btn-gold"><i class="fas fa-images me-2"></i>View Memories</a>
+                                            <a href="../pages/anniversary.html#anniv-voices" class="btn btn-gold"><i class="fas fa-comment-dots me-2"></i>Read Their Stories</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
+                                        <div class="anniv-hero-photo-collage">
+                                            <div><img src="../images/Gallery3.jpeg" alt="Kriya Coaching Classes - student moment"></div>
+                                            <div><img src="../images/Gallery6.jpg" alt="Kriya Coaching Classes - workshop moment"></div>
+                                            <div><img src="../images/Gallery8.jpg" alt="Kriya Coaching Classes - celebration moment"></div>
+                                            <div><img src="../images/Vikrant_1st_student.jpg" alt="Vikrant - our first student"></div>
+                                            <div><img src="../images/Gallery10.jpeg" alt="Kriya Coaching Classes - achievement moment"></div>
+                                            <div><img src="../images/event-1.jpg" alt="Kriya Coaching Classes - event moment"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
 
                      <!-- Slide 1 -->
                     <!--<div class="carousel-item" style="background: linear-gradient(135deg, #cad5ef 0%, #2be753 100%);">
@@ -46,7 +129,7 @@
                         </div>
                     </div>-->
                     <!-- Slide 1 -->
-                    <div class="carousel-item active" style="background: darkseagreen">
+                    <div class="carousel-item" style="background: darkseagreen">
                         <div class="carousel-content">
                             <div class="container-custom">
                                 <div class="row align-items-center">
@@ -154,6 +237,20 @@
                 <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
                     <span class="carousel-control-next-icon"></span>
                 </button>
+            </div>
+        </section>
+
+        <!-- 5th Anniversary Teaser Banner -->
+        <section class="anniv-teaser-section">
+            <div class="container-custom">
+                <div class="anniv-teaser-banner" data-aos="zoom-in">
+                    <div class="anniv-teaser-text">
+                        <span class="anniv-teaser-badge"><i class="fas fa-birthday-cake"></i>&nbsp;5th Anniversary</span>
+                        <h3>We're Celebrating 5 Years of Excellence!</h3>
+                        <p>Explore our journey, milestones, memories &amp; exclusive anniversary offers &mdash; live for a limited time.</p>
+                    </div>
+                    <a href="pages/anniversary.html" class="btn btn-primary btn-lg">Celebrate With Us <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
             </div>
         </section>
 
@@ -803,6 +900,9 @@
     <!-- ===== PAGE-SPECIFIC SCRIPTS (home.html) ===== -->
     <!-- Home Page JS will call loadCommonScripts() and initialize after common scripts load -->
     <script src="./js/home.js"></script>
+
+        <!-- ===== PAGE-SPECIFIC SCRIPTS (anniversary.html) ===== -->
+    <script src="../js/anniversary.js"></script>
 
 </body>
 </html>
