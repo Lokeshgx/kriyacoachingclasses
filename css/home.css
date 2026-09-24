@@ -78,14 +78,14 @@
 /* Hero Carousel Section */
 .hero-carousel-section {
     position: relative;
- /*   min-height: 505px; */
+    height: 400px;
     overflow: hidden;
 }
 
 .carousel-content {
     display: flex;
     align-items: center;
-    min-height: 400px;
+    height: 400px;
     position: relative;
     z-index: 1;
 }
@@ -730,12 +730,12 @@
     }
 
     .carousel-content {
-        min-height: 400px;
+        height: 400px;
         padding: 2rem 0;
     }
 
     .hero-carousel-section {
-        min-height: 400px;
+        height: 400px;
     }
 
     /* Smaller controls on very small screens */
